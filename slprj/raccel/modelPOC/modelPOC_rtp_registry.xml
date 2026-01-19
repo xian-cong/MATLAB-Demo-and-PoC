@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_rtp/R2023a">
+  <slsa.mm.param.rtp.ModelMetadata type="slsa.mm.param.rtp.ModelMetadata" uuid="db3653db-c2ed-4579-a0e2-ee42f1522e56">
+    <modelName>modelPOC</modelName>
+  </slsa.mm.param.rtp.ModelMetadata>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="5eae8eaf-8396-4901-9392-03609ea71977">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="d967f130-9b66-47a6-bfef-567bcefa8f1a"/>
+    <valueIndices>1</valueIndices>
+    <valueIndices>1</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="1e187f67-e52f-4c63-88eb-db5409ba70cf">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="ed3de740-0b2d-4700-90b9-a04967b75c9f"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="b09c3e95-93ab-48aa-9feb-12d8b6daa7cb"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="ed3de740-0b2d-4700-90b9-a04967b75c9f">
+    <workspaceName>modelPOC</workspaceName>
+    <name>gain</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="1e187f67-e52f-4c63-88eb-db5409ba70cf"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="b09c3e95-93ab-48aa-9feb-12d8b6daa7cb">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="1e187f67-e52f-4c63-88eb-db5409ba70cf"/>
+    <valueIndices>0</valueIndices>
+    <valueIndices>0</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="418b7264-da9d-45bb-86f3-7cf433de3b1d">
+    <workspaceName>modelPOC</workspaceName>
+    <name>k</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="d967f130-9b66-47a6-bfef-567bcefa8f1a"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="d967f130-9b66-47a6-bfef-567bcefa8f1a">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="418b7264-da9d-45bb-86f3-7cf433de3b1d"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="5eae8eaf-8396-4901-9392-03609ea71977"/>
+  </slsa.mm.param.rtp.Parameter>
+</MF0>
