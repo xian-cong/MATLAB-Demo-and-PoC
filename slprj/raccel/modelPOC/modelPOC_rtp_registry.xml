@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_rtp/R2023a">
+  <slsa.mm.param.rtp.ModelMetadata type="slsa.mm.param.rtp.ModelMetadata" uuid="9c9ed65c-448c-4aaa-bbeb-507785d919e2">
+    <modelName>modelPOC</modelName>
+  </slsa.mm.param.rtp.ModelMetadata>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="46e9dd3c-bfe3-48bd-821d-efadca98201a">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="ffb75407-1ba9-43c0-bb56-d65c9845c163"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="3a506f35-01c1-429e-8a4e-2654136b04a1"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="ffb75407-1ba9-43c0-bb56-d65c9845c163">
+    <workspaceName>modelPOC</workspaceName>
+    <name>gain</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="46e9dd3c-bfe3-48bd-821d-efadca98201a"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="3a506f35-01c1-429e-8a4e-2654136b04a1">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="46e9dd3c-bfe3-48bd-821d-efadca98201a"/>
+    <valueIndices>0</valueIndices>
+    <valueIndices>0</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="889aaa6b-3218-4750-80ad-f7bf66bc9728">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="b8df0888-6591-45c8-b65e-0a3f4c5ed335"/>
+    <valueIndices>1</valueIndices>
+    <valueIndices>1</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="b8df0888-6591-45c8-b65e-0a3f4c5ed335">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="e9472e9a-aaad-4bb4-9c7d-c3d8d56a8d7d"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="889aaa6b-3218-4750-80ad-f7bf66bc9728"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="e9472e9a-aaad-4bb4-9c7d-c3d8d56a8d7d">
+    <workspaceName>modelPOC</workspaceName>
+    <name>k</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="b8df0888-6591-45c8-b65e-0a3f4c5ed335"/>
+  </slsa.mm.param.rtp.VariableId>
+</MF0>
