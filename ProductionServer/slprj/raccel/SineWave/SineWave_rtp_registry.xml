@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_rtp/R2023a">
+  <slsa.mm.param.rtp.ModelMetadata type="slsa.mm.param.rtp.ModelMetadata" uuid="902528ab-0a86-4bb0-886e-9a39fdf9400c">
+    <modelName>SineWave</modelName>
+  </slsa.mm.param.rtp.ModelMetadata>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="22092a62-c55c-46dd-acdc-5dd9b3a5b68c">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="1249956c-049f-4d2e-9477-08e5fd6ee439"/>
+    <valueIndices>0</valueIndices>
+    <valueIndices>0</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="1249956c-049f-4d2e-9477-08e5fd6ee439">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="fd820872-cf1e-4342-9c23-b1b28e832f67"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="22092a62-c55c-46dd-acdc-5dd9b3a5b68c"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="fd820872-cf1e-4342-9c23-b1b28e832f67">
+    <workspaceName>global-workspace</workspaceName>
+    <name>A</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="1249956c-049f-4d2e-9477-08e5fd6ee439"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="2cf2feb2-cd84-470b-9d8f-c79ecce583ab">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="9bb93df5-e294-4d96-92ce-6708b6897462"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="89a05f52-32a6-4305-8d3d-2b43d133edcd"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="9bb93df5-e294-4d96-92ce-6708b6897462">
+    <workspaceName>global-workspace</workspaceName>
+    <name>F</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="2cf2feb2-cd84-470b-9d8f-c79ecce583ab"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="89a05f52-32a6-4305-8d3d-2b43d133edcd">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="2cf2feb2-cd84-470b-9d8f-c79ecce583ab"/>
+    <valueIndices>1</valueIndices>
+    <valueIndices>1</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+</MF0>

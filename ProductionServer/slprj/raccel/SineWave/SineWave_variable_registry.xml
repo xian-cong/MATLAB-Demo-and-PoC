@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="9e3a6cc3-7d87-42bd-8fc0-eae120656867">
+    <name>SineWave</name>
+    <variables type="slsa.mm.param.graph.Variable" uuid="5b984add-37b9-4c00-9528-9117c4272e00">
+      <name>F</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="4007d7fd-1651-4466-bb9a-e34349806df2"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="0332ea61-1eed-4c00-8a63-d1eaabafa1ef">
+      <name>A</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="4007d7fd-1651-4466-bb9a-e34349806df2"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="4007d7fd-1651-4466-bb9a-e34349806df2">
+      <name>global-workspace</name>
+      <variables type="slsa.mm.param.graph.Variable" uuid="5b984add-37b9-4c00-9528-9117c4272e00"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="0332ea61-1eed-4c00-8a63-d1eaabafa1ef"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="f778e91d-2171-40c0-b23d-a549e243732b"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>

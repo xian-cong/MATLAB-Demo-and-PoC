@@ -1,0 +1,11 @@
+-IC:/Users/KoayXianCong/Documents/MATLAB/Examples/R2025b/simulink/ControlASimulinkSimulationAppDesignerExample
+-IC:/Users/KoayXianCong/Documents/MATLAB/Examples/R2025b/simulink/ControlASimulinkSimulationAppDesignerExample/slprj/raccel/ex_mass_spring_damper_appdemo
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/src/rapid"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/raccel"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/src/ext_mode/common"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/coder/rtiostream/src"
+-I"C:/Program Files/MATLAB/R2025b/extern/include"
+-I"C:/Program Files/MATLAB/R2025b/simulink/include"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/src"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/coder/rtiostream/src/rtiostreamtcpip"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/coder/rtiostream/src/utils"

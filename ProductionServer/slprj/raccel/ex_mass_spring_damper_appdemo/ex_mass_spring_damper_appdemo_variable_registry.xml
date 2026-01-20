@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="aa366044-26fd-4662-b16e-1cf605c6549f">
+    <name>ex_mass_spring_damper_appdemo</name>
+    <variables type="slsa.mm.param.graph.Variable" uuid="6509d471-d2a8-4d73-a004-a853cd125cc5">
+      <name>b</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b9a60003-c47b-4726-bac2-9994b5a112e3"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="b9d641dc-ba3a-4073-be25-332e258f30ff">
+      <name>k</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b9a60003-c47b-4726-bac2-9994b5a112e3"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="243c4123-b867-403d-9c81-0fff9cdbd4bb">
+      <name>m</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b9a60003-c47b-4726-bac2-9994b5a112e3"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="b9a60003-c47b-4726-bac2-9994b5a112e3">
+      <name>global-workspace</name>
+      <variables type="slsa.mm.param.graph.Variable" uuid="6509d471-d2a8-4d73-a004-a853cd125cc5"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="b9d641dc-ba3a-4073-be25-332e258f30ff"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="243c4123-b867-403d-9c81-0fff9cdbd4bb"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="f9d6c4dc-519e-4c32-9b7e-ec483fc2bd58"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>

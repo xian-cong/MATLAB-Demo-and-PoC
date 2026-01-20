@@ -1,0 +1,2 @@
+chcp 65001
+cmd /D /c start "RapidAccelerator" /B "C:\Users\Demo\Documents\MATLAB\Simulink\ProductionServer\slprj\raccel\SineWave\SineWave.exe" --config "C:\Users\Demo\AppData\Local\Temp\raccel_inputpd2c8a685_8eb6_4e89_8f1e_cb33472dee3b.cfg" -server_info_file "C:\Users\Demo\AppData\Local\Temp\tppd2c8a685_8eb6_4e89_8f1e_cb33472dee3b.info" -tgtconn_server_info_file "C:\Users\Demo\AppData\Local\Temp\tgtconnpd2c8a685_8eb6_4e89_8f1e_cb33472dee3b.info" -tgtconn_port 0 -port 0 -w >"C:\Users\Demo\Documents\MATLAB\Simulink\ProductionServer\slprj\raccel\SineWave\cmdLog.txt"
