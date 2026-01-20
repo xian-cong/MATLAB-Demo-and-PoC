@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0201">
+  <!--(*
+ *
+ * File: SimpleConveyorSystem.xml
+ *
+ * IEC 61131-3 Structured Text (ST) code generated for subsystem "SimpleConveyorSystem/ConveyorLogic"
+ *
+ * Model name                      : SimpleConveyorSystem
+ * Model version                   : 1.6
+ * Model creator                   : KoayXianCong
+ * Model last modified by          : KoayXianCong
+ * Model last modified on          : Fri Dec 19 16:00:26 2025
+ * Model sample time               : 0s
+ * Subsystem name                  : SimpleConveyorSystem/ConveyorLogic
+ * Subsystem sample time           : 0.1s
+ * Simulink PLC Coder version      : 25.2 (R2025b) 28-Jul-2025
+ * Target Plugin version           : 1.20
+ * ST code generated on            : Fri Dec 19 16:04:08 2025
+ *
+ * Target IDE selection            : MITSUBISHI ELECTRIC MELSOFT GX Works3
+ * Test Bench included             : Yes
+ *
+ *)
+-->
+  <fileHeader companyName="The Mathworks, Inc." companyURL="www.mathworks.com" contentDescription="" creationDateTime="2025-12-19T16:04:08" productName="Simulink PLC Coder" productRelease="(R2025b)" productVersion="25.2"/>
+  <contentHeader name="SimpleConveyorSystem">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="0" y="0"/>
+      </fbd>
+      <ld>
+        <scaling x="0" y="0"/>
+      </ld>
+      <sfc>
+        <scaling x="0" y="0"/>
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes/>
+    <pous>
+      <pou name="ProgPou" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="tbInstance">
+              <type>
+                <derived name="TestBench"/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <html xmlns="http://www.w3.org/1999/xhtml">    tbInstance();
+</html>
+          </ST>
+        </body>
+      </pou>
+      <pou name="ConveyorLogic" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="ssMethodType">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="b_s1">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="b_s2">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="robot_done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="conveyor_on">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="robot_trigger">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="temp1">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="is_c3_ConveyorLogic">
+              <type>
+                <WORD/>
+              </type>
+            </variable>
+            <variable name="is_active_c3_ConveyorLogic">
+              <type>
+                <WORD/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <html xmlns="http://www.w3.org/1999/xhtml">
+CASE ssMethodType OF
+    0: 
+        (* SystemInitialize for Chart: '&lt;Root&gt;/ConveyorLogic' incorporates:
+         *  Outport: '&lt;Root&gt;/conveyor_on'
+         *  Outport: '&lt;Root&gt;/robot_trigger' *)
+        conveyor_on := FALSE;
+        robot_trigger := FALSE;
+        is_active_c3_ConveyorLogic := 0;
+        is_c3_ConveyorLogic := 0;
+    1: 
+        (* Chart: '&lt;Root&gt;/ConveyorLogic' incorporates:
+         *  Outport: '&lt;Root&gt;/conveyor_on'
+         *  Outport: '&lt;Root&gt;/robot_trigger' *)
+        (* Gateway: ConveyorLogic *)
+        (* During: ConveyorLogic *)
+
+        IF is_active_c3_ConveyorLogic = 0 THEN 
+            (* Entry: ConveyorLogic *)
+            is_active_c3_ConveyorLogic := 1;
+            (* Entry Internal: ConveyorLogic *)
+            (* Transition: '&lt;S1&gt;:9' *)
+            is_c3_ConveyorLogic := 1;
+            (* Entry 'IDLE': '&lt;S1&gt;:6' *)
+            (* '&lt;S1&gt;:6:2' conveyor_on = false; *)
+            conveyor_on := FALSE;
+            (* '&lt;S1&gt;:6:2' robot_trigger = false; *)
+            robot_trigger := FALSE;
+        ELSE 
+            temp1 := WORD_TO_INT(is_c3_ConveyorLogic);
+
+            CASE temp1 OF
+                1: 
+                    robot_trigger := FALSE;
+                    (* During 'IDLE': '&lt;S1&gt;:6' *)
+                    (* '&lt;S1&gt;:10:1' sf_internal_predicateOutput = 0 | (s1 &amp;&amp; ~s2); *)
+
+                    IF b_s1 AND ( NOT b_s2) THEN 
+                        (* Transition: '&lt;S1&gt;:10' *)
+                        is_c3_ConveyorLogic := 2;
+                    END_IF;
+
+                2: 
+                    (* During 'MOVING': '&lt;S1&gt;:7' *)
+                    (* '&lt;S1&gt;:11:1' sf_internal_predicateOutput = 0 | (s2); *)
+
+                    IF b_s2 THEN 
+                        (* Transition: '&lt;S1&gt;:11' *)
+                        is_c3_ConveyorLogic := 3;
+                        (* Entry 'ROBOT_WORKING': '&lt;S1&gt;:8' *)
+                        (* '&lt;S1&gt;:8:2' conveyor_on = false; *)
+                        conveyor_on := FALSE;
+                        (* '&lt;S1&gt;:8:2' robot_trigger = true; *)
+                        robot_trigger := TRUE;
+                    ELSE 
+                        (* '&lt;S1&gt;:7:2' conveyor_on = true; *)
+                        conveyor_on := TRUE;
+                    END_IF;
+
+                ELSE
+                    robot_trigger := TRUE;
+                    (* During 'ROBOT_WORKING': '&lt;S1&gt;:8' *)
+                    (* '&lt;S1&gt;:12:1' sf_internal_predicateOutput = 0 | (robot_done &amp;&amp; ~s2); *)
+
+                    IF robot_done AND ( NOT b_s2) THEN 
+                        (* Transition: '&lt;S1&gt;:12' *)
+                        is_c3_ConveyorLogic := 1;
+                        (* Entry 'IDLE': '&lt;S1&gt;:6' *)
+                        (* '&lt;S1&gt;:6:2' conveyor_on = false; *)
+                        conveyor_on := FALSE;
+                        (* '&lt;S1&gt;:6:2' robot_trigger = false; *)
+                        robot_trigger := FALSE;
+                    ELSE 
+                        (* '&lt;S1&gt;:8:3' conveyor_on = false; *)
+                        conveyor_on := FALSE;
+                    END_IF;
+
+            END_CASE;
+
+        END_IF;
+
+        (* End of Chart: '&lt;Root&gt;/ConveyorLogic' *)
+END_CASE;
+
+</html>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.mitsubishielectric.com/xml/pouFolder">
+            <pouFolder name="FBFILE"/>
+          </data>
+        </addData>
+      </pou>
+      <pou name="TestBench" pouType="functionBlock">
+        <interface>
+          <inputVars/>
+          <outputVars>
+            <variable name="testVerify">
+              <type>
+                <BOOL/>
+              </type>
+              <initialValue>
+                <simpleValue value="TRUE"/>
+              </initialValue>
+            </variable>
+            <variable name="testCycleNum">
+              <type>
+                <DINT/>
+              </type>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="i0_ConveyorLogic">
+              <type>
+                <derived name="ConveyorLogic"/>
+              </type>
+            </variable>
+            <variable name="tb_s1">
+              <type>
+                <array>
+                  <dimension lower="0" upper="30"/>
+                  <baseType>
+                    <BOOL/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="cycle_s1">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="tb_s2">
+              <type>
+                <array>
+                  <dimension lower="0" upper="30"/>
+                  <baseType>
+                    <BOOL/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="cycle_s2">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="tb_robot_done">
+              <type>
+                <array>
+                  <dimension lower="0" upper="30"/>
+                  <baseType>
+                    <BOOL/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="cycle_robot_done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="tb_conveyor_on">
+              <type>
+                <array>
+                  <dimension lower="0" upper="30"/>
+                  <baseType>
+                    <BOOL/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="cycle_conveyor_on">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="out_conveyor_on">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="tb_robot_trigger">
+              <type>
+                <array>
+                  <dimension lower="0" upper="30"/>
+                  <baseType>
+                    <BOOL/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="cycle_robot_trigger">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="out_robot_trigger">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="need_init">
+              <type>
+                <BOOL/>
+              </type>
+              <initialValue>
+                <simpleValue value="TRUE"/>
+              </initialValue>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <html xmlns="http://www.w3.org/1999/xhtml">(* TEST_CYCLE_COUNT = 31                    *)
+
+IF need_init THEN 
+    tb_s1[0] := FALSE;
+    tb_s1[1] := FALSE;
+    tb_s1[2] := FALSE;
+    tb_s1[3] := FALSE;
+    tb_s1[4] := FALSE;
+    tb_s1[5] := FALSE;
+    tb_s1[6] := FALSE;
+    tb_s1[7] := FALSE;
+    tb_s1[8] := FALSE;
+    tb_s1[9] := FALSE;
+    tb_s1[10] := FALSE;
+    tb_s1[11] := FALSE;
+    tb_s1[12] := FALSE;
+    tb_s1[13] := FALSE;
+    tb_s1[14] := FALSE;
+    tb_s1[15] := FALSE;
+    tb_s1[16] := FALSE;
+    tb_s1[17] := FALSE;
+    tb_s1[18] := FALSE;
+    tb_s1[19] := FALSE;
+    tb_s1[20] := FALSE;
+    tb_s1[21] := FALSE;
+    tb_s1[22] := FALSE;
+    tb_s1[23] := FALSE;
+    tb_s1[24] := FALSE;
+    tb_s1[25] := FALSE;
+    tb_s1[26] := FALSE;
+    tb_s1[27] := FALSE;
+    tb_s1[28] := FALSE;
+    tb_s1[29] := FALSE;
+    tb_s1[30] := FALSE;
+    tb_s2[0] := FALSE;
+    tb_s2[1] := FALSE;
+    tb_s2[2] := FALSE;
+    tb_s2[3] := FALSE;
+    tb_s2[4] := FALSE;
+    tb_s2[5] := FALSE;
+    tb_s2[6] := FALSE;
+    tb_s2[7] := FALSE;
+    tb_s2[8] := FALSE;
+    tb_s2[9] := FALSE;
+    tb_s2[10] := FALSE;
+    tb_s2[11] := FALSE;
+    tb_s2[12] := FALSE;
+    tb_s2[13] := FALSE;
+    tb_s2[14] := FALSE;
+    tb_s2[15] := FALSE;
+    tb_s2[16] := FALSE;
+    tb_s2[17] := FALSE;
+    tb_s2[18] := FALSE;
+    tb_s2[19] := FALSE;
+    tb_s2[20] := FALSE;
+    tb_s2[21] := FALSE;
+    tb_s2[22] := FALSE;
+    tb_s2[23] := FALSE;
+    tb_s2[24] := FALSE;
+    tb_s2[25] := FALSE;
+    tb_s2[26] := FALSE;
+    tb_s2[27] := FALSE;
+    tb_s2[28] := FALSE;
+    tb_s2[29] := FALSE;
+    tb_s2[30] := FALSE;
+    tb_robot_done[0] := TRUE;
+    tb_robot_done[1] := TRUE;
+    tb_robot_done[2] := TRUE;
+    tb_robot_done[3] := TRUE;
+    tb_robot_done[4] := TRUE;
+    tb_robot_done[5] := TRUE;
+    tb_robot_done[6] := TRUE;
+    tb_robot_done[7] := TRUE;
+    tb_robot_done[8] := TRUE;
+    tb_robot_done[9] := TRUE;
+    tb_robot_done[10] := TRUE;
+    tb_robot_done[11] := TRUE;
+    tb_robot_done[12] := TRUE;
+    tb_robot_done[13] := TRUE;
+    tb_robot_done[14] := TRUE;
+    tb_robot_done[15] := TRUE;
+    tb_robot_done[16] := TRUE;
+    tb_robot_done[17] := TRUE;
+    tb_robot_done[18] := TRUE;
+    tb_robot_done[19] := TRUE;
+    tb_robot_done[20] := TRUE;
+    tb_robot_done[21] := TRUE;
+    tb_robot_done[22] := TRUE;
+    tb_robot_done[23] := TRUE;
+    tb_robot_done[24] := TRUE;
+    tb_robot_done[25] := TRUE;
+    tb_robot_done[26] := TRUE;
+    tb_robot_done[27] := TRUE;
+    tb_robot_done[28] := TRUE;
+    tb_robot_done[29] := TRUE;
+    tb_robot_done[30] := TRUE;
+    tb_conveyor_on[0] := FALSE;
+    tb_conveyor_on[1] := FALSE;
+    tb_conveyor_on[2] := FALSE;
+    tb_conveyor_on[3] := FALSE;
+    tb_conveyor_on[4] := FALSE;
+    tb_conveyor_on[5] := FALSE;
+    tb_conveyor_on[6] := FALSE;
+    tb_conveyor_on[7] := FALSE;
+    tb_conveyor_on[8] := FALSE;
+    tb_conveyor_on[9] := FALSE;
+    tb_conveyor_on[10] := FALSE;
+    tb_conveyor_on[11] := FALSE;
+    tb_conveyor_on[12] := FALSE;
+    tb_conveyor_on[13] := FALSE;
+    tb_conveyor_on[14] := FALSE;
+    tb_conveyor_on[15] := FALSE;
+    tb_conveyor_on[16] := FALSE;
+    tb_conveyor_on[17] := FALSE;
+    tb_conveyor_on[18] := FALSE;
+    tb_conveyor_on[19] := FALSE;
+    tb_conveyor_on[20] := FALSE;
+    tb_conveyor_on[21] := FALSE;
+    tb_conveyor_on[22] := FALSE;
+    tb_conveyor_on[23] := FALSE;
+    tb_conveyor_on[24] := FALSE;
+    tb_conveyor_on[25] := FALSE;
+    tb_conveyor_on[26] := FALSE;
+    tb_conveyor_on[27] := FALSE;
+    tb_conveyor_on[28] := FALSE;
+    tb_conveyor_on[29] := FALSE;
+    tb_conveyor_on[30] := FALSE;
+    tb_robot_trigger[0] := FALSE;
+    tb_robot_trigger[1] := FALSE;
+    tb_robot_trigger[2] := FALSE;
+    tb_robot_trigger[3] := FALSE;
+    tb_robot_trigger[4] := FALSE;
+    tb_robot_trigger[5] := FALSE;
+    tb_robot_trigger[6] := FALSE;
+    tb_robot_trigger[7] := FALSE;
+    tb_robot_trigger[8] := FALSE;
+    tb_robot_trigger[9] := FALSE;
+    tb_robot_trigger[10] := FALSE;
+    tb_robot_trigger[11] := FALSE;
+    tb_robot_trigger[12] := FALSE;
+    tb_robot_trigger[13] := FALSE;
+    tb_robot_trigger[14] := FALSE;
+    tb_robot_trigger[15] := FALSE;
+    tb_robot_trigger[16] := FALSE;
+    tb_robot_trigger[17] := FALSE;
+    tb_robot_trigger[18] := FALSE;
+    tb_robot_trigger[19] := FALSE;
+    tb_robot_trigger[20] := FALSE;
+    tb_robot_trigger[21] := FALSE;
+    tb_robot_trigger[22] := FALSE;
+    tb_robot_trigger[23] := FALSE;
+    tb_robot_trigger[24] := FALSE;
+    tb_robot_trigger[25] := FALSE;
+    tb_robot_trigger[26] := FALSE;
+    tb_robot_trigger[27] := FALSE;
+    tb_robot_trigger[28] := FALSE;
+    tb_robot_trigger[29] := FALSE;
+    tb_robot_trigger[30] := FALSE;
+    need_init := FALSE;
+END_IF;
+
+
+IF testVerify THEN 
+
+    IF testCycleNum &lt; 31 THEN 
+        (* TEST CYCLE SETUP  *)
+        cycle_s1 := tb_s1[testCycleNum];
+        cycle_s2 := tb_s2[testCycleNum];
+        cycle_robot_done := tb_robot_done[testCycleNum];
+        cycle_conveyor_on := tb_conveyor_on[testCycleNum];
+        cycle_robot_trigger := tb_robot_trigger[testCycleNum];
+
+        IF testCycleNum = 0 THEN 
+            (* INIT  *)
+            i0_ConveyorLogic(ssMethodType := 0, b_s1 := cycle_s1, b_s2 := cycle_s2, robot_done := cycle_robot_done);
+            out_conveyor_on := i0_ConveyorLogic.conveyor_on;
+            out_robot_trigger := i0_ConveyorLogic.robot_trigger;
+        END_IF;
+
+        (* STEP  *)
+        i0_ConveyorLogic(ssMethodType := 1, b_s1 := cycle_s1, b_s2 := cycle_s2, robot_done := cycle_robot_done);
+        out_conveyor_on := i0_ConveyorLogic.conveyor_on;
+        out_robot_trigger := i0_ConveyorLogic.robot_trigger;
+        (* VERIFY  *)
+
+        IF testVerify AND (out_conveyor_on &lt;&gt; cycle_conveyor_on) THEN 
+            testVerify := FALSE;
+        END_IF;
+
+
+        IF testVerify AND (out_robot_trigger &lt;&gt; cycle_robot_trigger) THEN 
+            testVerify := FALSE;
+        END_IF;
+
+        testCycleNum := testCycleNum + 1;
+    END_IF;
+
+END_IF;
+
+</html>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.mitsubishielectric.com/xml/pouFolder">
+            <pouFolder name="FBFILE"/>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations>
+      <configuration name="TestBenchConfig">
+        <resource name="MAIN">
+          <pouInstance name="ProgPou" typeName=""/>
+          <addData>
+            <data name="http://www.mitsubishielectric.com/xml/resourceExecutionType">
+              <resourceExecutionType type="scan"/>
+            </data>
+          </addData>
+        </resource>
+      </configuration>
+    </configurations>
+  </instances>
+  <addData>
+    <data name="http://www.mitsubishielectric.com/xml/projectPlcType">
+      <projectPlcType name="R120"/>
+    </data>
+    <data name="http://www.mitsubishielectric.com/xml/projectFolders">
+      <projectFolders>
+        <folder functionBlockType="subroutine" name="FBFile" type="functionBlock"/>
+      </projectFolders>
+    </data>
+  </addData>
+</project>
