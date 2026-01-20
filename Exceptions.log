@@ -1,0 +1,80 @@
+
+
+25-Nov-2025 14:13:20 Error using simulink.ui.control.SimulationControls/startPauseContinueButtonPushed
+Duplicate data logging variable name, 'yout' specified in both 'model Output logging (see Configuration Parameters)' and '<a href="matlab:open_and_hilite_hyperlink ('base_model/To Workspace','error')">base_model/To
+Workspace</a>'
+Error in simulink.ui.control.SimulationControls>@(o,e)obj.startPauseContinueButtonPushed()
+
+25-Nov-2025 14:13:26 Error using simulink.ui.control.SimulationControls/startPauseContinueButtonPushed
+Duplicate data logging variable name, 'yout' specified in both 'model Output logging (see Configuration Parameters)' and '<a href="matlab:open_and_hilite_hyperlink ('base_model/To Workspace','error')">base_model/To
+Workspace</a>'
+Error in simulink.ui.control.SimulationControls>@(o,e)obj.startPauseContinueButtonPushed()
+
+15-Jan-2026 09:12:52 Error using Simulink.findVars
+Failed to compile model '<a href="matlab:open_system ('base_model')">base_model</a>'. Cached results might be incomplete.
+Error in simulink.sim.Variables/keys
+Error in simulink.ui.control.VariableTuner/getTunableVariablesForSimulation
+Error in simulink.ui.control.VariableTuner/populateVisibleTunableVariables
+Error in simulink.ui.control.VariableTuner/updateGUI
+Error in simulink.ui.control.VariableTuner/update
+Error in matlab.ui.componentcontainer.ComponentContainer/executeUpdate
+Caused by:
+    Error using Simulink.findVars
+    Invalid setting in '<a href="matlab:open_and_hilite_hyperlink ('base_model/Multiply','error')">base_model/Multiply</a>' for parameter 'Gain'.
+    
+    Error in simulink.sim.Variables/keys
+    
+    Error in simulink.ui.control.VariableTuner/getTunableVariablesForSimulation
+    
+    Error in simulink.ui.control.VariableTuner/populateVisibleTunableVariables
+    
+    Error in simulink.ui.control.VariableTuner/updateGUI
+    
+    Error in simulink.ui.control.VariableTuner/update
+    
+    Error in matlab.ui.componentcontainer.ComponentContainer/executeUpdate
+        Error using Simulink.findVars
+        Error evaluating parameter <a href="matlab:Simulink.internal.OpenBlockParamsDialog(['base_model/Multiply'],'Gain');">'Gain'</a> in '<a href="matlab:open_and_hilite_hyperlink ('base_model/Multiply','error')">base_model/Multiply</a>'
+        
+        Error in simulink.sim.Variables/keys
+        
+        Error in simulink.ui.control.VariableTuner/getTunableVariablesForSimulation
+        
+        Error in simulink.ui.control.VariableTuner/populateVisibleTunableVariables
+        
+        Error in simulink.ui.control.VariableTuner/updateGUI
+        
+        Error in simulink.ui.control.VariableTuner/update
+        
+        Error in matlab.ui.componentcontainer.ComponentContainer/executeUpdate
+            Error using Simulink.findVars
+            Unrecognized function or variable 'myGain'.
+            
+            Error in simulink.sim.Variables/keys
+            
+            Error in simulink.ui.control.VariableTuner/getTunableVariablesForSimulation
+            
+            Error in simulink.ui.control.VariableTuner/populateVisibleTunableVariables
+            
+            Error in simulink.ui.control.VariableTuner/updateGUI
+            
+            Error in simulink.ui.control.VariableTuner/update
+            
+            Error in matlab.ui.componentcontainer.ComponentContainer/executeUpdate
+                Error using Simulink.findVars
+                Variable 'myGain' has been deleted from base workspace.
+                
+                Error in simulink.sim.Variables/keys
+                
+                Error in simulink.ui.control.VariableTuner/getTunableVariablesForSimulation
+                
+                Error in simulink.ui.control.VariableTuner/populateVisibleTunableVariables
+                
+                Error in simulink.ui.control.VariableTuner/updateGUI
+                
+                Error in simulink.ui.control.VariableTuner/update
+                
+                Error in matlab.ui.componentcontainer.ComponentContainer/executeUpdate
+                Suggested Actions:
+                    • Load a file into base workspace. - <a href="matlab:slprivate('robustVarRefHotlink_cb', 'loadFile', 'base_model', 'myGain')">Fix</a>
+                    • Create a new variable. - <a href="matlab:slprivate('robustVarRefHotlink_cb', 'createEntry', 'myGain', 'base_model', 'base workspace', 'normal', 'Gain', 'base_model/Multiply', ' ')">Fix</a>

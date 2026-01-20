@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="7b7fb148-dd66-4f5d-95d6-7e6765f9ac9f">
+    <name>base_model</name>
+    <variables type="slsa.mm.param.graph.Variable" uuid="ae4c2bff-6519-4049-a1ad-a5d3b919c7aa">
+      <name>myGain</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="a9d121c0-99ff-4c73-bd0b-e2af7d5d83c5"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="a9d121c0-99ff-4c73-bd0b-e2af7d5d83c5">
+      <name>global-workspace</name>
+      <variables type="slsa.mm.param.graph.Variable" uuid="ae4c2bff-6519-4049-a1ad-a5d3b919c7aa"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="b9bf221a-9a1b-42ec-a72b-8dc04862890d"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>
