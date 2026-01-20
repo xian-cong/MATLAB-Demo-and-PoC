@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="793294b8-5020-4b42-9e51-4728acd0ae59">
+    <name>modelPOC</name>
+    <variables type="slsa.mm.param.graph.Variable" uuid="85a5e9b3-b414-4df2-bb0e-764718c7e790">
+      <name>gain</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="092d3cb4-c47b-4f95-91e7-0886a3c406a2"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="c4a064e2-ca50-4188-b7fc-3a3987605687">
+      <name>k</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="092d3cb4-c47b-4f95-91e7-0886a3c406a2"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="092d3cb4-c47b-4f95-91e7-0886a3c406a2">
+      <name>modelPOC</name>
+      <type>MODEL</type>
+      <variables type="slsa.mm.param.graph.Variable" uuid="85a5e9b3-b414-4df2-bb0e-764718c7e790"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="c4a064e2-ca50-4188-b7fc-3a3987605687"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="e8738ce3-2232-4839-9d3e-91cd204a9623"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>

@@ -1,0 +1,2 @@
+chcp 65001
+cmd /D /c start "RapidAccelerator" /B "C:\demo\simulinkCompilerRealTimeUpdate\slprj\raccel\modelPOC\modelPOC.exe" --config "C:\Users\KOAYXI~1\AppData\Local\Temp\raccel_inputp75359f07_b8c4_4349_a949_d60ea291fff9.cfg" -server_info_file "C:\Users\KOAYXI~1\AppData\Local\Temp\tpp75359f07_b8c4_4349_a949_d60ea291fff9.info" -tgtconn_server_info_file "C:\Users\KOAYXI~1\AppData\Local\Temp\tgtconnp75359f07_b8c4_4349_a949_d60ea291fff9.info" -tgtconn_port 0 -port 0 -w >"C:\demo\simulinkCompilerRealTimeUpdate\slprj\raccel\modelPOC\cmdLog.txt"

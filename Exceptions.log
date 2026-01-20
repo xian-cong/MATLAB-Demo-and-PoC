@@ -1,0 +1,6 @@
+
+
+20-Jan-2026 10:22:14 Error using simulink.ui.control.SimulationControls/startPauseContinueButtonPushed
+Sample time [1.0 2.0] specified in the S-Function block '<a href="matlab:open_and_hilite_hyperlink ('modelPOC/S-Function','error')">modelPOC/S-Function</a>' is invalid. Sample time must be a real double scalar (period) or
+a real double vector of length 2 (period, offset); where period, offset must be finite and non-negative and offset must be less than period.
+Error in simulink.ui.control.SimulationControls>@(o,e)obj.startPauseContinueButtonPushed()
