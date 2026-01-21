@@ -1,0 +1,1 @@
+var PagesHeading = 'Content'; var reportPages = [["Traceability Report","Chart_trace.html"],["Static Code Metrics Report","Chart_metrics.html"]];
