@@ -1,0 +1,61 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "active"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:71043:119-125"\
+    }\
+    ChartData {\
+      Name         "active_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:71043:119-125"\
+    }\
+    ChartData {\
+      Name         "dataOutReg"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:71043:126-136"\
+      Dimensions   [2]\
+    }\
+    ChartData {\
+      Name         "startOutReg"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:71043:137-148"\
+    }\
+    ChartData {\
+      Name         "endOutReg"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:71043:149-158"\
+    }\
+    ChartData {\
+      Name         "validOutReg"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:71043:159-170"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

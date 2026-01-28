@@ -1,0 +1,126 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   15 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "rdEnb"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:186-191"\
+    }\
+    ChartData {\
+      Name         "rdEnbOld"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:192-200"\
+    }\
+    ChartData {\
+      Name         "startOutReg"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:201-212"\
+    }\
+    ChartData {\
+      Name         "curR"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:229-233"\
+    }\
+    ChartData {\
+      Name         "curC"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:234-238"\
+    }\
+    ChartData {\
+      Name         "vMaxR"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:239-244"\
+      Dimensions   [8]\
+    }\
+    ChartData {\
+      Name         "vMaxC"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:245-250"\
+      Dimensions   [8]\
+    }\
+    ChartData {\
+      Name         "wrIdx"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:251-256"\
+    }\
+    ChartData {\
+      Name         "rdIdx"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:257-262"\
+    }\
+    ChartData {\
+      Name         "framCnt"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:279-286"\
+    }\
+    ChartData {\
+      Name         "vModCodIs12"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:287-298"\
+      Dimensions   [8]\
+    }\
+    ChartData {\
+      Name         "curCorROutReg"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:315-328"\
+    }\
+    ChartData {\
+      Name         "maxRorCOutReg"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:329-342"\
+    }\
+    ChartData {\
+      Name         "curRorCOutReg"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:343-356"\
+    }\
+    ChartData {\
+      Name         "modcodIs12OutReg"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "soc_dvbs2_fpga:70542:357-373"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

@@ -1,0 +1,56 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "design_1_ADC_Demuxer_3_0",
+    "cell_name": "ADC_Demuxer_3",
+    "component_reference": "mathworks.com:user:ADC_Demuxer:1.0",
+    "ip_revision": "10",
+    "gen_directory": "../../../../../../vivado_prj.gen/sources_1/bd/design_1/ip/design_1_ADC_Demuxer_3_0",
+    "parameters": {
+      "component_parameters": {
+        "IQMODE": [ { "value": "true", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "SAMPLESPERCLOCK": [ { "value": "4", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "design_1_ADC_Demuxer_3_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "IQMODE": [ { "value": "true", "resolve_type": "generated", "format": "bool", "usage": "all" } ],
+        "SAMPLESPERCLOCK": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynquplusRFSOC" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xczu28dr" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
+        "PACKAGE": [ { "value": "ffvg1517" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "E" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "10" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../vivado_prj.gen/sources_1/bd/design_1/ip/design_1_ADC_Demuxer_3_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "I_In": [ { "direction": "in", "size_left": "63", "size_right": "0", "driver_value": "0" } ],
+        "Q_In": [ { "direction": "in", "size_left": "63", "size_right": "0", "driver_value": "0" } ],
+        "I_Valid": [ { "direction": "in", "driver_value": "0" } ],
+        "Q_Valid": [ { "direction": "in", "driver_value": "0" } ],
+        "I_Out": [ { "direction": "out", "size_left": "63", "size_right": "0", "driver_value": "0" } ],
+        "Q_Out": [ { "direction": "out", "size_left": "63", "size_right": "0", "driver_value": "0" } ],
+        "IQ_Valid": [ { "direction": "out", "driver_value": "0" } ]
+      }
+    }
+  }
+}

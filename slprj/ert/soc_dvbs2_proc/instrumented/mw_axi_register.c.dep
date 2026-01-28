@@ -1,0 +1,5 @@
+mw_axi_register.c.o: \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/src/mw_axi_register.c \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/mw_axi_register.h
+
+C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/mw_axi_register.h:

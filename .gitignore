@@ -1,0 +1,14 @@
+# Vivado
+vivado_prj.cache/
+vivado_prj.gen/
+vivado_prj.runs/
+.ip_user_files/
+*.bit
+*.bin
+*.elf
+*.dcp
+
+# MATLAB
+*.slxc
+*.asv
+*.autosave

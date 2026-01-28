@@ -1,0 +1,47 @@
+soc_dvbs2_proc_data.c.o: \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/soc_dvbs2_proc/soc_dvbs2_proc_data.c \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/soc_dvbs2_proc/soc_dvbs2_proc_private.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/model_reference_types.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/libiio/base/include/iio.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/soc_dvbs2_proc/soc_dvbs2_proc_types.h \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/mw_axi_register_lct.h \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/mw_axi_register.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/libiio/base/include/iio_helper.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/libiio/base/include/iio.h \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/target/shared/ioplayback/include/mw_driver_basetypes.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/soc_dvbs2_proc/soc_dvbs2_proc.h \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/MW_linuxUDP.h \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/target/shared/ioplayback/include/mw_udp.h \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/target/shared/ioplayback/include/mw_driver_basetypes.h
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/soc_dvbs2_proc/soc_dvbs2_proc_private.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/model_reference_types.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/libiio/base/include/iio.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/soc_dvbs2_proc/soc_dvbs2_proc_types.h:
+
+C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/mw_axi_register_lct.h:
+
+C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/mw_axi_register.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/libiio/base/include/iio_helper.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/libiio/base/include/iio.h:
+
+C:/PROGRA~1/MATLAB/R2025b/toolbox/target/shared/ioplayback/include/mw_driver_basetypes.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/soc_dvbs2_proc/soc_dvbs2_proc.h:
+
+C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/MW_linuxUDP.h:
+
+C:/PROGRA~1/MATLAB/R2025b/toolbox/target/shared/ioplayback/include/mw_udp.h:
+
+C:/PROGRA~1/MATLAB/R2025b/toolbox/target/shared/ioplayback/include/mw_driver_basetypes.h:

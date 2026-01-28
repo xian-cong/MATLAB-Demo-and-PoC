@@ -1,0 +1,47 @@
+ert_main.c.o: \
+ C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/ert_main.c \
+ C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/code_profiling_utility_functions.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/arm_cortex_a/include/profile_timer.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h \
+ C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/soc_dvbs2_top_sw.h \
+ C:/PROGRA~1/MATLAB/R2025b/simulink/include/rtw_extmode.h \
+ C:/PROGRA~1/MATLAB/R2025b/simulink/include/sysran_types.h \
+ C:/PROGRA~1/MATLAB/R2025b/rtw/c/src/dt_info.h \
+ C:/PROGRA~1/MATLAB/R2025b/rtw/c/src/ext_mode/common/ext_work.h \
+ C:/PROGRA~1/MATLAB/R2025b/rtw/c/src/ext_mode/common/ext_types.h \
+ C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/soc_dvbs2_top_sw_types.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/model_reference_types.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h \
+ C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/soc_dvbs2_top_sw_private.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/multiword_types.h \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/target/codertarget/rtos/inc/linuxinitialize.h
+
+C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/code_profiling_utility_functions.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/arm_cortex_a/include/profile_timer.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h:
+
+C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/soc_dvbs2_top_sw.h:
+
+C:/PROGRA~1/MATLAB/R2025b/simulink/include/rtw_extmode.h:
+
+C:/PROGRA~1/MATLAB/R2025b/simulink/include/sysran_types.h:
+
+C:/PROGRA~1/MATLAB/R2025b/rtw/c/src/dt_info.h:
+
+C:/PROGRA~1/MATLAB/R2025b/rtw/c/src/ext_mode/common/ext_work.h:
+
+C:/PROGRA~1/MATLAB/R2025b/rtw/c/src/ext_mode/common/ext_types.h:
+
+C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/soc_dvbs2_top_sw_types.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/model_reference_types.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h:
+
+C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/soc_dvbs2_top_sw_private.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/multiword_types.h:
+
+C:/PROGRA~1/MATLAB/R2025b/toolbox/target/codertarget/rtos/inc/linuxinitialize.h:

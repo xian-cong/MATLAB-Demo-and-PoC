@@ -1,0 +1,11 @@
+soc_dvbs2_top_sw_tgtconn.c.o: \
+ C:/demo/DVBS2ReceiverSoCExample/soc_dvbs2_top_sw_ert_rtw/soc_dvbs2_top_sw_tgtconn.c \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h \
+ C:/PROGRA~1/MATLAB/R2025b/extern/include/soc/StreamingProfilerTgtAppSvc/StreamingProfilerTgtAppSvcCIntrf.h \
+ C:/PROGRA~1/MATLAB/R2025b/extern/include/soc/StreamingProfilerTgtAppSvc/StreamingProfilerTgtAppSvc_dll.hpp
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h:
+
+C:/PROGRA~1/MATLAB/R2025b/extern/include/soc/StreamingProfilerTgtAppSvc/StreamingProfilerTgtAppSvcCIntrf.h:
+
+C:/PROGRA~1/MATLAB/R2025b/extern/include/soc/StreamingProfilerTgtAppSvc/StreamingProfilerTgtAppSvc_dll.hpp:

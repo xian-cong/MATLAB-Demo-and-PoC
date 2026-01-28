@@ -1,0 +1,399 @@
+ --> dvbs2_ip_src_DVBS2_pkg
+DVBS2_tc --> dvbs2_ip_src_DVBS2_tc
+soc_dvbs2_fpga/DVBS2/BER/Send Payload Data --> dvbs2_ip_src_Send_Payload_Data
+soc_dvbs2_fpga/DVBS2/BER --> dvbs2_ip_src_BER
+soc_dvbs2_fpga/DVBS2/Concatention --> dvbs2_ip_src_Concatention
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Gaussian Noise With Given Variance --> dvbs2_ip_src_Gaussian_Noise_With_Given_Variance
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/SinCos/Sine HDL Optimized1 --> dvbs2_ip_src_Sine_HDL_Optimized1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/SinCos/Sine HDL Optimized2 --> dvbs2_ip_src_Sine_HDL_Optimized2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/SinCos --> dvbs2_ip_src_SinCos
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/SqrtImplementation/SqrtEval/FunctionEvaluation --> dvbs2_ip_src_FunctionEvaluation
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/SqrtImplementation/SqrtEval/RangeReconstruction --> dvbs2_ip_src_RangeReconstruction
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/SqrtImplementation/SqrtEval/RangeReduction/leadingZeroDetector --> dvbs2_ip_src_leadingZeroDetector
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/SqrtImplementation/SqrtEval/RangeReduction --> dvbs2_ip_src_RangeReduction
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/SqrtImplementation/SqrtEval --> dvbs2_ip_src_SqrtEval
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/SqrtImplementation --> dvbs2_ip_src_SqrtImplementation
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/TausUniformRandGen/ConcatandExtract --> dvbs2_ip_src_ConcatandExtract
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/TausUniformRandGen/TausURNG1 --> dvbs2_ip_src_TausURNG1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/TausUniformRandGen/TausURNG2 --> dvbs2_ip_src_TausURNG2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/TausUniformRandGen --> dvbs2_ip_src_TausUniformRandGen
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/logImplementation/log/FunctionEvaluation --> dvbs2_ip_src_FunctionEvaluation_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/logImplementation/log/RangeReconstruction --> dvbs2_ip_src_RangeReconstruction_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/logImplementation/log/RangeReduction/leadingZeroDetector --> dvbs2_ip_src_leadingZeroDetector_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/logImplementation/log/RangeReduction --> dvbs2_ip_src_RangeReduction_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/logImplementation/log --> dvbs2_ip_src_log
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise/logImplementation --> dvbs2_ip_src_logImplementation
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/Unit Variance Gaussian Noise --> dvbs2_ip_src_Unit_Variance_Gaussian_Noise
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator/dB to Linear Scale Converter --> dvbs2_ip_src_dB_to_Linear_Scale_Converter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/AWGN Generator --> dvbs2_ip_src_AWGN_Generator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/NCO/WaveformGen/SinLookUpTableGen --> dvbs2_ip_src_SinLookUpTableGen
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/NCO/WaveformGen/CosLookUpTableGen --> dvbs2_ip_src_CosLookUpTableGen
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/NCO/WaveformGen --> dvbs2_ip_src_WaveformGen
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel/NCO --> dvbs2_ip_src_NCO
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Channel --> dvbs2_ip_src_Channel
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM/Single RAM Using Two RAMs/SimpleDualPortRAM_generic --> dvbs2_ip_src_SimpleDualPortRAM_generic
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM/Single RAM Using Two RAMs --> dvbs2_ip_src_Single_RAM_Using_Two_RAMs
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM/Wrap Address --> dvbs2_ip_src_Wrap_Address
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM --> dvbs2_ip_src_RAM
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/Generate and Add Read Base Address/Indicate End of Every ShortFrame Length Samples --> dvbs2_ip_src_Indicate_End_of_Every_ShortFrame_Length_Samples
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/Generate and Add Read Base Address --> dvbs2_ip_src_Generate_and_Add_Read_Base_Address
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/Parameter Store FIFO/SimpleDualPortRAM_singlebit --> dvbs2_ip_src_SimpleDualPortRAM_singlebit
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/Parameter Store FIFO --> dvbs2_ip_src_Parameter_Store_FIFO
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/Read Offset Address/Compute Read Offset Address --> dvbs2_ip_src_Compute_Read_Offset_Address
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/Read Offset Address/Generate Signal for End of Frame --> dvbs2_ip_src_Generate_Signal_for_End_of_Frame
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/Read Offset Address/Read Offset Address Signals Generator --> dvbs2_ip_src_Read_Offset_Address_Signals_Generator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/Read Offset Address --> dvbs2_ip_src_Read_Offset_Address
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/Write Offset Address --> dvbs2_ip_src_Write_Offset_Address
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator/nRows and nColumns --> dvbs2_ip_src_nRows_and_nColumns
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/RAM Address Generator --> dvbs2_ip_src_RAM_Address_Generator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver/Discard Out of  Frame samples --> dvbs2_ip_src_Discard_Out_of_Frame_samples
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/DVBS2 HDL Deinterleaver --> dvbs2_ip_src_DVBS2_HDL_Deinterleaver
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Discard Unsupported Frames/convertMODCOD --> dvbs2_ip_src_convertMODCOD
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Discard Unsupported Frames --> dvbs2_ip_src_Discard_Unsupported_Frames
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/Sample Control Bus Creator --> dvbs2_ip_src_Sample_Control_Bus_Creator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/InpSampNet --> dvbs2_ip_src_InpSampNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/RdWrInpNet/SimpleDualPortRAM_singlebit --> dvbs2_ip_src_SimpleDualPortRAM_singlebit_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/RdWrInpNet --> dvbs2_ip_src_RdWrInpNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/elabSynInterNNet --> dvbs2_ip_src_elabSynInterNNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/elabSynInterSNet --> dvbs2_ip_src_elabSynInterSNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/calFinalSynNet --> dvbs2_ip_src_calFinalSynNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/masseyNet --> dvbs2_ip_src_masseyNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/chienNet --> dvbs2_ip_src_chienNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/errCorrNet --> dvbs2_ip_src_errCorrNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder/endNxtFramGenNet --> dvbs2_ip_src_endNxtFramGenNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 BCH Decoder --> dvbs2_ip_src_DVB_S2_BCH_Decoder
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/CodeParameters --> dvbs2_ip_src_CodeParameters
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/IterationController/CheckMatrixLUT --> dvbs2_ip_src_CheckMatrixLUT
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/IterationController/SimpleDualPortRAM_generic --> dvbs2_ip_src_SimpleDualPortRAM_generic_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/IterationController/SimpleDualPortRAM_generic --> dvbs2_ip_src_SimpleDualPortRAM_generic_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/IterationController --> dvbs2_ip_src_IterationController
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/CircularShifter/BarrelRotator --> dvbs2_ip_src_BarrelRotator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/CircularShifter --> dvbs2_ip_src_CircularShifter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/FunctionalUnit/BetaDecompress/BetaCalculationUnit --> dvbs2_ip_src_BetaCalculationUnit
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/FunctionalUnit/BetaDecompress --> dvbs2_ip_src_BetaDecompress
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/FunctionalUnit/VariableNodeUnit --> dvbs2_ip_src_VariableNodeUnit
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/FunctionalUnit/CheckNodeUnit --> dvbs2_ip_src_CheckNodeUnit
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/FunctionalUnit/BetaDecompress/BetaCalculationUnit --> dvbs2_ip_src_BetaCalculationUnit_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/FunctionalUnit/BetaDecompress --> dvbs2_ip_src_BetaDecompress_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/FunctionalUnit/AposterioriUnit --> dvbs2_ip_src_AposterioriUnit
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/FunctionalUnit --> dvbs2_ip_src_FunctionalUnit
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/CheckNodeRAM --> dvbs2_ip_src_CheckNodeRAM
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator/SimpleDualPortRAM_singlebit --> dvbs2_ip_src_SimpleDualPortRAM_singlebit_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore/MetricCalculator --> dvbs2_ip_src_MetricCalculator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder/DecoderCore --> dvbs2_ip_src_DecoderCore
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding/DVB-S2 LDPC Decoder --> dvbs2_ip_src_DVB_S2_LDPC_Decoder
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/FEC Decoding --> dvbs2_ip_src_FEC_Decoding
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor/DVBS2 Symbol Demodulator/sampleScControlNet --> dvbs2_ip_src_sampleScControlNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor/DVBS2 Symbol Demodulator/sampleModCodeRateIdxNet --> dvbs2_ip_src_sampleModCodeRateIdxNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor/DVBS2 Symbol Demodulator/readyControlNet --> dvbs2_ip_src_readyControlNet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor/DVBS2 Symbol Demodulator/symDemodPiBy2BPSKSc --> dvbs2_ip_src_symDemodPiBy2BPSKSc
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor/DVBS2 Symbol Demodulator/symDemodQPSKSc --> dvbs2_ip_src_symDemodQPSKSc
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor/DVBS2 Symbol Demodulator/symDemodPSK8Sc --> dvbs2_ip_src_symDemodPSK8Sc
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor/DVBS2 Symbol Demodulator/symDemod16APSKSc --> dvbs2_ip_src_symDemod16APSKSc
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor/DVBS2 Symbol Demodulator/symDemod32APSKSc --> dvbs2_ip_src_symDemod32APSKSc
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor/DVBS2 Symbol Demodulator --> dvbs2_ip_src_DVBS2_Symbol_Demodulator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode/Symbol Demodulaor --> dvbs2_ip_src_Symbol_Demodulaor
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Demod Deinterleave and FECDecode --> dvbs2_ip_src_Demod_Deinterleave_and_FECDecode
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract BBHeader/Extract DFL --> dvbs2_ip_src_Extract_DFL
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract BBHeader/Extract MATYPE1 --> dvbs2_ip_src_Extract_MATYPE1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract BBHeader/Extract SYNC --> dvbs2_ip_src_Extract_SYNC
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract BBHeader/Extract SYNCD --> dvbs2_ip_src_Extract_SYNCD
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract BBHeader/Extract UPL --> dvbs2_ip_src_Extract_UPL
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract BBHeader/Saturate UPL value --> dvbs2_ip_src_Saturate_UPL_value
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract BBHeader --> dvbs2_ip_src_Extract_BBHeader
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Data Field/Indicate SYNCD bit --> dvbs2_ip_src_Indicate_SYNCD_bit
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Data Field/Sample Discard Control --> dvbs2_ip_src_Sample_Discard_Control
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Data Field --> dvbs2_ip_src_Extract_Data_Field
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/Extract User Packet /Indicate SYNCD bit --> dvbs2_ip_src_Indicate_SYNCD_bit_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/Extract User Packet /Sample Discard Control --> dvbs2_ip_src_Sample_Discard_Control_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/Extract User Packet /Variable Count Limited HDL Counter --> dvbs2_ip_src_Variable_Count_Limited_HDL_Counter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/Extract User Packet  --> dvbs2_ip_src_Extract_User_Packet
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/Insert SYNC --> dvbs2_ip_src_Insert_SYNC
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/User Packet CRC Check/CRCGenerator/CRCGenControl --> dvbs2_ip_src_CRCGenControl
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/User Packet CRC Check/CRCGenerator/CRCGenCompute --> dvbs2_ip_src_CRCGenCompute
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/User Packet CRC Check/CRCGenerator --> dvbs2_ip_src_CRCGenerator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/User Packet CRC Check/CRCCompare --> dvbs2_ip_src_CRCCompare
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream/User Packet CRC Check --> dvbs2_ip_src_User_Packet_CRC_Check
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder/Extract Stream --> dvbs2_ip_src_Extract_Stream
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Decoder --> dvbs2_ip_src_BB_Decoder
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Demultiplexer --> dvbs2_ip_src_BB_Demultiplexer
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Descrambler/Subsystem/PN Sequence Generator --> dvbs2_ip_src_PN_Sequence_Generator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Descrambler/Subsystem --> dvbs2_ip_src_Subsystem
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Descrambler --> dvbs2_ip_src_BB_Descrambler
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Header CRC Check/Discard CRC failed Frame --> dvbs2_ip_src_Discard_CRC_failed_Frame
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Header CRC Check/General CRC Syndrome Detector HDL Optimized/CRCGenerator/CRCGenControl --> dvbs2_ip_src_CRCGenControl_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Header CRC Check/General CRC Syndrome Detector HDL Optimized/CRCGenerator/CRCGenCompute --> dvbs2_ip_src_CRCGenCompute_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Header CRC Check/General CRC Syndrome Detector HDL Optimized/CRCGenerator --> dvbs2_ip_src_CRCGenerator_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Header CRC Check/General CRC Syndrome Detector HDL Optimized/CRCCompare --> dvbs2_ip_src_CRCCompare_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Header CRC Check/General CRC Syndrome Detector HDL Optimized --> dvbs2_ip_src_General_CRC_Syndrome_Detector_HDL_Optimized
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery/BB Header CRC Check --> dvbs2_ip_src_BB_Header_CRC_Check
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Stream Recovery --> dvbs2_ip_src_Stream_Recovery
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Enable MODCOD  --> dvbs2_ip_src_Enable_MODCOD
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Power Q and Beta Offset Rotation/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Power Q and Beta Offset Rotation/Complex Multiplier1 --> dvbs2_ip_src_Complex_Multiplier1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Power Q and Beta Offset Rotation/Complex Multiplier2 --> dvbs2_ip_src_Complex_Multiplier2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Power Q and Beta Offset Rotation/Gain --> dvbs2_ip_src_Gain
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Power Q and Beta Offset Rotation/Gain1 --> dvbs2_ip_src_Gain1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Power Q and Beta Offset Rotation --> dvbs2_ip_src_Power_Q_and_Beta_Offset_Rotation
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Phase Error Detector --> dvbs2_ip_src_Phase_Error_Detector
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Loop Filter --> dvbs2_ip_src_Loop_Filter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Direct Digital Synthesis/NCO HDL Optimized/WaveformGen/SinLookUpTableGen --> dvbs2_ip_src_SinLookUpTableGen_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Direct Digital Synthesis/NCO HDL Optimized/WaveformGen/CosLookUpTableGen --> dvbs2_ip_src_CosLookUpTableGen_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Direct Digital Synthesis/NCO HDL Optimized/WaveformGen --> dvbs2_ip_src_WaveformGen_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Direct Digital Synthesis/NCO HDL Optimized --> dvbs2_ip_src_NCO_HDL_Optimized
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer/Direct Digital Synthesis --> dvbs2_ip_src_Direct_Digital_Synthesis
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Fine Phase Synchronizer --> dvbs2_ip_src_Fine_Phase_Synchronizer
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Frame Demultiplexer --> dvbs2_ip_src_PL_Frame_Demultiplexer
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/Bit Flipping and Averaging --> dvbs2_ip_src_Bit_Flipping_and_Averaging
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Compute Euclidean Distance --> dvbs2_ip_src_Compute_Euclidean_Distance
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Get Min Index/For Each Subsystem5 --> dvbs2_ip_src_For_Each_Subsystem5
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Get Min Index/For Each Subsystem --> dvbs2_ip_src_For_Each_Subsystem
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Get Min Index/For Each Subsystem1 --> dvbs2_ip_src_For_Each_Subsystem1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Get Min Index/For Each Subsystem2 --> dvbs2_ip_src_For_Each_Subsystem2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Get Min Index/For Each Subsystem4 --> dvbs2_ip_src_For_Each_Subsystem4
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Get Min Index/For Each Subsystem3 --> dvbs2_ip_src_For_Each_Subsystem3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Get Min Index --> dvbs2_ip_src_Get_Min_Index
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Integer to Bit Convertor/Subsystem --> dvbs2_ip_src_Subsystem_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Integer to Bit Convertor/Subsystem1 --> dvbs2_ip_src_Subsystem1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Integer to Bit Convertor/For Each Subsystem --> dvbs2_ip_src_For_Each_Subsystem_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Integer to Bit Convertor/For Each Subsystem1 --> dvbs2_ip_src_For_Each_Subsystem1_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Integer to Bit Convertor/For Each Subsystem2 --> dvbs2_ip_src_For_Each_Subsystem2_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Integer to Bit Convertor/For Each Subsystem3 --> dvbs2_ip_src_For_Each_Subsystem3_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Integer to Bit Convertor --> dvbs2_ip_src_Integer_to_Bit_Convertor
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder/Euclidean Distance Sum Up --> dvbs2_ip_src_Euclidean_Distance_Sum_Up
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/ML Decoder --> dvbs2_ip_src_ML_Decoder
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/PLSC Descrambler --> dvbs2_ip_src_PLSC_Descrambler
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder/pi//2 BPSK Soft Bit Generator --> dvbs2_ip_src_2_BPSK_Soft_Bit_Generator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery/PL Header Decoder --> dvbs2_ip_src_PL_Header_Decoder
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/PL Header Recovery --> dvbs2_ip_src_PL_Header_Recovery
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Source Encoding/MATLAB Function --> dvbs2_ip_src_MATLAB_Function
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Source Encoding --> dvbs2_ip_src_Source_Encoding
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Coarse Phase Corrector/Reciprocal/Function Impl --> dvbs2_ip_src_Function_Impl
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Coarse Phase Corrector/Reciprocal --> dvbs2_ip_src_Reciprocal
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Coarse Phase Corrector/HDL_CMA_core/Quadrant_Mapper --> dvbs2_ip_src_Quadrant_Mapper
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Coarse Phase Corrector/HDL_CMA_core/CordicKernelMag --> dvbs2_ip_src_CordicKernelMag
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Coarse Phase Corrector/HDL_CMA_core --> dvbs2_ip_src_HDL_CMA_core
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Coarse Phase Corrector --> dvbs2_ip_src_Coarse_Phase_Corrector
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Coarse Phase Estimator --> dvbs2_ip_src_Coarse_Phase_Estimator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Unwrapping algorithm/HDL_CMA_core/Quadrant_Mapper --> dvbs2_ip_src_Quadrant_Mapper_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Unwrapping algorithm/HDL_CMA_core/CordicKernelMag --> dvbs2_ip_src_CordicKernelMag_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Unwrapping algorithm/HDL_CMA_core/Quadrant_Correction --> dvbs2_ip_src_Quadrant_Correction
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Unwrapping algorithm/HDL_CMA_core --> dvbs2_ip_src_HDL_CMA_core_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Unwrapping algorithm/NCO HDL Optimized/WaveformGen/SinLookUpTableGen --> dvbs2_ip_src_SinLookUpTableGen_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Unwrapping algorithm/NCO HDL Optimized/WaveformGen/CosLookUpTableGen --> dvbs2_ip_src_CosLookUpTableGen_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Unwrapping algorithm/NCO HDL Optimized/WaveformGen --> dvbs2_ip_src_WaveformGen_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Unwrapping algorithm/NCO HDL Optimized --> dvbs2_ip_src_NCO_HDL_Optimized_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer/Unwrapping algorithm --> dvbs2_ip_src_Unwrapping_algorithm
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Coarse Phase Synchronizer --> dvbs2_ip_src_Coarse_Phase_Synchronizer
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_1/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_1 --> dvbs2_ip_src_Compute_R_m_1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_2/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_2 --> dvbs2_ip_src_Compute_R_m_2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_3/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_3 --> dvbs2_ip_src_Compute_R_m_3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_4/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_4 --> dvbs2_ip_src_Compute_R_m_4
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_5/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block4
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_5 --> dvbs2_ip_src_Compute_R_m_5
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_6/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block5
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6/Compute R(m)_6 --> dvbs2_ip_src_Compute_R_m_6
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 1 to 6 --> dvbs2_ip_src_Compute_R_m_for_1_to_6
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_1/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block6
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_1 --> dvbs2_ip_src_Compute_R_m_1_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_2/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block7
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_2 --> dvbs2_ip_src_Compute_R_m_2_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_3/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block8
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_3 --> dvbs2_ip_src_Compute_R_m_3_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_4/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block9
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_4 --> dvbs2_ip_src_Compute_R_m_4_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_5/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block10
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_5 --> dvbs2_ip_src_Compute_R_m_5_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_6/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block11
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18/Compute R(m)_6 --> dvbs2_ip_src_Compute_R_m_6_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 13 to 18 --> dvbs2_ip_src_Compute_R_m_for_13_to_18
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_1/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block12
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_1 --> dvbs2_ip_src_Compute_R_m_1_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_2/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block13
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_2 --> dvbs2_ip_src_Compute_R_m_2_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_3/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block14
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_3 --> dvbs2_ip_src_Compute_R_m_3_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_4/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block15
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_4 --> dvbs2_ip_src_Compute_R_m_4_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_5/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block16
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_5 --> dvbs2_ip_src_Compute_R_m_5_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_6/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block17
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12/Compute R(m)_6 --> dvbs2_ip_src_Compute_R_m_6_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point/Compute R(m) for 7 to 12 --> dvbs2_ip_src_Compute_R_m_for_7_to_12
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/L and R Algorithm 18 point --> dvbs2_ip_src_L_and_R_Algorithm_18_point
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/Moving Average --> dvbs2_ip_src_Moving_Average
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/HDL_CMA_core/Quadrant_Mapper --> dvbs2_ip_src_Quadrant_Mapper_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/HDL_CMA_core/CordicKernelMag --> dvbs2_ip_src_CordicKernelMag_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/HDL_CMA_core/Quadrant_Correction --> dvbs2_ip_src_Quadrant_Correction_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm/HDL_CMA_core --> dvbs2_ip_src_HDL_CMA_core_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/Modified L and R Algorithm --> dvbs2_ip_src_Modified_L_and_R_Algorithm
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/NCO HDL Optimized/WaveformGen/SinLookUpTableGen --> dvbs2_ip_src_SinLookUpTableGen_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/NCO HDL Optimized/WaveformGen/CosLookUpTableGen --> dvbs2_ip_src_CosLookUpTableGen_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/NCO HDL Optimized/WaveformGen --> dvbs2_ip_src_WaveformGen_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer/NCO HDL Optimized --> dvbs2_ip_src_NCO_HDL_Optimized_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Frequency Synchronizer --> dvbs2_ip_src_Fine_Frequency_Synchronizer
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Gain Control/Reciprocal/Function Impl --> dvbs2_ip_src_Function_Impl_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Gain Control/Reciprocal --> dvbs2_ip_src_Reciprocal_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Fine Gain Control --> dvbs2_ip_src_Fine_Gain_Control
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Pilot Blks Counter --> dvbs2_ip_src_Pilot_Blks_Counter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/RRC Receive Matched Filter/Filter/FilterCoef --> dvbs2_ip_src_FilterCoef
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/RRC Receive Matched Filter/Filter/subFilter/FilterTapSystolicPreAddWvlIn --> dvbs2_ip_src_FilterTapSystolicPreAddWvlIn
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/RRC Receive Matched Filter/Filter/subFilter --> dvbs2_ip_src_subFilter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/RRC Receive Matched Filter/Filter --> dvbs2_ip_src_Filter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/RRC Receive Matched Filter --> dvbs2_ip_src_RRC_Receive_Matched_Filter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Rate Handle/FIFO/SimpleDualPortRAM_generic --> dvbs2_ip_src_SimpleDualPortRAM_generic_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Rate Handle/FIFO/MATLAB Function --> dvbs2_ip_src_MATLAB_Function_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Rate Handle/FIFO --> dvbs2_ip_src_FIFO
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Rate Handle/monostable --> dvbs2_ip_src_monostable
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Rate Handle --> dvbs2_ip_src_Rate_Handle
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Gardner TED/GTED --> dvbs2_ip_src_GTED
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Gardner TED --> dvbs2_ip_src_Gardner_TED
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Loop Filter --> dvbs2_ip_src_Loop_Filter_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Interpolation Control --> dvbs2_ip_src_Interpolation_Control
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer/Interpolation Filter --> dvbs2_ip_src_Interpolation_Filter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Symbol Synchronizer --> dvbs2_ip_src_Symbol_Synchronizer
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/Moving Sum --> dvbs2_ip_src_Moving_Sum
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator/Discrete FIR Filter/FirRdyLogic --> dvbs2_ip_src_FirRdyLogic
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator/Discrete FIR Filter/Addressable_Delay_Line/SimpleDualPortRAM_generic --> dvbs2_ip_src_SimpleDualPortRAM_generic_block3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator/Discrete FIR Filter/Addressable_Delay_Line --> dvbs2_ip_src_Addressable_Delay_Line
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator/Discrete FIR Filter/FilterTapSystolic --> dvbs2_ip_src_FilterTapSystolic
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator/Discrete FIR Filter/Addressable_Delay_Line --> dvbs2_ip_src_Addressable_Delay_Line_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator/Discrete FIR Filter/FilterTapSystolic --> dvbs2_ip_src_FilterTapSystolic_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator/Discrete FIR Filter/Addressable_Delay_Line --> dvbs2_ip_src_Addressable_Delay_Line_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator/Discrete FIR Filter/FilterTapSystolic --> dvbs2_ip_src_FilterTapSystolic_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator/Discrete FIR Filter --> dvbs2_ip_src_Discrete_FIR_Filter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/PLSC Correlator --> dvbs2_ip_src_PLSC_Correlator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/SOF Correlator/Discrete FIR Filter/FirRdyLogic --> dvbs2_ip_src_FirRdyLogic_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/SOF Correlator/Discrete FIR Filter/Addressable_Delay_Line --> dvbs2_ip_src_Addressable_Delay_Line_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/SOF Correlator/Discrete FIR Filter/FilterTapSystolic --> dvbs2_ip_src_FilterTapSystolic_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/SOF Correlator/Discrete FIR Filter/Addressable_Delay_Line --> dvbs2_ip_src_Addressable_Delay_Line_block3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/SOF Correlator/Discrete FIR Filter/FilterTapSystolic --> dvbs2_ip_src_FilterTapSystolic_block3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/SOF Correlator/Discrete FIR Filter/Addressable_Delay_Line --> dvbs2_ip_src_Addressable_Delay_Line_block4
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/SOF Correlator/Discrete FIR Filter/FilterTapSystolic --> dvbs2_ip_src_FilterTapSystolic_block4
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/SOF Correlator/Discrete FIR Filter --> dvbs2_ip_src_Discrete_FIR_Filter_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator/SOF Correlator --> dvbs2_ip_src_SOF_Correlator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Correlator --> dvbs2_ip_src_Correlator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Pilot and Sync Pulse Indicator/ThresholdLimiter --> dvbs2_ip_src_ThresholdLimiter
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer/Pilot and Sync Pulse Indicator --> dvbs2_ip_src_Pilot_and_Sync_Pulse_Indicator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Frame Synchronizer --> dvbs2_ip_src_Frame_Synchronizer
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/PL Data Descrambler and Pilot Valid Indicator/PL Data Descrambler/PL Scrambler Gold Sequence Generator/Subsystem/X PN Generator M_n --> dvbs2_ip_src_X_PN_Generator_M_n
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/PL Data Descrambler and Pilot Valid Indicator/PL Data Descrambler/PL Scrambler Gold Sequence Generator/Subsystem/X PN Generator M_nplus131072 --> dvbs2_ip_src_X_PN_Generator_M_nplus131072
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/PL Data Descrambler and Pilot Valid Indicator/PL Data Descrambler/PL Scrambler Gold Sequence Generator/Subsystem/Y PN Generator M_0 --> dvbs2_ip_src_Y_PN_Generator_M_0
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/PL Data Descrambler and Pilot Valid Indicator/PL Data Descrambler/PL Scrambler Gold Sequence Generator/Subsystem/Y PN Generator M_131072 --> dvbs2_ip_src_Y_PN_Generator_M_131072
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/PL Data Descrambler and Pilot Valid Indicator/PL Data Descrambler/PL Scrambler Gold Sequence Generator/Subsystem --> dvbs2_ip_src_Subsystem_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/PL Data Descrambler and Pilot Valid Indicator/PL Data Descrambler/PL Scrambler Gold Sequence Generator --> dvbs2_ip_src_PL_Scrambler_Gold_Sequence_Generator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/PL Data Descrambler and Pilot Valid Indicator/PL Data Descrambler --> dvbs2_ip_src_PL_Data_Descrambler
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/PL Data Descrambler and Pilot Valid Indicator/Pilot Valid Indicator --> dvbs2_ip_src_Pilot_Valid_Indicator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/PL Data Descrambler and Pilot Valid Indicator --> dvbs2_ip_src_PL_Data_Descrambler_and_Pilot_Valid_Indicator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator/Direct Digital Synthesis/NCO HDL Optimized/WaveformGen/SinLookUpTableGen --> dvbs2_ip_src_SinLookUpTableGen_block3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator/Direct Digital Synthesis/NCO HDL Optimized/WaveformGen/CosLookUpTableGen --> dvbs2_ip_src_CosLookUpTableGen_block3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator/Direct Digital Synthesis/NCO HDL Optimized/WaveformGen --> dvbs2_ip_src_WaveformGen_block3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator/Direct Digital Synthesis/NCO HDL Optimized --> dvbs2_ip_src_NCO_HDL_Optimized_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator/Direct Digital Synthesis --> dvbs2_ip_src_Direct_Digital_Synthesis_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator/Frequency Error Detector/Complex Multiplier --> dvbs2_ip_src_Complex_Multiplier_block18
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator/Frequency Error Detector --> dvbs2_ip_src_Frequency_Error_Detector
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator/Loop Filter --> dvbs2_ip_src_Loop_Filter_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator/Pilot Blks Counter --> dvbs2_ip_src_Pilot_Blks_Counter_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer/Coarse Frequency Estimator --> dvbs2_ip_src_Coarse_Frequency_Estimator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Time and Coarse Frequency Synchronizer --> dvbs2_ip_src_Time_and_Coarse_Frequency_Synchronizer
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer/Variance Estimator --> dvbs2_ip_src_Variance_Estimator
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder/Time Frequency and Coarse Phase Synchronizer --> dvbs2_ip_src_Time_Frequency_and_Coarse_Phase_Synchronizer
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver/Synchronizer and PL Header Decoder --> dvbs2_ip_src_Synchronizer_and_PL_Header_Decoder
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/DVB-S2 HDL Receiver --> dvbs2_ip_src_DVB_S2_HDL_Receiver
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Digital Automatic Gain Control/Error Detector --> dvbs2_ip_src_Error_Detector
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Digital Automatic Gain Control/Loop Filter --> dvbs2_ip_src_Loop_Filter_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Digital Automatic Gain Control --> dvbs2_ip_src_Digital_Automatic_Gain_Control
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem2/txLUT1 --> dvbs2_ip_src_txLUT1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem2/txLUT2 --> dvbs2_ip_src_txLUT2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem2/txLUT3 --> dvbs2_ip_src_txLUT3
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem2/txLUT4 --> dvbs2_ip_src_txLUT4
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem2/txLUT5 --> dvbs2_ip_src_txLUT5
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem2/txLUT6 --> dvbs2_ip_src_txLUT6
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem2 --> dvbs2_ip_src_Subsystem2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem4/txLUT1 --> dvbs2_ip_src_txLUT1_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem4/txLUT2 --> dvbs2_ip_src_txLUT2_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem4/txLUT3 --> dvbs2_ip_src_txLUT3_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem4/txLUT4 --> dvbs2_ip_src_txLUT4_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem4/txLUT5 --> dvbs2_ip_src_txLUT5_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem4/txLUT6 --> dvbs2_ip_src_txLUT6_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem4 --> dvbs2_ip_src_Subsystem4
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem/txLUT1 --> dvbs2_ip_src_txLUT1_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem/txLUT2 --> dvbs2_ip_src_txLUT2_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem/txLUT3 --> dvbs2_ip_src_txLUT3_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem/txLUT4 --> dvbs2_ip_src_txLUT4_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem/txLUT5 --> dvbs2_ip_src_txLUT5_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem/txLUT6 --> dvbs2_ip_src_txLUT6_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem --> dvbs2_ip_src_Subsystem_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem1/txLUT1 --> dvbs2_ip_src_txLUT1_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem1/txLUT2 --> dvbs2_ip_src_txLUT2_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem1/txLUT3 --> dvbs2_ip_src_txLUT3_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem1/txLUT4 --> dvbs2_ip_src_txLUT4_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem1/txLUT5 --> dvbs2_ip_src_txLUT5_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem1/txLUT6 --> dvbs2_ip_src_txLUT6_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1/Subsystem1 --> dvbs2_ip_src_Subsystem1_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Subsystem1 --> dvbs2_ip_src_Subsystem1_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Discrete FIR Filter HDL Optimized/Filter/FilterCoef --> dvbs2_ip_src_FilterCoef_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Discrete FIR Filter HDL Optimized/Filter/subFilter/FilterTapSystolicPreAddWvlIn --> dvbs2_ip_src_FilterTapSystolicPreAddWvlIn_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Discrete FIR Filter HDL Optimized/Filter/subFilter --> dvbs2_ip_src_subFilter_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Discrete FIR Filter HDL Optimized/Filter --> dvbs2_ip_src_Filter_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx/Discrete FIR Filter HDL Optimized --> dvbs2_ip_src_Discrete_FIR_Filter_HDL_Optimized
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/LUT Based Tx --> dvbs2_ip_src_LUT_Based_Tx
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Inputs/Discrete FIR Filter HDL Optimized1/Filter/FilterCoef --> dvbs2_ip_src_FilterCoef_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Inputs/Discrete FIR Filter HDL Optimized1/Filter/subFilter/FilterTapSystolicPreAddWvlIn --> dvbs2_ip_src_FilterTapSystolicPreAddWvlIn_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Inputs/Discrete FIR Filter HDL Optimized1/Filter/subFilter --> dvbs2_ip_src_subFilter_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Inputs/Discrete FIR Filter HDL Optimized1/Filter --> dvbs2_ip_src_Filter_block1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Inputs/Discrete FIR Filter HDL Optimized1 --> dvbs2_ip_src_Discrete_FIR_Filter_HDL_Optimized1
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Inputs --> dvbs2_ip_src_Prepare_Inputs
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Outputs/Discrete FIR Filter HDL Optimized/Filter/FilterCoef --> dvbs2_ip_src_FilterCoef_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Outputs/Discrete FIR Filter HDL Optimized/Filter/subFilter/FilterTapSystolicPreAddWvlIn --> dvbs2_ip_src_FilterTapSystolicPreAddWvlIn_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Outputs/Discrete FIR Filter HDL Optimized/Filter/subFilter --> dvbs2_ip_src_subFilter_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Outputs/Discrete FIR Filter HDL Optimized/Filter --> dvbs2_ip_src_Filter_block2
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Outputs/Discrete FIR Filter HDL Optimized --> dvbs2_ip_src_Discrete_FIR_Filter_HDL_Optimized_block
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx/Prepare Outputs --> dvbs2_ip_src_Prepare_Outputs
+soc_dvbs2_fpga/DVBS2/DVBS2 TxRx --> dvbs2_ip_src_DVBS2_TxRx
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/FilterCoef --> dvbs2_ip_src_FilterCoef_block3
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/subFilter/FilterTapSystolicWvldin --> dvbs2_ip_src_FilterTapSystolicWvldin
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/subFilter --> dvbs2_ip_src_subFilter_block3
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/FilterCoef --> dvbs2_ip_src_FilterCoef_block4
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/subFilter/FilterTapSystolicWvldin --> dvbs2_ip_src_FilterTapSystolicWvldin_block
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/subFilter --> dvbs2_ip_src_subFilter_block4
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/FilterCoef --> dvbs2_ip_src_FilterCoef_block5
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/subFilter/FilterTapSystolicWvldin --> dvbs2_ip_src_FilterTapSystolicWvldin_block1
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/subFilter --> dvbs2_ip_src_subFilter_block5
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/FilterCoef --> dvbs2_ip_src_FilterCoef_block6
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/subFilter/FilterTapSystolicWvldInC0 --> dvbs2_ip_src_FilterTapSystolicWvldInC0
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/subFilter/FilterTapSystolicWvldin --> dvbs2_ip_src_FilterTapSystolicWvldin_block2
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank/subFilter --> dvbs2_ip_src_subFilter_block6
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/FilterBank --> dvbs2_ip_src_FilterBank
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized/sumTree --> dvbs2_ip_src_sumTree
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation/FIR Decimation HDL Optimized --> dvbs2_ip_src_FIR_Decimation_HDL_Optimized
+soc_dvbs2_fpga/DVBS2/Vector Decimation/Vector Decimation --> dvbs2_ip_src_Vector_Decimation
+soc_dvbs2_fpga/DVBS2/Vector Decimation --> dvbs2_ip_src_Vector_Decimation_block
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter1/Filter/FilterCoef --> dvbs2_ip_src_FilterCoef_block7
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter1/Filter/subFilter/FilterTapSystolicWvldInC0 --> dvbs2_ip_src_FilterTapSystolicWvldInC0_block
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter1/Filter/subFilter/FilterTapSystolicWvldin --> dvbs2_ip_src_FilterTapSystolicWvldin_block3
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter1/Filter/subFilter --> dvbs2_ip_src_subFilter_block7
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter1/Filter --> dvbs2_ip_src_Filter_block3
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter1 --> dvbs2_ip_src_FIRFilter1
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter2/Filter/FilterCoef --> dvbs2_ip_src_FilterCoef_block8
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter2/Filter/subFilter/FilterTapSystolicWvldin --> dvbs2_ip_src_FilterTapSystolicWvldin_block4
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter2/Filter/subFilter --> dvbs2_ip_src_subFilter_block8
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter2/Filter --> dvbs2_ip_src_Filter_block4
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter2 --> dvbs2_ip_src_FIRFilter2
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter3/Filter/FilterCoef --> dvbs2_ip_src_FilterCoef_block9
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter3/Filter/subFilter/FilterTapSystolicPreAddWvlIn --> dvbs2_ip_src_FilterTapSystolicPreAddWvlIn_block3
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter3/Filter/subFilter --> dvbs2_ip_src_subFilter_block9
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter3/Filter --> dvbs2_ip_src_Filter_block5
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter3 --> dvbs2_ip_src_FIRFilter3
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter4/Filter/FilterCoef --> dvbs2_ip_src_FilterCoef_block10
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter4/Filter/subFilter/FilterTapSystolicWvldin --> dvbs2_ip_src_FilterTapSystolicWvldin_block5
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter4/Filter/subFilter --> dvbs2_ip_src_subFilter_block10
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter4/Filter --> dvbs2_ip_src_Filter_block6
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator/FIRFilter4 --> dvbs2_ip_src_FIRFilter4
+soc_dvbs2_fpga/DVBS2/Vector Interpolation/FIR Interpolator --> dvbs2_ip_src_FIR_Interpolator
+soc_dvbs2_fpga/DVBS2/Vector Interpolation --> dvbs2_ip_src_Vector_Interpolation
+soc_dvbs2_fpga/DVBS2 --> dvbs2_ip_src_DVBS2

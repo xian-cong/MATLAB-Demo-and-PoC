@@ -1,0 +1,8 @@
+MW_linuxUDP.c.o: \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/src/MW_linuxUDP.c \
+ C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/MW_linuxUDP.h \
+ C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h
+
+C:/PROGRA~1/MATLAB/R2025b/toolbox/shared/soc/processor/include/MW_linuxUDP.h:
+
+C:/demo/DVBS2ReceiverSoCExample/slprj/ert/_sharedutils/rtwtypes.h:

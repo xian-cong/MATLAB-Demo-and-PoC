@@ -1,0 +1,3 @@
+soc_dvbs2_fpga.obj
+soc_dvbs2_fpga_capi.obj
+soc_dvbs2_fpga_data.obj

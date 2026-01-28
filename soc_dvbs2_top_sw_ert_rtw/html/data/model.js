@@ -1,0 +1,1 @@
+var modelInfo = {model:"soc_dvbs2_top_sw"};var modelHierarchy=[{model:"soc_dvbs2_top_sw",relativePath:"_internal.html",parent:"null"},{model:"soc_dvbs2_proc",relativePath:"../../slprj/ert/soc_dvbs2_proc/html/_internal.html",parent:"soc_dvbs2_top_sw"},];var AddCode = true;var ProtectedModel = false;

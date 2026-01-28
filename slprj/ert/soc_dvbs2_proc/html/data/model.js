@@ -1,0 +1,1 @@
+var modelInfo = {model:"soc_dvbs2_proc"};var modelHierarchy=[{model:"soc_dvbs2_proc",relativePath:"_internal.html",parent:"null"},];var AddCode = true;var ProtectedModel = false;

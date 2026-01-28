@@ -1,0 +1,18 @@
+open_system('soc_dvbs2_fpga');
+open_system('gm_soc_dvbs2_fpga');
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'cyan';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_soc_dvbs2_fpga/DVBS2/BER/HDL Counter', 'user1');
+annotate_port('gm_soc_dvbs2_fpga/DVBS2/BER/HDL Counter', 0, 1, 'Blocks delay absorption: 1 cycles');
+hilite_system('soc_dvbs2_fpga/DVBS2/BER/HDL Counter', 'user1');
+annotate_port('soc_dvbs2_fpga/DVBS2/BER/HDL Counter', 0, 1, 'Blocks delay absorption: 1 cycles');
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'cyan';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_soc_dvbs2_fpga/DVBS2/BER/HDL Counter', 'user1');
+annotate_port('gm_soc_dvbs2_fpga/DVBS2/BER/HDL Counter', 0, 1, 'Blocks delay absorption: 1 cycles');
+hilite_system('soc_dvbs2_fpga/DVBS2/BER/HDL Counter', 'user1');
+annotate_port('soc_dvbs2_fpga/DVBS2/BER/HDL Counter', 0, 1, 'Blocks delay absorption: 1 cycles');

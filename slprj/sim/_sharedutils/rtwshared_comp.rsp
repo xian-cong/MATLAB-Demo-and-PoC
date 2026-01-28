@@ -1,0 +1,14 @@
+-IC:/demo/DVBS2ReceiverSoCExample
+-IC:/demo/DVBS2ReceiverSoCExample/slprj/sim/_sharedutils
+-I"C:/Program Files/MATLAB/R2025b/extern/include"
+-I"C:/Program Files/MATLAB/R2025b/simulink/include"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/src"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/src/ext_mode/common"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/ert"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/dsp/extern/src/export/include"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/dsp/extern/src/export/include/src"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/shared/dsp/vision/matlab/include"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/dsp/dsp/include"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/dsp/dsp/extern/src/export/include/src"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/dsp/dsp/extern/src/export/include"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/shared/soc/shared/blocks/src/soc_queue/export/include/soc_queue"
