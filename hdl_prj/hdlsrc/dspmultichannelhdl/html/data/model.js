@@ -1,0 +1,1 @@
+var modelInfo = {model:"Multichannel FIR Filter"};var modelHierarchy=[{model:"Multichannel FIR Filter",relativePath:"_internal.html",parent:"null"},];var AddCode = true;

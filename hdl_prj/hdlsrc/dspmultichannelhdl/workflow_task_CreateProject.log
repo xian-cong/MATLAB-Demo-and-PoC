@@ -1,0 +1,24 @@
+Task "Create Project" successful.
+Generated logfile: 
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Wed Jan 14 10:55:02 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source Multichannel_FIR_Filter_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2024.1 project <a href="matlab:downstream.handle('Model','dspmultichannelhdl').openTargetTool;">hdl_prj\vivado_prj\Multichannel_FIR_Filter_vivado.xpr</a>
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/vivado_prj/Multichannel_FIR_Filter_vivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 630.980 ; gain = 203.445
+### Set Xilinx Vivado 2024.1 project properties
+### Update Xilinx Vivado 2024.1 project with HDL source files
+WARNING: [Vivado 12-818] No files matched '*.tcl'
+### Close Xilinx Vivado 2024.1 project.
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 14 10:55:24 2026...
+
+Elapsed time is 23.6401 seconds.

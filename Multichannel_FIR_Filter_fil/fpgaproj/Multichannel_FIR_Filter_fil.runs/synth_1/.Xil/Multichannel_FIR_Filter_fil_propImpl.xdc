@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/demo/MultichannelFIRFilterForFPGAExample/Multichannel_FIR_Filter_fil/filsrc/Multichannel_FIR_Filter_fil.xdc rfile:../../../../filsrc/Multichannel_FIR_Filter_fil.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E3 [get_ports sysclk]
+set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_clock_groups -asynchronous -group TCK -group [get_clocks -include_generated_clocks clk_out1_clk_wiz_0]

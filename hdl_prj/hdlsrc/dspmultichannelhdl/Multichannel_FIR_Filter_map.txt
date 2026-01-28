@@ -1,0 +1,3 @@
+ --> Multichannel_FIR_Filter_pkg
+dspmultichannelhdl/Multichannel FIR Filter/Discrete FIR Filter --> Discrete_FIR_Filter
+dspmultichannelhdl/Multichannel FIR Filter --> Multichannel_FIR_Filter

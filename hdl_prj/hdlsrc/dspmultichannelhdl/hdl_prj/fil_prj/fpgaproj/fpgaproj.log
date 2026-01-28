@@ -1,0 +1,14 @@
+
+
+------------------------------------
+   FPGA-in-the-Loop build summary
+------------------------------------
+
+Warning: Design does not meet all timing constraints.
+
+Programming file generated:
+C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/hdl_prj/fil_prj/Multichannel_FIR_Filter_fil.bit
+
+FPGA-in-the-Loop build completed with warning.
+You may close this shell.
+

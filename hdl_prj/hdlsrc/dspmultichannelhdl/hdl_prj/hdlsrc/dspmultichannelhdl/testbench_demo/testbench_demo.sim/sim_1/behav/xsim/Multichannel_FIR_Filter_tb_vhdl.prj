@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../../Multichannel_FIR_Filter_pkg.vhd" \
+"../../../../../../../../Discrete_FIR_Filter.vhd" \
+"../../../../../../../../Multichannel_FIR_Filter.vhd" \
+"../../../../../Multichannel_FIR_Filter_tb_pkg.vhd" \
+"../../../../../Multichannel_FIR_Filter_tb.vhd" \
+
+# Do not sort compile order
+nosort

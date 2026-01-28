@@ -1,0 +1,564 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Jan 13 17:20:27 2026
+# Process ID: 25052
+# Current directory: C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/vivado_prj
+# Command line: vivado.exe -mode batch -notrace -source Multichannel_FIR_Filter_Xilinx_Vivado_run.tcl
+# Log file: C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/vivado_prj/vivado.log
+# Journal file: C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/vivado_prj\vivado.jou
+# Running On        :TS-93724
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency     :2803 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :34069 MB
+# Swap memory       :12884 MB
+# Total Virtual     :46954 MB
+# Available Virtual :12977 MB
+#-----------------------------------------------------------
+source Multichannel_FIR_Filter_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2024.1 project hdl_prj\vivado_prj\Multichannel_FIR_Filter_vivado.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/vivado_prj/Multichannel_FIR_Filter_vivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 628.047 ; gain = 199.621
+### Running Synthesis in Xilinx Vivado 2024.1 ...
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Tue Jan 13 17:20:38 2026] Launched synth_1...
+Run output will be captured here: C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/vivado_prj/Multichannel_FIR_Filter_vivado.runs/synth_1/runme.log
+[Tue Jan 13 17:20:38 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log Multichannel_FIR_Filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Multichannel_FIR_Filter.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Jan 13 17:20:40 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source Multichannel_FIR_Filter.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 627.688 ; gain = 198.551
+Command: synth_design -top Multichannel_FIR_Filter -part xc7a35tcsg324-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcsg324-2
+INFO: [Device 21-9227] Part: xc7a35tcsg324-2 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30780
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1478.250 ; gain = 446.742
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Multichannel_FIR_Filter' [C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/Multichannel_FIR_Filter.vhd:54]
+INFO: [Synth 8-3491] module 'Discrete_FIR_Filter' declared at 'C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/Discrete_FIR_Filter.vhd:24' bound to instance 'u_Discrete_FIR_Filter' of component 'Discrete_FIR_Filter' [C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/Multichannel_FIR_Filter.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'Discrete_FIR_Filter' [C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/Discrete_FIR_Filter.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Discrete_FIR_Filter' (0#1) [C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/Discrete_FIR_Filter.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Multichannel_FIR_Filter' (0#1) [C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/Multichannel_FIR_Filter.vhd:54]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1595.695 ; gain = 564.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1595.695 ; gain = 564.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1595.695 ; gain = 564.188
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1595.695 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/clock_constraint.xdc]
+Finished Parsing XDC File [C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/clock_constraint.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1647.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1652.527 ; gain = 4.684
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 44    
++---Registers : 
+	               16 Bit    Registers := 86    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP u_Discrete_FIR_Filter/gain21_mul_temp, operation Mode is: (A:0x75b8)*B.
+DSP Report: operator u_Discrete_FIR_Filter/gain21_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/gain21_mul_temp.
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0xb9).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain0_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+(A:0x60b7)*B.
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain20_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3dae).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain19_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x17b9).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain18_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3f9aa).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain17_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3ea1c).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain16_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3e98a).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain15_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3f328).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain14_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3ffb3).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain13_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x8cd).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain12_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0xb4e).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain11_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x7c3).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain10_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x139).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain9_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3fb40).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain8_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3f831).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain7_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3f87d).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain6_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3fb06).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain5_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x3fe17).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain4_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x59).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain3_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x14c).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain2_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0], operation Mode is: PCIN+A*(B:0x132).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: operator u_Discrete_FIR_Filter/gain1_mul_temp is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[0].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/gain21_mul_temp_1, operation Mode is: (A:0x75b8)*B.
+DSP Report: operator u_Discrete_FIR_Filter/gain21_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/gain21_mul_temp_1.
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0xb9).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain0_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+(A:0x60b7)*B.
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain20_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3dae).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain19_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x17b9).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain18_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3f9aa).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain17_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3ea1c).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain16_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3e98a).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain15_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3f328).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain14_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3ffb3).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain13_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x8cd).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain12_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0xb4e).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain11_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x7c3).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain10_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x139).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain9_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3fb40).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain8_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3f831).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain7_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3f87d).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain6_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3fb06).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain5_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x3fe17).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain4_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x59).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain3_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x14c).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain2_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: Generating DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1], operation Mode is: PCIN+A*(B:0x132).
+DSP Report: operator u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1] is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+DSP Report: operator u_Discrete_FIR_Filter/gain1_mul_temp_1 is absorbed into DSP u_Discrete_FIR_Filter/Discrete_FIR_Filter_out_tmp[1].
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 0 : 776 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 1 : 588 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 2 : 985 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 3 : 1165 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 4 : 1061 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 5 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 6 : 1061 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 7 : 1061 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 8 : 846 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 9 : 551 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 10 : 846 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 11 : 846 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 12 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 13 : 655 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 14 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 15 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 16 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 17 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 18 : 655 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 19 : 551 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 20 : 655 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_0 : 0 21 : 655 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 0 : 776 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 1 : 588 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 2 : 985 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 3 : 1165 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 4 : 1061 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 5 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 6 : 1061 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 7 : 1061 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 8 : 846 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 9 : 551 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 10 : 846 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 11 : 846 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 12 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 13 : 655 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 14 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 15 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 16 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 17 : 814 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 18 : 655 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 19 : 551 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 20 : 655 17841 : Used 1 time 0
+ Sort Area is  u_Discrete_FIR_Filter/gain21_mul_temp_1_a : 0 21 : 655 17841 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++--------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name         | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Discrete_FIR_Filter | (A:0x75b8)*B       | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0xb9)    | 16     | 9      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+(A:0x60b7)*B  | 16     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3dae)  | 16     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x17b9)  | 16     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3f9aa) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3ea1c) | 16     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3e98a) | 16     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3f328) | 16     | 13     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3ffb3) | 16     | 8      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x8cd)   | 16     | 13     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0xb4e)   | 16     | 13     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x7c3)   | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x139)   | 16     | 10     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3fb40) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3f831) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3f87d) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3fb06) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3fe17) | 16     | 10     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x59)    | 16     | 8      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x14c)   | 16     | 10     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x132)   | 16     | 10     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | (A:0x75b8)*B       | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0xb9)    | 16     | 9      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+(A:0x60b7)*B  | 16     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3dae)  | 16     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x17b9)  | 16     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3f9aa) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3ea1c) | 16     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3e98a) | 16     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3f328) | 16     | 13     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3ffb3) | 16     | 8      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x8cd)   | 16     | 13     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0xb4e)   | 16     | 13     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x7c3)   | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x139)   | 16     | 10     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3fb40) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3f831) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3f87d) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3fb06) | 16     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x3fe17) | 16     | 10     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x59)    | 16     | 8      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x14c)   | 16     | 10     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*(B:0x132)   | 16     | 10     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name         | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Discrete_FIR_Filter | A*B         | 30     | 15     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 8      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 15     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 13     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 11     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 9      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 7      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 9      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 9      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | A*B         | 30     | 15     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 8      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 15     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 13     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 12     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 11     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 9      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 7      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 9      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Discrete_FIR_Filter | PCIN+A*B    | 30     | 9      | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   176|
+|2     |DSP48E1 |    44|
+|3     |LUT2    |   704|
+|4     |FDCE    |  1376|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1652.527 ; gain = 621.020
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1652.527 ; gain = 564.188
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1652.527 ; gain = 621.020
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1652.527 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 220 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'Multichannel_FIR_Filter' is not ideal for floorplanning, since the cellview 'Discrete_FIR_Filter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1652.527 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: af4eb9de
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 1652.527 ; gain = 1024.840
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1652.527 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/vivado_prj/Multichannel_FIR_Filter_vivado.runs/synth_1/Multichannel_FIR_Filter.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Multichannel_FIR_Filter_utilization_synth.rpt -pb Multichannel_FIR_Filter_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 13 17:21:37 2026...
+[Tue Jan 13 17:21:39 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:01:01 . Memory (MB): peak = 633.270 ; gain = 0.000
+### Synthesis Complete.
+### Running PostMapTiming in Xilinx Vivado 2024.1 ...
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-2
+INFO: [Device 21-403] Loading part xc7a35tcsg324-2
+INFO: [Device 21-9227] Part: xc7a35tcsg324-2 does not have CEAM library.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1033.715 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 220 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'Multichannel_FIR_Filter' is not ideal for floorplanning, since the cellview 'Discrete_FIR_Filter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/clock_constraint.xdc]
+Finished Parsing XDC File [C:/demo/MultichannelFIRFilterForFPGAExample/hdl_prj/hdlsrc/dspmultichannelhdl/clock_constraint.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1166.602 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Common 17-708] report_timing_summary: The '-name' option will be ignored because it is only relevant in GUI mode.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1732.777 ; gain = 566.176
+### PostMapTiming Complete.
+### Close Xilinx Vivado 2024.1 project.
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 13 17:21:53 2026...

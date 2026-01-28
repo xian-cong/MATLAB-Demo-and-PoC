@@ -1,0 +1,175 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Wed Jan 14 09:47:52 2026
+| Host         : TS-93724 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Multichannel_FIR_Filter_fil_control_sets_placed.rpt
+| Design       : Multichannel_FIR_Filter_fil
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    97 |
+|    Minimum number of control sets                        |    97 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   201 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    97 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |    15 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |    36 |
+| >= 10 to < 12      |     6 |
+| >= 12 to < 14      |     5 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    30 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              89 |           34 |
+| No           | No                    | Yes                    |               6 |            5 |
+| No           | Yes                   | No                     |             514 |          155 |
+| Yes          | No                    | No                     |             116 |           35 |
+| Yes          | No                    | Yes                    |            1376 |          360 |
+| Yes          | Yes                   | No                     |            1170 |          346 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+--------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|        Clock Signal        |                                           Enable Signal                                          |                                  Set/Reset Signal                                  | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------+--------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  u_ClockManager/txclk_BUFG |                                                                                                  | u_ClockManager/rst                                                                 |                2 |              2 |         1.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/waitCycle[3]_i_1_n_0                     | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                2 |              4 |         2.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/macSrcDstCnt                                          | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                1 |              4 |         4.00 |
+|  dutClk_BUFG               | u_FILCore/u_mwfil_chiftop/u_mwfil_chifcore/CHIF2DUT.u_b2dfifo/u_dpscram/E[0]                     | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                1 |              4 |         4.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/ipAddrCnt                                             | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                1 |              4 |         4.00 |
+|  dutClk_BUFG               | u_FILCore/u_mwfil_chiftop/u_mwfil_chifcore/u_controller/E[0]                                     | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                1 |              4 |         4.00 |
+|  dutClk_BUFG               | u_FILCore/u_mwfil_chiftop/u_mwfil_chifcore/DUT2CHIF.u_dut2bus/E[0]                               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                1 |              4 |         4.00 |
+|  dutClk_BUFG               | u_FILCore/u_mwfil_chiftop/u_mwfil_chifcore/DUT2CHIF.u_d2bfifo/u_dpscram/E[0]                     | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                1 |              4 |         4.00 |
+|  u_ClockManager/txclk_BUFG | u_ClockManager/ETH_RESET_n_OBUF                                                                  |                                                                                    |                2 |              4 |         2.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/E[0]                                          | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                1 |              4 |         4.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/pktbld_statusVld                              | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                2 |              5 |         2.50 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/pingCnt                                               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                3 |              5 |         1.67 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/arpCnt                                                | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                1 |              5 |         5.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/current_state[5]_i_2__0_n_0                           | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/current_state[5]_i_1__0_n_0             |                3 |              5 |         1.67 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/u_STATUS_BUF/rdAddr0                     | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                1 |              5 |         5.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/pktbld_statusVld                              | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/txrst_int_reg_0[0]              |                2 |              5 |         2.50 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/current_state[6]_i_2_n_0                              | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_1[0]              |                6 |              6 |         1.00 |
+|  u_ClockManager/txclk_BUFG |                                                                                                  | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/current_state[5]_i_1__0_n_0             |                3 |              6 |         2.00 |
+|  u_ClockManager/txclk_BUFG | u_mii2gmii/txclk_en                                                                              | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                4 |              7 |         1.75 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/FSM_onehot_pktState[6]_i_1_n_0           | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                2 |              7 |         3.50 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/udplen2reg[7]_i_1_n_0                                 | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                2 |              8 |         4.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/dataHeaderReg[39]_i_1_n_0                | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                2 |              8 |         4.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/byte_count[7]_i_1_n_0                                 | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                5 |              8 |         1.60 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/pktbld_statusVld                              |                                                                                    |                1 |              8 |         8.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostmacaddr4reg[7]_i_1_n_0                            | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                5 |              8 |         1.60 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostipaddr3reg[7]_i_1_n_0                             | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                1 |              8 |         8.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostipaddr1reg[7]_i_1_n_0                             | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                2 |              8 |         4.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostmacaddr2reg[7]_i_1_n_0                            | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                3 |              8 |         2.67 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostmacaddr3reg[7]_i_1_n_0                            | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                4 |              8 |         2.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostmacaddr1reg[7]_i_1_n_0                            | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                3 |              8 |         2.67 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/iplen2reg[7]_i_1_n_0                                  | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                3 |              8 |         2.67 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/iplen1reg[7]_i_1_n_0                                  | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                2 |              8 |         4.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostipaddr4reg[7]_i_1_n_0                             | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                1 |              8 |         8.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostmacaddr5reg[7]_i_1_n_0                            | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                3 |              8 |         2.67 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostipaddr2reg[7]_i_1_n_0                             | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                2 |              8 |         4.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/hostmacaddr6reg[7]_i_1_n_0                            | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                2 |              8 |         4.00 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/d2b_fifo_valid_reg                           | u_FILCore/u_mwfil_chiftop/u_mwfil_chifcore/DUT2CHIF.u_dut2bus/shiftreg[79]_i_1_n_0 |                3 |              8 |         2.67 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_rxFIFO/FSM_sequential_rx_state_reg[0][0]   | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                3 |              8 |         2.67 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_rxFIFO/E[0]                                | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                4 |              8 |         2.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/RxData[7]_i_1_n_0                                     | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                3 |              8 |         2.67 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/udplen1reg[7]_i_1_n_0                                 | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                2 |              8 |         4.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/udpdstrx1reg[7]_i_1_n_0                               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                1 |              8 |         8.00 |
+|  dutClk_BUFG               | u_FILCore/u_mwfil_chiftop/u_mwfil_chifcore/DUT2CHIF.u_dut2bus/dout[7]_i_1_n_0                    | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                2 |              8 |         4.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/udpdstrx2reg[7]_i_1_n_0                               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                3 |              8 |         2.67 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/udpsrcrx2reg[7]_i_1_n_0                               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                3 |              8 |         2.67 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/udpsrcrx1reg[7]_i_1_n_0                               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                3 |              8 |         2.67 |
+|  u_ClockManager/rxclk_BUFG | u_mii2gmii/rxd[7]_i_1_n_0                                                                        |                                                                                    |                1 |              8 |         8.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/byte_count[15]_i_1_n_0                                | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                4 |              8 |         2.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/gmii_txd[7]_i_1_n_0                                   | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                8 |              8 |         1.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/dataHeaderReg[39]_i_1_n_0                |                                                                                    |                3 |              8 |         2.67 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/dataHeaderReg[39]_i_1_n_0                | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/dataHeaderReg[23]_i_1_n_0  |                1 |              8 |         8.00 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/dut_din[7]_i_1_n_0                           | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                2 |              9 |         4.50 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/pingaddr[8]_i_1_n_0                                   | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_1[0]              |                2 |              9 |         4.50 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/pktData[7]_i_1_n_0                       | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                4 |              9 |         2.25 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/dut_doutvld_reg                              | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                2 |              9 |         4.50 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/pingaddr[8]_i_1__0_n_0                                | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/current_state[5]_i_1__0_n_0             |                7 |              9 |         1.29 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/dut_dinvld                                   | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/dut_dinvld_reg_1[0]            |                3 |             10 |         3.33 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/u_STATUS_BUF/rdAddr_reg[4]_0[0]          | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                2 |             10 |         5.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILUDPCRC/wrAddrLast_0                                   | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                4 |             11 |         2.75 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/FSM_onehot_wrState_reg[1][0]                          | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                4 |             11 |         2.75 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILUDPCRC/sel                                            | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                2 |             11 |         5.50 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILUDPCRC/E[0]                                           | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                3 |             11 |         3.67 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_txFIFO/pktbld_dataVld                      | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_txFIFO/dpram/txrst_int_reg   |                3 |             12 |         4.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_txFIFO/pktbld_dataVld                      | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                3 |             12 |         4.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/thisPKTLen[11]_i_1_n_0                   | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                3 |             12 |         4.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/pktLen[11]_i_1_n_0                       | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                2 |             12 |         6.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/u_DATA_BUF/rdAddr0                       | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                3 |             12 |         4.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/arplencount[15]_i_1_n_0                               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                5 |             16 |         3.20 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_rxFIFO/FSM_sequential_rx_state_reg[2]_1[0] | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                3 |             16 |         5.33 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/tx_dlen_actual_0                             | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                4 |             16 |         4.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/pinglencount[15]_i_1_n_0                              | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                4 |             16 |         4.00 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_FILPktProc/u_MWUDPPKTBuilder/u_STATUS_BUF/D[3]                        | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                4 |             16 |         4.00 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/udplencount[15]_i_1_n_0                               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                6 |             16 |         2.67 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/udp_count                                             | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                5 |             16 |         3.20 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/iptotallenreg[15]_i_1_n_0                             | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                4 |             16 |         4.00 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/tx_cnt_4                                     | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                5 |             16 |         3.20 |
+|  u_ClockManager/rxclk_BUFG |                                                                                                  |                                                                                    |               10 |             16 |         1.60 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_rxFIFO/dvld_reg_1[0]                       | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |                5 |             16 |         3.20 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/hdrchecksum[16]_i_1_n_0                               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |                4 |             17 |         4.25 |
+|  u_ClockManager/rxclk_BUFG | u_mii2gmii/rxclk_en                                                                              | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                8 |             22 |         2.75 |
+|  dutClk_BUFG               | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/dut_dinvld_reg_0[0]                          |                                                                                    |                5 |             24 |         4.80 |
+|  u_ClockManager/txclk_BUFG |                                                                                                  | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |               12 |             31 |         2.58 |
+|  u_ClockManager/rxclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwrxmac/fcs[31]_i_1_n_0                                       | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |               15 |             32 |         2.13 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/fcs[31]_i_1__0_n_0                                    | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |               30 |             32 |         1.07 |
+|  u_ClockManager/rxclk_BUFG | u_mii2gmii/E[0]                                                                                  | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |                7 |             32 |         4.57 |
+|  u_ClockManager/rxclk_BUFG |                                                                                                  | u_ClockManager/rst                                                                 |               13 |             38 |         2.92 |
+|  dutClk_BUFG               |                                                                                                  |                                                                                    |               13 |             41 |         3.15 |
+|  dutClk_BUFG               | u_FILCore/u_mwfil_chiftop/u_mwfil_chifcore/CHIF2DUT.u_b2dfifo/u_dpscram/E[0]                     |                                                                                    |                6 |             44 |         7.33 |
+|  u_ClockManager/txclk_BUFG |                                                                                                  | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_txFIFO/rst_clkout_sync2_0    |               12 |             50 |         4.17 |
+|  u_ClockManager/rxclk_BUFG |                                                                                                  | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/rxrst_int_reg_0                 |               22 |             52 |         2.36 |
+|  u_ClockManager/txclk_BUFG |                                                                                                  |                                                                                    |               11 |             56 |         5.09 |
+|  u_ClockManager/rxclk_BUFG |                                                                                                  | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_rxFIFO/rst_clkin_sync2       |               20 |             65 |         3.25 |
+|  dutClk_BUFG               | u_FILCore/u_mwfil_chiftop/u_mwfil_chifcore/DUT2CHIF.u_dut2bus/shiftreg[71]_i_1_n_0               |                                                                                    |               24 |             72 |         3.00 |
+|  dutClk_BUFG               |                                                                                                  | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILDataProc/u_rxFIFO/rst_clkout_sync2      |               31 |            115 |         3.71 |
+|  dutClk_BUFG               |                                                                                                  | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |               45 |            161 |         3.58 |
+|  u_ClockManager/txclk_BUFG | u_FILCore/u_FILCommLayer/u_MWMAC/u_mwtxmac/EthHeader[399]_i_1_n_0                                | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/SR[0]                           |               75 |            400 |         5.33 |
+|  dutClk_BUFG               | u_FILCore/u_mwfil_chiftop/u_mwfil_chifcore/u_controller/LOCKEDSTEP_CTRL.dut_enable_int_reg_0     | u_FILCore/u_FILCommLayer/u_FILPktProc/u_FILCmdProc/dutrst_reg_0                    |              360 |           1376 |         3.82 |
++----------------------------+--------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
