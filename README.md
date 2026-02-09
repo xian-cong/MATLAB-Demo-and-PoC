@@ -4,7 +4,7 @@
 - mcb_pmsm_foc_sim_ori_pure_sim.slx -> contains original simulation
 - mcb_pmsm_foc_sim_pil.slx -> modified ori version that contain pil block added
 - pil_block_generated.slx
-- ExecutionProfiling_eb2a150928b9aca0.html -> Code profiling report
+- C:\demo\CodeVerificationAndProfilingUsingPILTestingExample\Current_ert_rtw\html\ExecutionProfiling_eb2a150928b9aca0.html -> Code profiling report
 
 ## Hardware
 - Download support packages for TI
