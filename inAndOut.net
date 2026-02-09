@@ -1,0 +1,17 @@
+* C:\Users\yifany\OneDrive - MathWorks\Desktop\Co-simulation\25b\single-in and single-out.sxsch
+*#SIMETRIX
+V1 R1_P 0 500
+R1 R1_P R1_N 1K
+X$U1 U1_OUT1P 0 $TP_SLSX_U1
+.SUBCKT $TP_SLSX_U1 OUT1P OUT1N
+U1 OUT1P OUT1N SLSX INDEX=0
+.MODEL SLSX SLSX DIR=OUT CONN=DIFF DRIVE=V RAMP_TIME=0
+.ENDS
+X$U2 R1_N $TP_SLSX_U2
+.SUBCKT $TP_SLSX_U2 IN1
+U1 IN1 SLSX INDEX=1
+.MODEL SLSX SLSX DIR=IN CONN=SINGLE DRIVE=V
+.ENDS
+X$Q1 R1_N U1_OUT1P 0 AIKQ200N75CP2_L1 params: TJ=25 pinnames: C G E
+.GRAPH U1_OUT1P curveLabel= Q1-G nowarn=true ylog=auto xlog=auto analysis=tran|ac|dc GUID="7b7a0dc9-008e-47f0-99e6-26b9a2951ffc" disabled=false PROBEREF=Probe1  
+.GRAPH Q1#C curveLabel="I(Q1-C)" nowarn=true complete=true analysis=tran|ac|dc GUID="3530e0ff-d89c-4628-ad73-dacc07a6caef" disabled=false 
