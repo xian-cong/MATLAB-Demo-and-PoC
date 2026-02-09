@@ -21,6 +21,11 @@
 <img width="1916" height="1019" alt="image" src="https://github.com/user-attachments/assets/27367de0-a275-42f2-bf56-cdfc2d4c137e" /> </br>
 <img width="1917" height="1018" alt="image" src="https://github.com/user-attachments/assets/4ba41c3d-0b79-43e0-ac9b-1066fb911ce3" />
 
+## Steps to save profiling data
+```
+out = sim("MyModel","Profile","on");
+profilingData = out.SimulationMetadata.TimingInfo.ProfilerData;
+```
 
 ## More info
 Follow the steps here:
