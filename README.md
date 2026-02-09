@@ -13,14 +13,15 @@ After you save your netlist in SIMetrix, you build the block diagram or electric
 - Simscape Electrical
 
 ## Working with LTSpice Library
-You should be able to use the LTSpice Library by just removing the quotation “” in the .LIB netlist. 
-Example: 
-<img width="293" height="89" alt="image" src="https://github.com/user-attachments/assets/857d4146-b2ac-41d7-8157-bb8353040549" />
-<img width="474" height="273" alt="image" src="https://github.com/user-attachments/assets/a69b8028-a3ee-4340-ae4e-02a4dd296975" />
-Make sure that you put the LTSpice library in the correct directory:
+You should be able to use the LTSpice Library by just removing the quotation “” in the .LIB netlist. </br>
+Example: </br>
+<img width="293" height="89" alt="image" src="https://github.com/user-attachments/assets/857d4146-b2ac-41d7-8157-bb8353040549" /> </br>
+<img width="474" height="273" alt="image" src="https://github.com/user-attachments/assets/a69b8028-a3ee-4340-ae4e-02a4dd296975" /> </br>
+Make sure that you put the LTSpice library in the correct directory: </br>
+```
 C:\LTC_Library\lib\...
-<img width="523" height="248" alt="image" src="https://github.com/user-attachments/assets/cac6be50-509e-49f8-afc0-4fe0916a279e" />
-
+```
+<img width="523" height="248" alt="image" src="https://github.com/user-attachments/assets/cac6be50-509e-49f8-afc0-4fe0916a279e" /> </br>
 
 ## Additional Information
 https://www.mathworks.com/help/sps/ref/simetrixcosimulationinterface.html
