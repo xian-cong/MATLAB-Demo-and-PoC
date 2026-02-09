@@ -23,7 +23,7 @@
 
 ## Steps to save profiling data
 ```
-out = sim("MyModel","Profile","on");
+out = sim("mcb_pmsm_foc_sim_pil","Profile","on");
 profilingData = out.SimulationMetadata.TimingInfo.ProfilerData;
 ```
 
