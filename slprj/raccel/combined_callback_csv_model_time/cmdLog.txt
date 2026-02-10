@@ -1,0 +1,22 @@
+	---> i18n_init
+	---> Parse Arguments
+	---> sdiInitializeForHostBasedTarget
+	---> Initialize the model
+	---> rsimLoadOptionsFromMATFile
+	---> rt_RapidInitDiagLoggerDB home: C:\Users\KoayXianCong\AppData\Local\Temp\, id: 802222
+	---> rt_RapidInitDiagLoggerDB done
+	---> slsaFreeOPModelData
+	---> rt_FreeParamStructs
+	---> TgtConnTerm
+	---> rtwISigstreamManagerDestroyInstance
+	---> rtwLoggingIntervalDestroyInstance
+	---> rt_RapidReleaseDiagLoggerDB
+	---> rt_RapidReleaseDiagLoggerDB
+	---> rt_RapidReleaseDiagLoggerDB Done
+	---> rt_RapidFreeGbls
+	---> rtDestroyRevalMgr
+	---> done raccel main
+The argument '-tgtconn_server_info_file' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument 'C:\Users\KOAYXI~1\AppData\Local\Temp\tgtconnpcae91b08_d528_4563_9b08_c9fe90b47ca7.info' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument '-tgtconn_port' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument '0' passed to rtiostream_tcpip is not valid and will be ignored.

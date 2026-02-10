@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="b8e880ac-d583-4477-8c88-99ee7fabc2d6">
+    <name>combined_callback_csv_model_time</name>
+    <variables type="slsa.mm.param.graph.Variable" uuid="1074a499-3ffd-48dc-97b1-8f3a6b3a3b18">
+      <name>amplitude_param</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="ee30335f-92cd-430c-8dad-45aab2fd7a67"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="7de0595f-2b2e-4871-9c3f-1af65b87cd5c">
+      <name>frequency_param</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="ee30335f-92cd-430c-8dad-45aab2fd7a67"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="ee30335f-92cd-430c-8dad-45aab2fd7a67">
+      <name>global-workspace</name>
+      <variables type="slsa.mm.param.graph.Variable" uuid="1074a499-3ffd-48dc-97b1-8f3a6b3a3b18"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="7de0595f-2b2e-4871-9c3f-1af65b87cd5c"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="c96b3090-7884-4cd3-9354-844bbd0f50cb"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_rtp/R2023a">
+  <slsa.mm.param.rtp.ModelMetadata type="slsa.mm.param.rtp.ModelMetadata" uuid="a71f432f-ae61-43fe-9e06-6f7d243babc7">
+    <modelName>combined_callback_csv_model_time</modelName>
+  </slsa.mm.param.rtp.ModelMetadata>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="f3f87e08-72e5-46d8-b111-2ef4a3fb693c">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="a3e76deb-6d10-47ce-979c-2786bbf42e49"/>
+    <valueIndices>1</valueIndices>
+    <valueIndices>1</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="a3e76deb-6d10-47ce-979c-2786bbf42e49">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="668d0059-6187-4a50-8ed2-e7a530221c24"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="f3f87e08-72e5-46d8-b111-2ef4a3fb693c"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="d30d1426-711e-4acf-81e7-1ad7a864ae59">
+    <workspaceName>global-workspace</workspaceName>
+    <name>amplitude_param</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="935ec5a4-0cca-4fb4-ac2b-a8cd5c96bb67"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="935ec5a4-0cca-4fb4-ac2b-a8cd5c96bb67">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="d30d1426-711e-4acf-81e7-1ad7a864ae59"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="0d344031-4e9c-48a3-bfc9-34a7f4faab38"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="0d344031-4e9c-48a3-bfc9-34a7f4faab38">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="935ec5a4-0cca-4fb4-ac2b-a8cd5c96bb67"/>
+    <valueIndices>0</valueIndices>
+    <valueIndices>0</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="668d0059-6187-4a50-8ed2-e7a530221c24">
+    <workspaceName>global-workspace</workspaceName>
+    <name>frequency_param</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="a3e76deb-6d10-47ce-979c-2786bbf42e49"/>
+  </slsa.mm.param.rtp.VariableId>
+</MF0>
