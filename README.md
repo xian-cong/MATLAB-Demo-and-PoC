@@ -13,8 +13,7 @@ This project demonstrates how to use Simulink Compiler with callback functions a
 
 ### Models
 - `callback_demo_with_callbacks.slx` - Pure callback demonstration model
-- `combined_callback_csv_model_time.slx` - Time-based CSV reading model (recommended)
-- `combined_callback_csv_model_counter.slx` - Counter-based CSV reading model (alternative)
+- `combined_callback_csv_model_time.slx` - Time-based CSV reading model
 
 ### Data File
 - `input_data.csv` - Sample CSV data file with three values (1.5, 1.8, 1.0)
@@ -60,7 +59,7 @@ This project demonstrates how to use Simulink Compiler with callback functions a
   - Pure callback execution without external data
 - **Best for**: Understanding callback mechanisms
 
-### 2. combined_callback_csv_model_time.slx (Time-Based CSV Reading - RECOMMENDED)
+### 2. combined_callback_csv_model_time.slx (Time-Based CSV Reading)
 - **Purpose**: Integrates CSV data reading with callbacks using simulation time
 - **Features**:
   - Uses Clock block to provide simulation time as input
@@ -69,15 +68,6 @@ This project demonstrates how to use Simulink Compiler with callback functions a
   - MATLAB Function block reads `input_data.csv` based on simulation time
 - **Timing**: Updates every 5.0 seconds of simulation time
 - **Best for**: Production deployments requiring precise timing
-
-### 3. combined_callback_csv_model_counter.slx (Counter-Based CSV Reading)
-- **Purpose**: Integrates CSV data reading with callbacks using counter
-- **Features**:
-  - Uses Counter block to provide incremental values
-  - Updates CSV data every 50 counter steps (equivalent to 5.0 seconds with 0.1s step size)
-  - MATLAB Function block reads `input_data.csv` based on counter value
-- **Timing**: Updates every 50 counter steps (5.0 seconds with 0.1s step size)
-- **Best for**: Educational purposes or when counter-based timing is preferred
 
 ## How to Use
 
@@ -88,19 +78,11 @@ This project demonstrates how to use Simulink Compiler with callback functions a
    sim('callback_demo_with_callbacks');
    ```
 
-### Time-Based CSV Model (Recommended)
+### Time-Based CSV Model
 1. Ensure `input_data.csv` exists in the directory
 2. Run the time-based model:
    ```matlab
    sim('combined_callback_csv_model_time');
-   ```
-3. Update `input_data.csv` externally to see real-time changes
-
-### Counter-Based CSV Model
-1. Ensure `input_data.csv` exists in the directory
-2. Run the counter-based model:
-   ```matlab
-   sim('combined_callback_csv_model_counter');
    ```
 3. Update `input_data.csv` externally to see real-time changes
 
@@ -124,17 +106,12 @@ When packaging with the Simulink Compiler, include these files:
 - All callback .m files (callback_init.m, callback_start.m, etc.)
 - Your main application file
 
-### For Time-Based CSV Model (Recommended):
+### For Time-Based CSV Model:
 - `combined_callback_csv_model_time.slx`
 - All callback .m files
 - `input_data.csv` (as a required file)
 - Your main application file
 
-### For Counter-Based CSV Model:
-- `combined_callback_csv_model_counter.slx`
-- All callback .m files
-- `input_data.csv` (as a required file)
-- Your main application file
 
 ## Key Features
 
@@ -147,36 +124,18 @@ When packaging with the Simulink Compiler, include these files:
 
 ## Notes
 
-- The time-based model (`combined_callback_csv_model_time.slx`) is recommended for production use
-- Time-based updates are more accurate than counter-based approaches
 - Update intervals can be modified in the MATLAB Function code
-- The CSV file should be in the same directory as the executable for standalone apps
+- **CRITICAL**: The `input_data.csv` file must be in the same directory as the executable for standalone apps to read CSV data properly
 - All callback functions are designed to work with Simulink Compiler deployment
 
 ## Manual MATLAB Function Update Required
 
-Due to limitations in automated MATLAB Function block configuration, you need to manually update the MATLAB Function blocks in both models:
+Due to limitations in automated MATLAB Function block configuration, you need to manually update the MATLAB Function block in the time-based model:
 
 ### For combined_callback_csv_model_time.slx:
 1. Open the model in Simulink
 2. Double-click the "CSV Reader" MATLAB Function block
-3. Replace the existing code with the content from `time_based_csv_function_fixed.m`
-4. Save the model
-
-### For combined_callback_csv_model_counter.slx:
-1. Open the model in Simulink
-2. Double-click the "CSV Reader" MATLAB Function block
-3. Replace the existing code with the content from `counter_based_csv_function_fixed.m`
+3. Replace the existing code with the corrected code that avoids try/catch blocks
 4. Save the model
 
 After manual update, the CSV reading functionality will work properly during simulation.
-
-## Notes
-
-- The corrected MATLAB Function code avoids try/catch blocks which are not supported for code generation
-- The code uses low-level file operations (fopen, fgets, fclose) for better compatibility
-- The time-based model (`combined_callback_csv_model_time.slx`) is recommended for production use
-- Time-based updates are more accurate than counter-based approaches
-- Update intervals can be modified in the MATLAB Function code
-- The CSV file should be in the same directory as the executable for standalone apps
-- All callback functions are designed to work with Simulink Compiler deployment
