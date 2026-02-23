@@ -34,6 +34,10 @@ On **subsequent runs**, Java detects the live heartbeat and reuses the daemon im
 
 ---
 
+## Sample Output
+<img width="1614" height="845" alt="image" src="https://github.com/user-attachments/assets/06678853-b3d4-4dd5-a686-6d17ca6ab6ae" />
+
+
 ## Flow Diagram
 
 ```mermaid
