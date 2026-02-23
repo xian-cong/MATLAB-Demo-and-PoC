@@ -48,7 +48,7 @@ flowchart TD
         F -- "Heartbeat fresh" --> G
         D -- "Fresh ≤ 10 s" --> G[Generate 1024 random bits]
         G --> H["Write input/data_&lt;ts&gt;.txt\nStart round-trip timer"]
-        H --> I[Poll output/result_&lt;ts&gt;.txt\nevery 100 ms]
+        H --> I["OS WatchService blocks\nuntil result_&lt;ts&gt;.txt created"]
         I --> J[Parse Decoded + ProcessingTime]
         J --> K[Print results\nRound-trip time]
         K --> L{More\nrequests?}
@@ -68,11 +68,11 @@ flowchart TD
         U --> V["Measure CPU time\n(cputime)"]
         V --> W["Write output/result_&lt;ts&gt;.txt\nDecoded: &lt;bits&gt;\nProcessingTime: &lt;ms&gt;"]
         W --> X[Delete input file]
-        X --> S
+        X --> P
     end
 
     H -. "writes" .-> R
-    W -. "writes" .-> I
+    W -. "OS ENTRY_CREATE event" .-> I
 ```
 
 ---
@@ -105,4 +105,5 @@ ProcessingTime:122.5900
 | Request/response matching | Shared `<timestamp>` token in filenames |
 | Parallel processing | `parfor` over 8-bit chunks with XOR simulation |
 | CPU timing | `cputime` in MATLAB (reflects actual CPU consumption) |
-| Java round-trip timing | `System.currentTimeMillis()` before write → after read |
+| Java result waiting | `WatchService.poll()` — OS notifies Java instantly on file creation, no sleep loop |
+| Java round-trip timing | `System.currentTimeMillis()` before write → after watch event |

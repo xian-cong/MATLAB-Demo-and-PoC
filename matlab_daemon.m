@@ -105,7 +105,7 @@ while true
         delete(inputPath);
 
         fprintf('[DAEMON] Result written: result_%s.txt\n', ts);
+    else
+        pause(0.01);
     end
-
-    pause(0.01);
 end
