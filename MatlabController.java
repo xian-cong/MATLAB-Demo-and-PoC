@@ -68,7 +68,7 @@ public class MatlabController {
         }
 
         System.out.println("─".repeat(60));
-        log("All requests complete. MATLAB daemon continues running.");
+        log("All requests complete. MATLAB engine continues running.");
     }
 
     // ── Ensure the three IPC directories exist ────────────────────────────────
@@ -86,12 +86,12 @@ public class MatlabController {
             return;
         }
 
-        log("[MATLAB] No fresh heartbeat detected - launching MATLAB daemon...");
+        log("[MATLAB] No fresh heartbeat detected - launching MATLAB engine...");
         log("[MATLAB] Command: matlab -nosplash -nodesktop -r \"run('" + MATLAB_SCRIPT + "')\"");
 
         // Launch MATLAB in a new console window (detached) so it outlives Java.
         ProcessBuilder pb = new ProcessBuilder(
-                "cmd", "/c", "start", "MATLAB Daemon",
+                "cmd", "/c", "start", "MATLAB Engine",
                 "matlab", "-nosplash", "-nodesktop",
                 // Use forward slashes: MATLAB's run() accepts them on Windows
                 // and rejects double-backslash (\\) escaped paths.
@@ -105,7 +105,7 @@ public class MatlabController {
         long deadline = System.currentTimeMillis() + MATLAB_START_TIMEOUT;
         while (System.currentTimeMillis() < deadline) {
             if (isHeartbeatFresh()) {
-                log("[MATLAB] Heartbeat received - MATLAB daemon is ready.");
+                log("[MATLAB] Heartbeat received - MATLAB engine is ready.");
                 return;
             }
             Thread.sleep(500);

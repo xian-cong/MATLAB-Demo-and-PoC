@@ -11,20 +11,20 @@ SYSTEM_DIR = fullfile(BASE_DIR, 'system');
 HEARTBEAT  = fullfile(SYSTEM_DIR, 'heartbeat.txt');
 
 % ── Parallel pool ──────────────────────────────────────────────
-fprintf('[DAEMON] Starting up at %s\n', datestr(now));
+fprintf('[MATLAB] Starting up at %s\n', datestr(now));
 pool = gcp('nocreate');
 if isempty(pool)
-    fprintf('[DAEMON] Creating parallel pool...\n');
+    fprintf('[MATLAB] Creating parallel pool...\n');
     parpool('local');
-    fprintf('[DAEMON] Parallel pool ready.\n');
+    fprintf('[MATLAB] Parallel pool ready.\n');
 else
-    fprintf('[DAEMON] Reusing existing parallel pool (%d workers).\n', pool.NumWorkers);
+    fprintf('[MATLAB] Reusing existing parallel pool (%d workers).\n', pool.NumWorkers);
 end
 
 % ── Helpers ────────────────────────────────────────────────────
 heartbeatTimer = tic;
 
-fprintf('[DAEMON] Entering main loop. Polling %s\n', INPUT_DIR);
+fprintf('[MATLAB] Entering main loop. Polling %s\n', INPUT_DIR);
 
 % ── Main loop ──────────────────────────────────────────────────
 while true
@@ -64,7 +64,7 @@ while true
         binaryStr = strtrim(fgetl(fid));
         fclose(fid);
 
-        fprintf('[DAEMON] Processing file: %s (%d bits)\n', f.name, length(binaryStr));
+        fprintf('[MATLAB] Processing file: %s (%d bits)\n', f.name, length(binaryStr));
 
         % --- Parallel decoding simulation -----------------------
         N = length(binaryStr);
@@ -90,7 +90,7 @@ while true
         end
         elapsedMs = (cputime - tStart) * 1000;
 
-        fprintf('[DAEMON] parfor done in %.2f ms\n', elapsedMs);
+        fprintf('[MATLAB] parfor done in %.2f ms\n', elapsedMs);
 
         % --- Write result file ----------------------------------
         outputPath = fullfile(OUTPUT_DIR, ['result_' ts '.txt']);
@@ -104,7 +104,7 @@ while true
         % --- Delete input file ----------------------------------
         delete(inputPath);
 
-        fprintf('[DAEMON] Result written: result_%s.txt\n', ts);
+        fprintf('[MATLAB] Result written: result_%s.txt\n', ts);
     else
         pause(0.01);
     end
