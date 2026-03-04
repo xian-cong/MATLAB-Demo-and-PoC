@@ -87,12 +87,12 @@ public class MatlabController {
         }
 
         log("[MATLAB] No fresh heartbeat detected - launching MATLAB engine...");
-        log("[MATLAB] Command: matlab -nosplash -nodesktop -r \"run('" + MATLAB_SCRIPT + "')\"");
+        log("[MATLAB] Command: matlab -nodesktop -r \"run('" + MATLAB_SCRIPT + "')\"");
 
         // Launch MATLAB in a new console window (detached) so it outlives Java.
         ProcessBuilder pb = new ProcessBuilder(
                 "cmd", "/c", "start", "MATLAB Engine",
-                "matlab", "-nosplash", "-nodesktop",
+                "matlab", "-nodesktop",
                 // Use forward slashes: MATLAB's run() accepts them on Windows
                 // and rejects double-backslash (\\) escaped paths.
                 "-r", "run('" + MATLAB_SCRIPT.replace("\\", "/") + "')");
