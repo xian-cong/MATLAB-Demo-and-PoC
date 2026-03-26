@@ -1,0 +1,164 @@
+# TI C2000 Hybrid Workflow Demo
+
+**MATLAB R2025b · CCS v20.0 · LAUNCHXL-F28069M · C2000Ware 5.02**
+
+
+## Environment
+
+| Component | Version |
+|---|---|
+| MATLAB + Simulink | R2025b (25.2) |
+| Embedded Coder | R2025b (25.2) |
+| C2000 Microcontroller Blockset | R2025b (25.2) |
+| Code Composer Studio | v20.0 (`C:\ti\ccs2001\ccs`) |
+| C2000Ware | 5.02.00.00 (`C:\ti\c2000\C2000Ware_5_02_00_00`) |
+| Eval Board | LAUNCHXL-F28069M (TI Piccolo F28069M LaunchPad) |
+| Debug Probe | XDS100v2 (onboard, USB Micro-B) |
+
+---
+
+## Demo Model Structure
+
+```
+[ADC Block - C2806x HSP]  →  [Gain: x0.0008056]  →  [Scope]
+
+[C Caller: Custom_GPIO_Toggle()]
+```
+
+| Block | Type | Purpose |
+|---|---|---|
+| ADC | C2806x HSP Block | Reads ADCINA0 (onboard potentiometer) |
+| Gain | Simulink Math | Scales 12-bit ADC count to 0–3.3V |
+| C Caller | Custom C Function | Toggles blue LED on GPIO34 — simulates unsupported peripheral (e.g. AES) |
+
+---
+
+## Custom Driver Files
+
+### `custom_gpio.h`
+```c
+#ifndef CUSTOM_GPIO_H
+#define CUSTOM_GPIO_H
+
+void Custom_GPIO_Toggle(void);
+
+#endif
+```
+
+### `custom_gpio.c`
+```c
+#ifdef _TMS320C28XX
+  // Hardware build — use real TI device registers
+  #include "F2806x_Device.h"
+
+  void Custom_GPIO_Toggle(void)
+  {
+      GpioDataRegs.GPBTOGGLE.bit.GPIO34 = 1;
+  }
+
+#else
+  // Simulation build — stub function
+  #include <stdio.h>
+
+  void Custom_GPIO_Toggle(void)
+  {
+      printf("Simulation: GPIO34 toggle called\n");
+  }
+
+#endif
+```
+
+> The `#ifdef _TMS320C28XX` guard allows the same file to compile in both Simulink simulation mode and hardware deployment without changes.
+
+---
+
+## Simulink Model Settings
+
+### Hardware Implementation
+- **Hardware board:** `TI Piccolo F28069M LaunchPad`
+- **Build action:** `Build, Load and Run`
+- **Linker command file:** `Auto`
+
+### Solver
+- **Type:** Fixed-step
+- **Solver:** discrete (no continuous states)
+- **Step size:** `1/10000` (10 kHz)
+
+### Code Generation → Custom Code
+- **Source files:** `C:\demo\custom_gpio.c`
+- **Include directories:**
+  ```
+  C:\demo
+  C:\ti\c2000\C2000Ware_5_02_00_00\device_support\f2806x\headers\include
+  C:\ti\c2000\C2000Ware_5_02_00_00\device_support\f2806x\common\include
+  ```
+
+---
+
+## Errors & Fixes
+
+### 1. `F2806x_Device.h: No such file or directory`
+**Cause:** F2806x header include path not set in model.  
+**Fix:** Add the C2000Ware headers path to Custom Code → Include directories (see above).
+
+### 2. `DEV_EMU memory range already specified` (linker overlap)
+**Cause:** `F2806x_Headers_nonBIOS.cmd` was manually added to Custom Code while the blockset also auto-includes its own `.cmd` file — causing every memory region to be defined twice.  
+**Fix:** Remove the manually added `.cmd` from Custom Code source files. Set Linker command file to **Auto**.
+
+### 3. `_Custom_GPIO_Toggle: unresolved symbol`
+**Cause:** `custom_gpio.c` was not included in the build — only the header was referenced.  
+**Fix:** Add `C:\demo\custom_gpio.c` to **Source files** in Custom Code settings (not Include directories).
+
+### 4. `Error -151 @ 0x0: XDS100 FTDI error`
+**Cause:** USB cable was charge-only (no data lines), or FTDI driver not loaded.  
+**Fix:** Use a data-capable USB cable. Verify the board appears in Device Manager as `XDS100 Class USB Serial Port`. Test with `C:\ti\ccs2001\ccs\ccs_base\common\uscif\xds100serial.exe`.
+
+---
+
+## Linker Strategy (Customer Q3 Answer)
+
+- Simulink set to **Auto** selects the same TI-maintained `.cmd` file that CCS uses for the F28069M
+- Both environments share **one file** — no duplication, no conflict
+- Do **not** manually add `F2806x_Headers_nonBIOS.cmd` to Custom Code — this causes the duplicate memory region errors above
+
+---
+
+## Build & Deploy
+
+1. Connect LAUNCHXL-F28069M via USB — green power LED should light up
+2. Open CCS once to initialize the XDS100v2 FTDI driver
+3. Open the model in MATLAB:
+   ```matlab
+   open_system('C:\demo\ccs_c_caller_block')
+   ```
+4. Verify Hardware board = `TI Piccolo F28069M LaunchPad`
+5. Verify Custom Code paths are set correctly
+6. Click **Deploy to Hardware** (or `Ctrl+B`)
+7. Blue LED (GPIO34) blinks — demo is running ✅
+
+> If build fails after changes, clean stale artifacts first:
+> ```matlab
+> rmdir('C:\demo\ccs_c_caller_block', 's')
+> ```
+
+---
+
+## Live Demo Script
+
+| Step | Show | Say |
+|---|---|---|
+| 1 | ADC HSP block | "HSP is fully used — no driver writing needed, MathWorks maintains this" |
+| 2 | Gain block | "Application algorithm lives here — simulatable before touching hardware" |
+| 3 | C Caller block | "Unsupported peripherals like AES plug in here via C2000Ware driverlib — same pattern" |
+| 4 | Linker `.cmd` set to Auto | "One shared TI-maintained linker file — no conflict between Simulink and CCS" |
+| 5 | Deploy to Hardware, LED blinks | "Final firmware built and flashed in one click — this is your Step 3" |
+
+---
+
+## Next Steps
+
+| Demo | Approach | When to Use |
+|---|---|---|
+| IO Device Builder | Generate a reusable Simulink block from C driver code | Customer wants AES as a drag-and-drop block like ADC |
+| Hybrid CCS Export | Generate algorithm code from Simulink, integrate into full CCS project | Customer needs full control of startup, drivers, RTOS in CCS |
+| PIL | Validate generated code on real hardware in closed loop with Simulink | Step 2 in customer's workflow — replaces manual code review |

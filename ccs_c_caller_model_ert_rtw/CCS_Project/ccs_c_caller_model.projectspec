@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectSpec>
+        <project
+        name="ccs_c_caller_model"
+        outputFormat="COFF"
+        device="TMS320F28069"
+        cgtVersion="22.6.0.LTS"
+        launchWizard="False"
+        linkerCommandFile=""
+        >
+<pathVariable name="DSP2806x_INSTALLDIR" path="C:\ti\controlSUITE\" scope="project" />
+<pathVariable name="CCSProjectFolder" path="C:\demo\ccs_c_caller_block\ccs_c_caller_model_ert_rtw\CCS_Project" scope="project" />
+    <configuration name="CPU1_FLASH" compilerBuildOptions="-I${CCSProjectFolder}\..\.. -I${CCSProjectFolder}\.. -I${CCSProjectFolder}\..\..\..\..\ti\c2000\C2000Ware_5_02_00_00\device_support\f2806x\common\include -I${CCSProjectFolder}\..\..\..\..\ti\c2000\C2000Ware_5_02_00_00\device_support\f2806x\headers\include -I${CCSProjectFolder}\..\..\.. -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\extern\include -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\simulink\include -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\rtw\c\src -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\rtw\c\src\ext_mode\common -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\rtw\c\ert -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\include -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\common -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\protocol\src -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\protocol\include -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\transport\include -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\transport\src -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\platform\include -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\platform\default -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\ext_mode\include -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\ext_mode\src -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\coder\rtiostream\src -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000\src -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000_shared\src -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000_shared\inc -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000\inc -I${CCSProjectFolder}\..\..\..\..\ti\controlSUITE\device_support\f2806x\v151\F2806x_common\include -I${CCSProjectFolder}\..\..\..\..\ti\controlSUITE\device_support\f2806x\v151\F2806x_headers\include -I${CCSProjectFolder}\..\..\..\..\ti\controlSUITE\libs\math\CLAmath\v400\include -I${CCSProjectFolder}\..\..\..\..\ti\controlSUITE\libs\math\IQmath\v160\include -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\shared\can\src\scanutil -I${CCSProjectFolder}\..\..\..\..\ti\controlSUITE\libs\utilities\hrcap_hccal\type0\v110\include -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000_soc\src\ipclite -I${CCSProjectFolder}\..\..\..\..\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000_soc\inc\ipclite  --abi=coffabi -s -v28 -ml --abi=coffabi --preproc_dependency=$(@:%.obj=%.dep) --preproc_with_compile -IC:\ProgramData\MATLAB\tic2000\3P.instrset\tic28xcodegentools.instrset\ti-cgt-c2000_22.6.0.LTS\include -v28 -ml --float_support=fpu32 -DF28069M -DCPU1 -DBOOT_FROM_FLASH=1 --define EXTMODE_DISABLEPRINTF  -DXCP_EXTMODE_SIMULATION_TIME_IN_TICKS -DMODEL=ccs_c_caller_model -DNUMST=1 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DXCP_DAQ_SUPPORT -DXCP_CALIBRATION_SUPPORT -DXCP_TIMESTAMP_SUPPORT -DXCP_TIMESTAMP_BASED_ON_SIMULATION_TIME -DXCP_SET_MTA_SUPPORT -DEXTMODE_XCP_TRIGGER_SUPPORT -DXCP_ADDRESS_GRANULARITY=XCP_ADDRESS_GRANULARITY_WORD -DCODERTARGET_XCP_DAQ_PACKED_MODE -DCODERTARGET_XCP_MAX_CONTIGUOUS_SAMPLES=8 -DXCP_MEM_BLOCK_1_SIZE=32 -DXCP_MEM_BLOCK_1_NUMBER=1 -DXCP_MEM_BLOCK_2_SIZE=56 -DXCP_MEM_BLOCK_2_NUMBER=1 -DXCP_MEM_BLOCK_3_SIZE=8 -DXCP_MEM_BLOCK_3_NUMBER=1 -DXCP_MEM_RESERVED_POOLS_TOTAL_SIZE=325 -DXCP_MEM_RESERVED_POOLS_NUMBER=2 -DXCP_MEM_DAQ_RESERVED_POOL_BLOCKS_NUMBER=3 -DXCP_MEM_DAQ_RESERVED_POOLS_NUMBER=1 -DXCP_MIN_EVENT_NO_RESERVED_POOL=1 -DXCP_MAX_CTO_SIZE=32 -DXCP_MAX_DTO_SIZE=65532 -DXCP_MAX_ODT_ENTRY_SIZE=255 -DEXTMODE_STATIC -DEXTMODE_STATIC_SIZE=2000 -DON_TARGET_WAIT_FOR_START=0 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DEXT_MODE=1 -DINTEGER_CODE=0 -DMT=0 -DXCP_CUSTOM_PLATFORM -DEXTMODE_DISABLE_ARGS_PROCESSING=1 -DMW_PIL_SCIFIFOLEN=4 -DMW_F2806X -DSTACK_SIZE=1024 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT -DF28069M -DCPU1 -DBOOT_FROM_FLASH=1 -DMW_FAST_RTS_INCLUDED=0 -DMW_HCCAL_INCLUDED=0" linkerBuildOptions="  --stack_size=1024 --warn_sections --heap_size=1024 --reread_libs --rom_model --priority -mccs_c_caller_model.map  --define F28069M --define CPU1 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0 -i${DSP2806x_INSTALLDIR}/libs/math/FPUfastRTS/V100/lib -iC:/PROGRA~3/MATLAB/tic2000/3P778C~1.INS/TIC28X~1.INS/TI-CGT~1.LTS/lib -lrts2800_fpu32_fast_supplement.lib -lrts2800_fpu32.lib --priority" />
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\ext_mode\src\xcp_ext_mode.c" targetDirectory=""/>
+    <file action="link" path="..\MW_c28xx_csl.c" targetDirectory=""/>
+    <file action="link" path="..\MW_c28xx_board.c" targetDirectory=""/>
+    <file action="link" path="..\MW_c28xx_adc.c" targetDirectory=""/>
+    <file action="link" path="..\ccs_c_caller_model.c" targetDirectory=""/>
+    <file action="link" path="..\ert_main.c" targetDirectory=""/>
+    <file action="link" path="C:\demo\ccs_c_caller_block\custom_gpio.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\ext_mode\src\xcp_ext_common.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\ext_mode\src\xcp_ext_classic_trigger.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\protocol\src\xcp.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\protocol\src\xcp_standard.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\protocol\src\xcp_daq.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\protocol\src\xcp_calibration.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\transport\src\xcp_fifo.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\transport\src\xcp_transport.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\platform\default\xcp_mem_default.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\platform\default\xcp_drv_rtiostream.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\common\xcp_utils.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\server\transport\src\xcp_frame_serial.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\coder\xcp\src\target\ext_mode\src\xcp_ext_param_default_serial.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000\src\c2806xBoard_Realtime_Support.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000_shared\src\MW_c28xGlobalInterrupts.c" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_CpuTimers.c" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_DefaultIsr.c" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_headers\source\F2806x_GlobalVariableDefs.c" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_PieCtrl.c" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_PieVect.c" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_SysCtrl.c" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_usDelay.asm" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_CodeStartBranch.asm" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_Dma.c" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_Adc.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000\src\blapp_support.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000\src\c2000HardwareTimerConfig.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000_shared\src\MW_c28xGPIO.c" targetDirectory=""/>
+    <file action="link" path="DSP2806x_INSTALLDIR\device_support\f2806x\v151\F2806x_common\source\F2806x_HRCap.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000\src\c2806xSchedulerTimer0.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000_shared\src\rtiostream_serial_c28x.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000_shared\src\datamodify_xcp.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000\src\c2000HardwareTimerSupport.c" targetDirectory=""/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000_soc\src\ipclite\mw_soc_c2000_ipc.c" targetDirectory=""/>
+% Regular libraries (non-rts)
+    <file action="link" path="DSP2806x_INSTALLDIR\libs\utilities\hrcap_hccal\type0\v110\lib\HCCal_Type0_V1_fpu32.lib" targetDirectory="" applicableConfigurations="CPU1_FLASH"/>
+    <file action="link" path="DSP2806x_INSTALLDIR\libs\math\IQmath\v160\lib\IQmath_fpu32.lib" targetDirectory="" applicableConfigurations="CPU1_FLASH"/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000\src\c2806xPeripherals.cmd" targetDirectory="" applicableConfigurations="CPU1_FLASH"/>
+    <file action="link" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000\src\c28069M.cmd" targetDirectory="" applicableConfigurations="CPU1_FLASH"/>
+<file action="copy" path="C:\Program Files\MATLAB\R2025b\toolbox\c2b\tic2000/CCS_Config/f28069.ccxml" targetDirectory="targetConfigs" />
+  </project>
+</projectSpec>
