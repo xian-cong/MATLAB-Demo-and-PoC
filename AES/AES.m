@@ -63,7 +63,7 @@ classdef AES < matlab.System ...
         end
 
         function [destArray,tagArray,iniVector,status] =  stepImpl(obj ,srcArray,key1,key2,iniVector,authDataArray,authDataLength)
-            destArray = uint32(zeros(1,1));
+            destArray = uint32(zeros(4,1));
             tagArray = uint32(zeros(4,1));
             iniVector = uint32(zeros(4,1));
             status = uint8(zeros(1,1));
