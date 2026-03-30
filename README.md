@@ -43,6 +43,11 @@ Create a custom IO block in Simulink for the AES Driver in the C2000 library.
 <img width="480" alt="Step 4b" src="https://github.com/user-attachments/assets/0003b275-52f8-4fc2-926e-b3ebb9cb6e7d" />
 </div>
 
+### 5. Generate Code
+<div align="center">
+<img width="1916" height="1016" alt="image" src="https://github.com/user-attachments/assets/90d1973c-93a2-40a0-8c39-69b6698fad16" />
+</div>
+
 ## More Information
 
 [MathWorks - IO Device Builder Documentation](https://www.mathworks.com/help/ti-c2000/ug/clock-frequency-io-device-builder.html)
