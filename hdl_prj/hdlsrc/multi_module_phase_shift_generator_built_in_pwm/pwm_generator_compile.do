@@ -1,0 +1,15 @@
+vlib work
+vmap -c
+vcom  pwm_generator_pkg.vhd
+vcom  nfp_convert_fix_10_En0_to_double.vhd
+vcom  nfp_mul_double.vhd
+vcom  nfp_floor_double.vhd
+vcom  nfp_relop_double.vhd
+vcom  ReplicaOfSource.vhd
+vcom  nfp_wire_double.vhd
+vcom  PWM.vhd
+vcom  ReplicaOfSource_block.vhd
+vcom  PWM1.vhd
+vcom  ReplicaOfSource_block1.vhd
+vcom  PWM2.vhd
+vcom  pwm_generator.vhd

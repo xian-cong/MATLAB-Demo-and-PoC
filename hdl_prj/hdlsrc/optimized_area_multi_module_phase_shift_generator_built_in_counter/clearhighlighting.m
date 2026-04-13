@@ -1,0 +1,17 @@
+SLStudio.Utils.RemoveHighlighting(get_param('optimized_area_multi_module_phase_shift_generator_built_in_counter', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter', 'handle'));
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Data Type Conversion2', 0, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Relational Operator3', 0, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product1_out_dtc', 0, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/crp_temp_shared', 0, 3, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/crp_temp_shared/Product2', 0, 1, '');
+annotate_port('optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product2', 0, 1, '');
+annotate_port('optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product3', 0, 1, '');
+annotate_port('optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product1', 0, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/t2', 1, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/ctr_0_2', 0, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/crp_temp_shared/Product2', 0, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/crp_temp_shared/Serializer_Subnetwork', 0, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/crp_temp_shared/Product1_out1_bypass', 0, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/crp_temp_shared/Serializer_Subnetwork/splitcomp_multiport', 0, 1, '');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/crp_temp_shared/Product1_out1_bypass/Product1_out1_enb', 0, 1, '');

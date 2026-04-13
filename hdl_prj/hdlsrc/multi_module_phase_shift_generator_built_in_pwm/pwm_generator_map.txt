@@ -1,0 +1,13 @@
+ --> pwm_generator_pkg
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM/ReplicaOfSource/nfp_convert_fix_10_En0_to_double --> nfp_convert_fix_10_En0_to_double
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM/ReplicaOfSource/nfp_mul_double --> nfp_mul_double
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM/ReplicaOfSource/nfp_floor_double --> nfp_floor_double
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM/ReplicaOfSource/nfp_relop_double --> nfp_relop_double
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM/ReplicaOfSource --> ReplicaOfSource
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM/nfp_wire_double --> nfp_wire_double
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM --> PWM
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM1/ReplicaOfSource --> ReplicaOfSource_block
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM1 --> PWM1
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM2/ReplicaOfSource --> ReplicaOfSource_block1
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator/PWM2 --> PWM2
+multi_module_phase_shift_generator_built_in_pwm/pwm_generator --> pwm_generator

@@ -1,0 +1,15 @@
+open_system('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter');
+open_system('optimized_area_multi_module_phase_shift_generator_built_in_counter');
+clearhighlighting;
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'yellow';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/crp_temp_shared/Product2', 'user1');
+annotate_port('gm_optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/crp_temp_shared/Product2', 0, 1, 'Sharing Group 1');
+hilite_system('optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product2', 'user1');
+annotate_port('optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product2', 0, 1, 'Sharing Group 1');
+hilite_system('optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product3', 'user1');
+annotate_port('optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product3', 0, 1, 'Sharing Group 1');
+hilite_system('optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product1', 'user1');
+annotate_port('optimized_area_multi_module_phase_shift_generator_built_in_counter/pwm/Product1', 0, 1, 'Sharing Group 1');

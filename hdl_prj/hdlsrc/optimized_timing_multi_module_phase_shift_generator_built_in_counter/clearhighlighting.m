@@ -1,0 +1,13 @@
+SLStudio.Utils.RemoveHighlighting(get_param('optimized_timing_multi_module_phase_shift_generator_built_in_counter', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_optimized_timing_multi_module_phase_shift_generator_built_in_counter', 'handle'));
+annotate_port('gm_optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Counter Free-Running', 0, 1, '');
+annotate_port('gm_optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Add1_stage2', 0, 1, '');
+annotate_port('gm_optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Add1_stage3', 0, 1, '');
+annotate_port('gm_optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Data Type Conversion6', 0, 1, '');
+annotate_port('gm_optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Switch4', 0, 1, '');
+annotate_port('gm_optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/delayMatch', 1, 1, '');
+annotate_port('gm_optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Product3', 0, 1, '');
+annotate_port('optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Product3', 0, 1, '');
+annotate_port('optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Product2', 0, 1, '');
+annotate_port('optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Product1', 0, 1, '');
+annotate_port('gm_optimized_timing_multi_module_phase_shift_generator_built_in_counter/pwm/Counter Free-Running/Output', 0, 1, '');

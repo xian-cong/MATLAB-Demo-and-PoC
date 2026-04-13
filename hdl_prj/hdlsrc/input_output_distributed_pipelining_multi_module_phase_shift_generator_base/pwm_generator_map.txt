@@ -1,0 +1,1 @@
+input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator --> pwm_generator

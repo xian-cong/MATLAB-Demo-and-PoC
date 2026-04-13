@@ -1,0 +1,13 @@
+SLStudio.Utils.RemoveHighlighting(get_param('input_output_distributed_pipelining_multi_module_phase_shift_generator_base', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_input_output_distributed_pipelining_multi_module_phase_shift_generator_base', 'handle'));
+annotate_port('gm_input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/Add5_stage2', 0, 1, '');
+annotate_port('gm_input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/Add5_stage3', 0, 1, '');
+annotate_port('gm_input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/Relational Operator6', 0, 1, '');
+annotate_port('input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/Relational Operator6', 0, 1, '');
+annotate_port('gm_input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/Relational Operator7', 0, 1, '');
+annotate_port('input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/Relational Operator7', 0, 1, '');
+annotate_port('gm_input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/Relational Operator8', 0, 1, '');
+annotate_port('input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/Relational Operator8', 0, 1, '');
+annotate_port('gm_input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/Switch3', 0, 1, '');
+annotate_port('gm_input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/rd_1', 1, 1, '');
+annotate_port('gm_input_output_distributed_pipelining_multi_module_phase_shift_generator_base/pwm_generator/rd_0', 0, 1, '');

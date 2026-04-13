@@ -1,0 +1,15 @@
+open_system('gm_resource_sharing_multi_module_phase_shift_generator_base');
+open_system('resource_sharing_multi_module_phase_shift_generator_base');
+clearhighlighting;
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'yellow';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product', 'user1');
+annotate_port('gm_resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product', 0, 1, 'Sharing Group 1');
+hilite_system('resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product', 'user1');
+annotate_port('resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product', 0, 1, 'Sharing Group 1');
+hilite_system('resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product1', 'user1');
+annotate_port('resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product1', 0, 1, 'Sharing Group 1');
+hilite_system('resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product2', 'user1');
+annotate_port('resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product2', 0, 1, 'Sharing Group 1');

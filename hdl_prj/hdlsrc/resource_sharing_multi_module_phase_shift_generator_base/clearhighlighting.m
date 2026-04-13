@@ -1,0 +1,12 @@
+SLStudio.Utils.RemoveHighlighting(get_param('resource_sharing_multi_module_phase_shift_generator_base', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_resource_sharing_multi_module_phase_shift_generator_base', 'handle'));
+annotate_port('gm_resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product', 0, 1, '');
+annotate_port('gm_resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product', 0, 1, '');
+annotate_port('resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product', 0, 1, '');
+annotate_port('resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product1', 0, 1, '');
+annotate_port('resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Product2', 0, 1, '');
+annotate_port('gm_resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/ctr_0_2', 0, 1, '');
+annotate_port('gm_resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Serializer_Subnetwork', 0, 1, '');
+annotate_port('gm_resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Deserializer_Subnetwork', 1, 1, '');
+annotate_port('gm_resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Serializer_Subnetwork/splitcomp_multiport', 0, 1, '');
+annotate_port('gm_resource_sharing_multi_module_phase_shift_generator_base/pwm_generator/Deserializer_Subnetwork/tapped_delay', 1, 1, '');
