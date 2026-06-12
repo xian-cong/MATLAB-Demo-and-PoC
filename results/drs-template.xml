@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--EDRS Version 2.0-->
+<global>
+   <file name="C:\\demo\\polyspace_agentic_toolkit\\sample.c" comment="">
+      <function name="divide" comment="" line="6" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="6" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="arg2" comment="" line="6" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="return" comment="" line="6" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="process" comment="" line="11" main_generator_called="MAIN_GENERATOR">
+         <pointer name="arg1" comment="" line="11" complete_type="int32 *" init_mode="MAIN_GENERATOR" init_modes_allowed="10" initialize_pointer="Not NULL" number_allocated="max" init_pointed="MAIN_GENERATOR">
+            <scalar comment="" line="11" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         </pointer>
+      </function>
+   </file>
+</global>

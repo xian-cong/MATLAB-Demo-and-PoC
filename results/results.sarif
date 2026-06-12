@@ -1,0 +1,4725 @@
+{
+    "$schema": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/cos02/schemas/sarif-schema-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+      {
+        "tool": {
+          "driver": {
+            "name": "Bug Finder",
+            "fullName": "Polyspace as You Code",
+            "semanticVersion": "R2026a",
+            "organization": "MathWorks",
+            "rules": [
+              {
+                "id": "INT_ZERO_DIV",
+                "name": "Integer division by zero",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Numerical",
+                  "impact": "High",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "NULL_PTR",
+                "name": "Dereference of a null pointer",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Static memory",
+                  "impact": "High",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "OUT_BOUND_ARRAY",
+                "name": "Array access out of bounds",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Static memory",
+                  "impact": "High",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MEM_LEAK",
+                "name": "Memory leak",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Dynamic memory",
+                  "impact": "Medium",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "HARD_CODED_BUFFER_SIZE",
+                "name": "Hard-coded buffer size",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Good practice",
+                  "impact": "Low",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "HARD_CODED_LOOP_BOUNDARY",
+                "name": "Hard-coded loop boundary",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Good practice",
+                  "impact": "Low",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "UNMODIFIED_VAR_NOT_CONST",
+                "name": "Unmodified variable not const-qualified",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Good practice",
+                  "impact": "Low",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "UNPROTECTED_MEMORY_ALLOCATION",
+                "name": "Unprotected dynamic memory allocation",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Dynamic memory",
+                  "impact": "Low",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "UNUSED_VARIABLE",
+                "name": "Unused variable",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Good practice",
+                  "impact": "Low",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "USELESS_INCLUDE",
+                "name": "Useless include",
+                "properties": {
+                  "metaFamily": "Defect",
+                  "family": "Defect",
+                  "group": "Good practice",
+                  "impact": "Low",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MISRA C:2012 D4.6",
+                "name": "Dir 4.6 typedefs that indicate size and signedness should be used in place of the basic numerical types.",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "MISRA C:2012",
+                  "group": "Dir 4 Code design",
+                  "category": "Advisory",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MISRA C:2012 11.5",
+                "name": "11.5 A conversion should not be performed from pointer to void into pointer to object.",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "MISRA C:2012",
+                  "group": "11 Pointer type conversions",
+                  "category": "Advisory",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MISRA C:2012 21.3",
+                "name": "21.3 The memory allocation and deallocation functions of \u003cstdlib.h\u003e shall not be used.",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "MISRA C:2012",
+                  "group": "21 Standard libraries",
+                  "category": "Required",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MISRA C:2012 8.4",
+                "name": "8.4 A compatible declaration shall be visible when an object or function with external linkage is defined.",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "MISRA C:2012",
+                  "group": "8 Declarations and definitions",
+                  "category": "Required",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MISRA C:2012 D4.12",
+                "name": "Dir 4.12 Dynamic memory allocation shall not be used.",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "MISRA C:2012",
+                  "group": "Dir 4 Code design",
+                  "category": "Required",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MISRA C:2012 2.8",
+                "name": "2.8 A project should not contain unused object definitions.",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "MISRA C:2012",
+                  "group": "2 Unused code",
+                  "category": "Advisory",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MISRA C:2012 D4.1",
+                "name": "Dir 4.1 Run-time failures shall be minimized.",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "MISRA C:2012",
+                  "group": "Dir 4 Code design",
+                  "category": "Required",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MISRA C:2012 18.1",
+                "name": "18.1 A pointer resulting from arithmetic on a pointer operand shall address an element of the same array as that pointer operand.",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "MISRA C:2012",
+                  "group": "18 Pointers and arrays",
+                  "category": "Required",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "MISRA C:2012 22.1",
+                "name": "22.1 All resources obtained dynamically by means of Standard Library functions shall be explicitly released.",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "MISRA C:2012",
+                  "group": "22 Resources",
+                  "category": "Required",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C DCL00-C",
+                "name": "DCL00-C Const-qualify immutable objects",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Declarations and Initialization (DCL)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C INT00-C",
+                "name": "INT00-C Understand the data model used by your implementation(s)",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Integers (INT)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C DCL06-C",
+                "name": "DCL06-C Use meaningful symbolic constants to represent literal values",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Declarations and Initialization (DCL)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C EXP07-C",
+                "name": "EXP07-C Do not diminish the benefits of constants by assuming their values in expressions",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Expressions (EXP)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C EXP08-C",
+                "name": "EXP08-C Ensure pointer arithmetic is used correctly",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Expressions (EXP)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C INT33-C",
+                "name": "INT33-C Ensure that division and remainder operations do not result in divide-by-zero errors",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Integers (INT)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C ARR30-C",
+                "name": "ARR30-C Do not form or use out-of-bounds pointers or array subscripts",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Arrays (ARR)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C EXP34-C",
+                "name": "EXP34-C Do not dereference null pointers",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Expressions (EXP)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C MEM12-C",
+                "name": "MEM12-C Consider using a goto chain when leaving a function on error when using and releasing resources",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Memory Management (MEM)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C MEM31-C",
+                "name": "MEM31-C Free dynamically allocated memory when no longer needed",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Memory Management (MEM)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C MEM11-C",
+                "name": "MEM11-C Do not assume infinite heap space",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Memory Management (MEM)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "SEI CERT C ERR33-C",
+                "name": "ERR33-C Detect and handle standard library errors",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "SEI CERT C",
+                  "group": "Error Handling (ERR)",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 547",
+                "name": "547 Use of Hard-coded, Security-relevant Constants",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Bad Coding Practices",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 369",
+                "name": "369 Divide By Zero",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Numeric Errors",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 788",
+                "name": "788 Access of Memory Location After End of Buffer",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Memory Buffer Errors",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 131",
+                "name": "131 Incorrect Calculation of Buffer Size",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Memory Buffer Errors",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 125",
+                "name": "125 Out-of-bounds Read",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Memory Buffer Errors",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 119",
+                "name": "119 Improper Restriction of Operations within the Bounds of a Memory Buffer",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Others",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 468",
+                "name": "468 Incorrect Pointer Scaling",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Pointer Issues",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 466",
+                "name": "466 Return of Pointer Value Outside of Expected Range",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Pointer Issues",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 193",
+                "name": "193 Off-by-one Error",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Numeric Errors",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 476",
+                "name": "476 NULL Pointer Dereference",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Pointer Issues",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 404",
+                "name": "404 Improper Resource Shutdown or Release",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Others",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 459",
+                "name": "459 Incomplete Cleanup",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Initialization and Cleanup Errors",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 401",
+                "name": "401 Missing Release of Memory after Effective Lifetime",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Others",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 771",
+                "name": "771 Missing Reference to Active Allocated Resource",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Resource Management Errors",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 690",
+                "name": "690 Unchecked Return Value to NULL Pointer Dereference",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Others",
+                  "enabled": true
+                }
+              },
+              {
+                "id": "CWE 253",
+                "name": "253 Incorrect Check of Function Return Value",
+                "properties": {
+                  "metaFamily": "Coding Rule",
+                  "family": "CWE",
+                  "group": "Error Conditions, Return Values, Status Codes",
+                  "enabled": true
+                }
+              }
+            ]
+          }
+        },
+        "properties": {},
+        "invocations": [
+          {
+            "executionSuccessful": true,
+            "properties": {
+              "logFilePath": "polyspace_err.log",
+              "options": [
+                {
+                  "name": "-author",
+                  "value": "KoayXianCong"
+                },
+                {
+                  "name": "-results-dir",
+                  "value": "C:\\demo\\polyspace_agentic_toolkit\\results"
+                },
+                {
+                  "name": "-date",
+                  "value": "12/06/2026"
+                },
+                {
+                  "name": "-checkers-activation-file",
+                  "value": "C:\\demo\\polyspace_agentic_toolkit\\checkers.xml"
+                },
+                {
+                  "name": "-lang",
+                  "value": "C"
+                },
+                {
+                  "name": "-verif-version",
+                  "value": "1.0"
+                },
+                {
+                  "name": "-prog",
+                  "value": "polyspace"
+                },
+                {
+                  "name": "-target",
+                  "value": "i386"
+                },
+                {
+                  "name": "-compiler",
+                  "value": "generic"
+                }
+              ],
+              "resultsNumber": 77,
+              "families": [
+                "Defect",
+                "MISRA C:2012",
+                "SEI CERT C",
+                "CWE"
+              ],
+              "predefinedStatuses": [
+                "Unreviewed",
+                "To investigate",
+                "To fix",
+                "Justified",
+                "No action planned",
+                "Not a defect",
+                "Other"
+              ],
+              "language": "C"
+            }
+          }
+        ],
+        "artifacts": [
+          {
+            "location": {
+              "uri": "file:///C:/demo/polyspace_agentic_toolkit/sample.c"
+            },
+            "mimeType": "text/x-c",
+            "sourceLanguage": "c",
+            "properties": {
+              "areResultsGenerated": true
+            }
+          }
+        ],
+        "results": [
+          {
+            "ruleId": "INT_ZERO_DIV",
+            "ruleIndex": 0,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 50,
+              "information": "Impact: High",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "9B499C51FAA5A894A75F8825B21366",
+              "identicalResultsIds": {
+                "extIds": [
+                  52,
+                  45,
+                  47
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 7,
+                    "startColumn": 14,
+                    "endLine": 7,
+                    "endColumn": 15
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "divide()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Division by zero."
+            }
+          },
+          {
+            "ruleId": "NULL_PTR",
+            "ruleIndex": 1,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 62,
+              "information": "Impact: High",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "8923C955264CBE41A22586",
+              "identicalResultsIds": {
+                "extIds": [
+                  61,
+                  63,
+                  64
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 12,
+                    "startColumn": 5,
+                    "endLine": 12,
+                    "endColumn": 6
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to dereference a null pointer.\nAdditional Info:\nRisk: Program can hang or segfault.\nFix: Check for previous assignment to NULL that is not overwritten."
+            }
+          },
+          {
+            "ruleId": "OUT_BOUND_ARRAY",
+            "ruleIndex": 2,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 53,
+              "information": "Impact: High",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "8993E9552A5F843DAAE488D7A052A405CA1326",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  56,
+                  49,
+                  55,
+                  59,
+                  48,
+                  46,
+                  51,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "MEM_LEAK",
+            "ruleIndex": 3,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 70,
+              "information": "Impact: Medium",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "9183A951A65F98150AB406",
+              "identicalResultsIds": {
+                "extIds": [
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  71,
+                  72
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Pointer 'p' points to dynamically allocated memory.\nIt has not been freed before the end of its scope."
+            }
+          },
+          {
+            "ruleId": "HARD_CODED_BUFFER_SIZE",
+            "ruleIndex": 4,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 9,
+              "information": "Impact: Low",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "C4B9842894225F863D225488D721558C192A25EBD4A45A8AC491",
+              "identicalResultsIds": {
+                "extIds": [
+                  24,
+                  35
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 17,
+                    "startColumn": 13,
+                    "endLine": 17,
+                    "endColumn": 14
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Buffer size is hard coded instead of a symbolic constant.\nHard-coded buffer size increases maintenance costs and security risks."
+            }
+          },
+          {
+            "ruleId": "HARD_CODED_LOOP_BOUNDARY",
+            "ruleIndex": 5,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 18,
+              "information": "Impact: Low",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "130712A052887D1AF48851225F983D7A05EB90A7559C110A252B8C19",
+              "identicalResultsIds": {
+                "extIds": [
+                  42,
+                  34
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 18,
+                    "startColumn": 23,
+                    "endLine": 18,
+                    "endColumn": 25
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Loop boundary is hard coded instead of a symbolic constant.\nHard-coded loop boundary increases maintenance costs and security risks."
+            }
+          },
+          {
+            "ruleId": "UNMODIFIED_VAR_NOT_CONST",
+            "ruleIndex": 6,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 44,
+              "information": "Impact: Low",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "9153AA93A64F88253294A811AF568249FAE4E915AF439E399A4527",
+              "identicalResultsIds": {
+                "extIds": [
+                  2
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 10,
+                    "endLine": 25,
+                    "endColumn": 11
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "fixes": [
+              {
+                "description": {
+                  "text": "const-qualify variable"
+                },
+                "artifactChanges": [
+                  {
+                    "artifactLocation": {
+                      "uri": "file:///C:/demo/polyspace_agentic_toolkit/sample.c"
+                    },
+                    "replacements": [
+                      {
+                        "deletedRegion": {
+                          "startLine": 25,
+                          "startColumn": 4,
+                          "charLength": 41
+                        },
+                        "insertedContent": {
+                          "text": "int * const p = (int *)malloc(sizeof(int) * 10);"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "The pointer 'p' does not point to a different location after initialization. The pointer can be declared as 'T* const'."
+            }
+          },
+          {
+            "ruleId": "UNMODIFIED_VAR_NOT_CONST",
+            "ruleIndex": 6,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 33,
+              "information": "Impact: Low",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "9923AA93A64F88253294A811AF568249FAE4E915AF439E399A4507",
+              "identicalResultsIds": {
+                "extIds": [
+                  13
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 32,
+                    "startColumn": 9,
+                    "endLine": 32,
+                    "endColumn": 10
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "main()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "fixes": [
+              {
+                "description": {
+                  "text": "const-qualify variable"
+                },
+                "artifactChanges": [
+                  {
+                    "artifactLocation": {
+                      "uri": "file:///C:/demo/polyspace_agentic_toolkit/sample.c"
+                    },
+                    "replacements": [
+                      {
+                        "deletedRegion": {
+                          "startLine": 32,
+                          "startColumn": 4,
+                          "charLength": 0
+                        },
+                        "insertedContent": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "The value of variable 'x' does not change after initialization. The variable can be declared 'const'."
+            }
+          },
+          {
+            "ruleId": "UNMODIFIED_VAR_NOT_CONST",
+            "ruleIndex": 6,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 39,
+              "information": "Impact: Low",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "132655274D9E114A642951225FAC0592F5C9D32A5F863D72358A4C1C",
+              "identicalResultsIds": {
+                "extIds": [
+                  22
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 11,
+                    "startColumn": 19,
+                    "endLine": 11,
+                    "endColumn": 22
+                  },
+                  "properties": {
+                    "startLineInFunction": 0
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "process()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "The pointer parameter 'ptr' points to the same address during its lifetime. The pointer can be declared as 'T* const'."
+            }
+          },
+          {
+            "ruleId": "UNPROTECTED_MEMORY_ALLOCATION",
+            "ruleIndex": 7,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 73,
+              "information": "Impact: Low",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "326E5572054AD32A4586512A44EB53A24D9E49CAF52813264F8605A294E9939A",
+              "identicalResultsIds": {
+                "extIds": [
+                  74,
+                  75,
+                  76,
+                  77
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 27,
+                    "startColumn": 6,
+                    "endLine": 27,
+                    "endColumn": 7
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Possible failure of dynamic allocation (out of memory) may not have been checked."
+            }
+          },
+          {
+            "ruleId": "UNUSED_VARIABLE",
+            "ruleIndex": 8,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 8,
+              "information": "Impact: Low",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "CC9155C955A945887DB2144A52A0429815C1",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 32,
+                    "startColumn": 9,
+                    "endLine": 32,
+                    "endColumn": 10
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "main()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Variable is not read in this scope."
+            }
+          },
+          {
+            "ruleId": "UNUSED_VARIABLE",
+            "ruleIndex": 8,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 5,
+              "information": "Impact: Low",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "C4B955C955A945887DB2144A52A0429815C1",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 17,
+                    "startColumn": 9,
+                    "endLine": 17,
+                    "endColumn": 12
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Variable is not read in this scope."
+            }
+          },
+          {
+            "ruleId": "USELESS_INCLUDE",
+            "ruleIndex": 9,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 17,
+              "information": "Impact: Low",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Red",
+              "key": "66559A548951A953BE2572348955224560",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 3,
+                    "startColumn": 1,
+                    "endLine": 3,
+                    "endColumn": 9
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "fixes": [
+              {
+                "description": {
+                  "text": "comment out useless #include directive"
+                },
+                "artifactChanges": [
+                  {
+                    "artifactLocation": {
+                      "uri": "file:///C:/demo/polyspace_agentic_toolkit/sample.c"
+                    },
+                    "replacements": [
+                      {
+                        "deletedRegion": {
+                          "startLine": 3,
+                          "startColumn": 0,
+                          "charLength": 19
+                        },
+                        "insertedContent": {
+                          "text": "/* #include \u003cstring.h\u003e */"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "description": {
+                  "text": "remove useless #include directive"
+                },
+                "artifactChanges": [
+                  {
+                    "artifactLocation": {
+                      "uri": "file:///C:/demo/polyspace_agentic_toolkit/sample.c"
+                    },
+                    "replacements": [
+                      {
+                        "deletedRegion": {
+                          "startLine": 3,
+                          "startColumn": 0,
+                          "charLength": 19
+                        },
+                        "insertedContent": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Included file is never used."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 1,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "63A952A95282801AA3460C98324011A1E2C64C98",
+              "identicalResultsIds": {
+                "extIds": [
+                  40
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 6,
+                    "startColumn": 12,
+                    "endLine": 6,
+                    "endColumn": 15
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 3,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "334653A453A4050134478C183164802243C58D1A",
+              "identicalResultsIds": {
+                "extIds": [
+                  29
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 32,
+                    "startColumn": 5,
+                    "endLine": 32,
+                    "endColumn": 8
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "main()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 11.5",
+            "ruleIndex": 11,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 4,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "464DA649A6490A02688E193062C80113268B9A3166",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 14,
+                    "endLine": 25,
+                    "endColumn": 15
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": ""
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 21.3",
+            "ruleIndex": 12,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 11,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "464DA649A6490A02688E193062C80123268B993260",
+              "identicalResultsIds": {
+                "extIds": [
+                  23
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 21,
+                    "endLine": 25,
+                    "endColumn": 27
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": ""
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 12,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "464DA649A6490A02688E193062C80144868B1B3168",
+              "identicalResultsIds": {
+                "extIds": [
+                  7
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 15,
+                    "endLine": 25,
+                    "endColumn": 18
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 8.4",
+            "ruleIndex": 13,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 15,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "8913A952A95282801AA3460C983240E07143A6",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 11,
+                    "startColumn": 6,
+                    "endLine": 11,
+                    "endColumn": 13
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Function 'process' has no visible prototype at definition."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 19,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "13E653A453A4050134478C183164802243C58D1A",
+              "identicalResultsIds": {
+                "extIds": [
+                  14
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 17,
+                    "startColumn": 5,
+                    "endLine": 17,
+                    "endColumn": 8
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 20,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "63A952A95282801AA3460C98324011A1E2C64C1C",
+              "identicalResultsIds": {
+                "extIds": [
+                  10
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 6,
+                    "startColumn": 19,
+                    "endLine": 6,
+                    "endColumn": 22
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 8.4",
+            "ruleIndex": 13,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 21,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "8963A952A95282801AA3460C983240E07143A6",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 16,
+                    "startColumn": 6,
+                    "endLine": 16,
+                    "endColumn": 16
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Function 'fill_array' has no visible prototype at definition."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.12",
+            "ruleIndex": 14,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 23,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "8C9A4D924D921404D01D3260C49102880D173164C881",
+              "identicalResultsIds": {
+                "extIds": [
+                  11
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 21,
+                    "endLine": 25,
+                    "endColumn": 27
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": ""
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 25,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "B1D429D42941400DD123064C192088D0716306",
+              "identicalResultsIds": {
+                "extIds": [
+                  16
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 6,
+                    "startColumn": 1,
+                    "endLine": 6,
+                    "endColumn": 4
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 26,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "130753A453A4050134478C183164802243C58D9C",
+              "identicalResultsIds": {
+                "extIds": [
+                  38
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 18,
+                    "startColumn": 10,
+                    "endLine": 18,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 27,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "23A653A453A4050134478C183164802243C58D1A",
+              "identicalResultsIds": {
+                "extIds": [
+                  6
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 5,
+                    "endLine": 25,
+                    "endColumn": 8
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 28,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "464DA649A6490A02688E193062C80144868B1B3368",
+              "identicalResultsIds": {
+                "extIds": [
+                  36
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 35,
+                    "endLine": 25,
+                    "endColumn": 38
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 8.4",
+            "ruleIndex": 13,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 31,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "D86A946A94A02086E89103268C10385CD0A1",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 6,
+                    "startColumn": 5,
+                    "endLine": 6,
+                    "endColumn": 11
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Function 'divide' has no visible prototype at definition."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 2.8",
+            "ruleIndex": 15,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 37,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "9923A952A95282801AA3460C983240C8718307",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 32,
+                    "startColumn": 9,
+                    "endLine": 32,
+                    "endColumn": 10
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "main()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": ""
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.6",
+            "ruleIndex": 10,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 41,
+              "information": "Category: Advisory",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "264CA649A6490A02688E193062C80144868B1B3166",
+              "identicalResultsIds": {
+                "extIds": [
+                  32
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 11,
+                    "startColumn": 14,
+                    "endLine": 11,
+                    "endColumn": 17
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 8.4",
+            "ruleIndex": 13,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 43,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "9143A952A95282801AA3460C983240E07143A6",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 24,
+                    "startColumn": 6,
+                    "endLine": 24,
+                    "endColumn": 17
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Function 'memory_leak' has no visible prototype at definition."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.1",
+            "ruleIndex": 16,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 47,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "73A952A95282801AA3460C98324011A1E2264C99",
+              "identicalResultsIds": {
+                "extIds": [
+                  52,
+                  45,
+                  50
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 7,
+                    "startColumn": 14,
+                    "endLine": 7,
+                    "endColumn": 15
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "divide()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Division by zero."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.1",
+            "ruleIndex": 16,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 48,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "264EA649A6490A02688E193062C80144868B983162",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  56,
+                  49,
+                  55,
+                  59,
+                  46,
+                  53,
+                  51,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 18.1",
+            "ruleIndex": 17,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 59,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "264EA649A6490A02688E193062C80113078B983162",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  56,
+                  49,
+                  55,
+                  48,
+                  46,
+                  53,
+                  51,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 D4.1",
+            "ruleIndex": 16,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 63,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "134653A453A4050134478C183164802243C54C1A",
+              "identicalResultsIds": {
+                "extIds": [
+                  61,
+                  62,
+                  64
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 12,
+                    "startColumn": 5,
+                    "endLine": 12,
+                    "endColumn": 6
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to dereference a null pointer.\nAdditional Info:\nRisk: Program can hang or segfault.\nFix: Check for previous assignment to NULL that is not overwritten."
+            }
+          },
+          {
+            "ruleId": "MISRA C:2012 22.1",
+            "ruleIndex": 18,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 67,
+              "information": "Category: Required",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "230753A453A4050134478C183164809123C54C18",
+              "identicalResultsIds": {
+                "extIds": [
+                  65,
+                  66,
+                  68,
+                  69,
+                  70,
+                  71,
+                  72
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Pointer 'p' points to dynamically allocated memory.\nIt has not been freed before the end of its scope."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C DCL00-C",
+            "ruleIndex": 19,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 2,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "464DA94592801A544A15104340111AC4060C964372",
+              "identicalResultsIds": {
+                "extIds": [
+                  44
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 10,
+                    "endLine": 25,
+                    "endColumn": 11
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "fixes": [
+              {
+                "description": {
+                  "text": "const-qualify variable"
+                },
+                "artifactChanges": [
+                  {
+                    "artifactLocation": {
+                      "uri": "file:///C:/demo/polyspace_agentic_toolkit/sample.c"
+                    },
+                    "replacements": [
+                      {
+                        "deletedRegion": {
+                          "startLine": 25,
+                          "startColumn": 4,
+                          "charLength": 41
+                        },
+                        "insertedContent": {
+                          "text": "int * const p = (int *)malloc(sizeof(int) * 10);"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "The pointer 'p' does not point to a different location after initialization. The pointer can be declared as 'T* const'."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 6,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "464DA94592801A544A15104340257245060C964368",
+              "identicalResultsIds": {
+                "extIds": [
+                  27
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 5,
+                    "endLine": 25,
+                    "endColumn": 8
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 7,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "8C9A538A250134A8942A2086804AE48A0C182D86C4A1",
+              "identicalResultsIds": {
+                "extIds": [
+                  12
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 15,
+                    "endLine": 25,
+                    "endColumn": 18
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 10,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "C6D4A249400D2A258A08A1209239A203064BA13170",
+              "identicalResultsIds": {
+                "extIds": [
+                  20
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 6,
+                    "startColumn": 19,
+                    "endLine": 6,
+                    "endColumn": 22
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C DCL00-C",
+            "ruleIndex": 19,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 13,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "668CA94592801A544A15104340111AC4060C964370",
+              "identicalResultsIds": {
+                "extIds": [
+                  33
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 32,
+                    "startColumn": 9,
+                    "endLine": 32,
+                    "endColumn": 10
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "main()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "fixes": [
+              {
+                "description": {
+                  "text": "const-qualify variable"
+                },
+                "artifactChanges": [
+                  {
+                    "artifactLocation": {
+                      "uri": "file:///C:/demo/polyspace_agentic_toolkit/sample.c"
+                    },
+                    "replacements": [
+                      {
+                        "deletedRegion": {
+                          "startLine": 32,
+                          "startColumn": 4,
+                          "charLength": 0
+                        },
+                        "insertedContent": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "The value of variable 'x' does not change after initialization. The variable can be declared 'const'."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 14,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "26CDA94592801A544A15104340257245060C964368",
+              "identicalResultsIds": {
+                "extIds": [
+                  19
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 17,
+                    "startColumn": 5,
+                    "endLine": 17,
+                    "endColumn": 8
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 16,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "636A51A4208615924504D010499C518103A5D018",
+              "identicalResultsIds": {
+                "extIds": [
+                  25
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 6,
+                    "startColumn": 1,
+                    "endLine": 6,
+                    "endColumn": 4
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C DCL00-C",
+            "ruleIndex": 19,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 22,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "4C98538A250134A8942A2086802234890C182D86C4C1",
+              "identicalResultsIds": {
+                "extIds": [
+                  39
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 11,
+                    "startColumn": 19,
+                    "endLine": 11,
+                    "endColumn": 22
+                  },
+                  "properties": {
+                    "startLineInFunction": 0
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "process()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "The pointer parameter 'ptr' points to the same address during its lifetime. The pointer can be declared as 'T* const'."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C DCL06-C",
+            "ruleIndex": 21,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 24,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "4C9B538A250134A8942A2086802234890C1B2D86C491",
+              "identicalResultsIds": {
+                "extIds": [
+                  9,
+                  35
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 17,
+                    "startColumn": 13,
+                    "endLine": 17,
+                    "endColumn": 14
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Buffer size is hard coded instead of a symbolic constant.\nHard-coded buffer size increases maintenance costs and security risks."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 29,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "668CA94592801A544A15104340257245060C964368",
+              "identicalResultsIds": {
+                "extIds": [
+                  3
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 32,
+                    "startColumn": 5,
+                    "endLine": 32,
+                    "endColumn": 8
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "main()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C EXP07-C",
+            "ruleIndex": 22,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 30,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "8C9A538A250134A8942A2086802A850A0C9B2D86D089",
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 42,
+                    "endLine": 25,
+                    "endColumn": 44
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Hard coded numerical value used in arithmetic expression."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 32,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "4C98538A250134A8942A2086804AE48A0C182D86C499",
+              "identicalResultsIds": {
+                "extIds": [
+                  41
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 11,
+                    "startColumn": 14,
+                    "endLine": 11,
+                    "endColumn": 17
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 36,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "8C9A538A250134A8942A2086804AE48A0C182D86CCA1",
+              "identicalResultsIds": {
+                "extIds": [
+                  28
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 25,
+                    "startColumn": 35,
+                    "endLine": 25,
+                    "endColumn": 38
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "memory_leak()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 38,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "260EA94592801A544A15104340257245060C964372",
+              "identicalResultsIds": {
+                "extIds": [
+                  26
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 18,
+                    "startColumn": 10,
+                    "endLine": 18,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT00-C",
+            "ruleIndex": 20,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 40,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "C6D4A249400D2A258A08A1209239A203064BA13162",
+              "identicalResultsIds": {
+                "extIds": [
+                  1
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 6,
+                    "startColumn": 12,
+                    "endLine": 6,
+                    "endColumn": 15
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Type int does not indicate its size."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C DCL06-C",
+            "ruleIndex": 21,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 42,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "4C1C538A250134A8942A2086802234890C1B2D86C891",
+              "identicalResultsIds": {
+                "extIds": [
+                  18,
+                  34
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 18,
+                    "startColumn": 23,
+                    "endLine": 18,
+                    "endColumn": 25
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Loop boundary is hard coded instead of a symbolic constant.\nHard-coded loop boundary increases maintenance costs and security risks."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C EXP08-C",
+            "ruleIndex": 23,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 46,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "4C9C538A250134A8942A2086802A850A0C1C2D86C489",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  56,
+                  49,
+                  55,
+                  59,
+                  48,
+                  53,
+                  51,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C INT33-C",
+            "ruleIndex": 24,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 52,
+              "information": "Category: Rule",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "E6D4A249400D2A258A08A1209239A233664BA13166",
+              "identicalResultsIds": {
+                "extIds": [
+                  45,
+                  47,
+                  50
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 7,
+                    "startColumn": 14,
+                    "endLine": 7,
+                    "endColumn": 15
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "divide()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Division by zero."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C ARR30-C",
+            "ruleIndex": 25,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 56,
+              "information": "Category: Rule",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "4C9C538A250134A8942A2086800A254ACC182D86C489",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  49,
+                  55,
+                  59,
+                  48,
+                  46,
+                  53,
+                  51,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C EXP34-C",
+            "ruleIndex": 26,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 61,
+              "information": "Category: Rule",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "268CA94592801A544A1510434015C205660D964368",
+              "identicalResultsIds": {
+                "extIds": [
+                  62,
+                  63,
+                  64
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 12,
+                    "startColumn": 5,
+                    "endLine": 12,
+                    "endColumn": 6
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to dereference a null pointer.\nAdditional Info:\nRisk: Program can hang or segfault.\nFix: Check for previous assignment to NULL that is not overwritten."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C MEM12-C",
+            "ruleIndex": 27,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 68,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "460EA94592801A544A15104340352AD4268C964360",
+              "identicalResultsIds": {
+                "extIds": [
+                  65,
+                  66,
+                  67,
+                  69,
+                  70,
+                  71,
+                  72
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Pointer 'p' points to dynamically allocated memory.\nIt has not been freed before the end of its scope."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C MEM31-C",
+            "ruleIndex": 28,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 69,
+              "information": "Category: Rule",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "460EA94592801A544A15104340352AD4664C964360",
+              "identicalResultsIds": {
+                "extIds": [
+                  65,
+                  66,
+                  67,
+                  68,
+                  70,
+                  71,
+                  72
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Pointer 'p' points to dynamically allocated memory.\nIt has not been freed before the end of its scope."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C MEM11-C",
+            "ruleIndex": 29,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 74,
+              "information": "Category: Recommendation",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "46CDA94592801A544A15104340352AD4264C96436A",
+              "identicalResultsIds": {
+                "extIds": [
+                  73,
+                  75,
+                  76,
+                  77
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 27,
+                    "startColumn": 6,
+                    "endLine": 27,
+                    "endColumn": 7
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Possible failure of dynamic allocation (out of memory) may not have been checked."
+            }
+          },
+          {
+            "ruleId": "SEI CERT C ERR33-C",
+            "ruleIndex": 30,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 76,
+              "information": "Category: Rule",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "46CDA94592801A544A1510434015922566CC96436A",
+              "identicalResultsIds": {
+                "extIds": [
+                  73,
+                  74,
+                  75,
+                  77
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 27,
+                    "startColumn": 6,
+                    "endLine": 27,
+                    "endColumn": 7
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Possible failure of dynamic allocation (out of memory) may not have been checked."
+            }
+          },
+          {
+            "ruleId": "CWE 547",
+            "ruleIndex": 31,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 34,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "898368D5A2206AD0B92346",
+              "identicalResultsIds": {
+                "extIds": [
+                  18,
+                  42
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 18,
+                    "startColumn": 23,
+                    "endLine": 18,
+                    "endColumn": 25
+                  },
+                  "properties": {
+                    "startLineInFunction": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Loop boundary is hard coded instead of a symbolic constant.\nHard-coded loop boundary increases maintenance costs and security risks."
+            }
+          },
+          {
+            "ruleId": "CWE 547",
+            "ruleIndex": 31,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 35,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "897368D5A2206AD0B91346",
+              "identicalResultsIds": {
+                "extIds": [
+                  24,
+                  9
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 17,
+                    "startColumn": 13,
+                    "endLine": 17,
+                    "endColumn": 14
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Buffer size is hard coded instead of a symbolic constant.\nHard-coded buffer size increases maintenance costs and security risks."
+            }
+          },
+          {
+            "ruleId": "CWE 369",
+            "ruleIndex": 32,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 45,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "DC1A75A808993672C499",
+              "identicalResultsIds": {
+                "extIds": [
+                  52,
+                  47,
+                  50
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 7,
+                    "startColumn": 14,
+                    "endLine": 7,
+                    "endColumn": 15
+                  },
+                  "properties": {
+                    "startLineInFunction": 1
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "divide()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Division by zero."
+            }
+          },
+          {
+            "ruleId": "CWE 788",
+            "ruleIndex": 33,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 49,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "899368D5A2206EE0C11326",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  56,
+                  55,
+                  59,
+                  48,
+                  46,
+                  53,
+                  51,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "CWE 131",
+            "ruleIndex": 34,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 51,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "899368D5A22062CC891326",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  56,
+                  49,
+                  55,
+                  59,
+                  48,
+                  46,
+                  53,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "CWE 125",
+            "ruleIndex": 35,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 54,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "899368D5A22062C8A91326",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  56,
+                  49,
+                  55,
+                  59,
+                  48,
+                  46,
+                  53,
+                  51,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "CWE 119",
+            "ruleIndex": 36,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 55,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "899368D5A22062C4C91326",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  56,
+                  49,
+                  59,
+                  48,
+                  46,
+                  53,
+                  51,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "CWE 468",
+            "ruleIndex": 37,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 57,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "899368D5A22068D8C11326",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  56,
+                  49,
+                  55,
+                  59,
+                  48,
+                  46,
+                  53,
+                  51,
+                  58
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "CWE 466",
+            "ruleIndex": 38,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 58,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "899368D5A22068D8B11326",
+              "identicalResultsIds": {
+                "extIds": [
+                  60,
+                  54,
+                  56,
+                  49,
+                  55,
+                  59,
+                  48,
+                  46,
+                  53,
+                  51,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "CWE 193",
+            "ruleIndex": 39,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 60,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "899368D5A22062E4991326",
+              "identicalResultsIds": {
+                "extIds": [
+                  54,
+                  56,
+                  49,
+                  55,
+                  59,
+                  48,
+                  46,
+                  53,
+                  51,
+                  58,
+                  57
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 19,
+                    "startColumn": 12,
+                    "endLine": 19,
+                    "endColumn": 13
+                  },
+                  "properties": {
+                    "startLineInFunction": 3
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "fill_array()",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to access arr outside its bounds.\nAdditional Info:\nExpected values: i is [0 .. 4].\nActual values: i is [0 .. 5].\nRisk: Value read is invalid or program can hang or segfault.\nFix: Check for possible programming error earlier, for instance, an incorrect loop bound."
+            }
+          },
+          {
+            "ruleId": "CWE 476",
+            "ruleIndex": 40,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 64,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "C49134EA5110346ED8A1",
+              "identicalResultsIds": {
+                "extIds": [
+                  61,
+                  62,
+                  63
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 12,
+                    "startColumn": 5,
+                    "endLine": 12,
+                    "endColumn": 6
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Attempt to dereference a null pointer.\nAdditional Info:\nRisk: Program can hang or segfault.\nFix: Check for previous assignment to NULL that is not overwritten."
+            }
+          },
+          {
+            "ruleId": "CWE 404",
+            "ruleIndex": 41,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 65,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "C8C134EA51103460D081",
+              "identicalResultsIds": {
+                "extIds": [
+                  66,
+                  67,
+                  68,
+                  69,
+                  70,
+                  71,
+                  72
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Pointer 'p' points to dynamically allocated memory.\nIt has not been freed before the end of its scope."
+            }
+          },
+          {
+            "ruleId": "CWE 459",
+            "ruleIndex": 42,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 66,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "C8C134EA5110346AE481",
+              "identicalResultsIds": {
+                "extIds": [
+                  65,
+                  67,
+                  68,
+                  69,
+                  70,
+                  71,
+                  72
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Pointer 'p' points to dynamically allocated memory.\nIt has not been freed before the end of its scope."
+            }
+          },
+          {
+            "ruleId": "CWE 401",
+            "ruleIndex": 43,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 71,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "C8C134EA51103460C481",
+              "identicalResultsIds": {
+                "extIds": [
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70,
+                  72
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Pointer 'p' points to dynamically allocated memory.\nIt has not been freed before the end of its scope."
+            }
+          },
+          {
+            "ruleId": "CWE 771",
+            "ruleIndex": 44,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 72,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "C8C134EA5110376EC481",
+              "identicalResultsIds": {
+                "extIds": [
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70,
+                  71
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 2
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Pointer 'p' points to dynamically allocated memory.\nIt has not been freed before the end of its scope."
+            }
+          },
+          {
+            "ruleId": "CWE 690",
+            "ruleIndex": 45,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 75,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "C8B934EA51103672C0A9",
+              "identicalResultsIds": {
+                "extIds": [
+                  73,
+                  74,
+                  76,
+                  77
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 27,
+                    "startColumn": 6,
+                    "endLine": 27,
+                    "endColumn": 7
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Possible failure of dynamic allocation (out of memory) may not have been checked."
+            }
+          },
+          {
+            "ruleId": "CWE 253",
+            "ruleIndex": 46,
+            "level": "error",
+            "rank": 100,
+            "kind": "fail",
+            "properties": {
+              "databaseId": 77,
+              "information": "",
+              "informationDetails": "",
+              "className": "Global Scope",
+              "color": "Violet",
+              "key": "C8B934EA5110326ACCA9",
+              "identicalResultsIds": {
+                "extIds": [
+                  73,
+                  74,
+                  75,
+                  76
+                ]
+              },
+              "comment": "",
+              "severity": "Unset",
+              "status": "Unreviewed",
+              "justified": false
+            },
+            "locations": [
+              {
+                "physicalLocation": {
+                  "artifactLocation": {
+                    "index": 0
+                  },
+                  "region": {
+                    "startLine": 27,
+                    "startColumn": 6,
+                    "endLine": 27,
+                    "endColumn": 7
+                  }
+                },
+                "logicalLocations": [
+                  {
+                    "fullyQualifiedName": "File Scope",
+                    "kind": "check"
+                  }
+                ]
+              }
+            ],
+            "message": {
+              "text": "Possible failure of dynamic allocation (out of memory) may not have been checked."
+            }
+          }
+        ]
+      }
+    ]
+  }
