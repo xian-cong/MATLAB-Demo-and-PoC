@@ -492,3 +492,7 @@ Would you like to fix the findings or review them interactively in the Polyspace
 ```
 
 *End of transcript.*
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/8f824d37-5283-439c-b0a7-ceb5e9eb6ac3" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/4cb59fe7-8f84-4ee9-9e3c-ba5756ec75fd" />
+
