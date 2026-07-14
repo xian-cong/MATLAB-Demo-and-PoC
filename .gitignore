@@ -1,0 +1,54 @@
+# ─────────────────────────────────────────────────────────────
+# AMD / Xilinx Vivado build output (regenerable from the .xpr)
+# ─────────────────────────────────────────────────────────────
+*.cache/
+*.hw/
+*.ioplanning/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+.Xil/
+
+# Vivado journals, logs, backups, checkpoints
+*.jou
+*.log
+*.str
+*.backup.*
+*.dcp
+*.pb
+*.rpx
+hs_err_pid*.log
+hs_err_pid*.dmp
+webtalk*.jou
+webtalk*.log
+
+# ─────────────────────────────────────────────────────────────
+# MATLAB / Simulink build output
+# ─────────────────────────────────────────────────────────────
+slprj/
+sccprj/
+codegen/
+*.slxc
+*.asv
+*.autosave
+*.mex*
+*.slx.r*
+
+# HDL Coder Vivado project (regenerable); keep the generated VHDL in hdl_prj/hdlsrc
+MathWorks/hdl_prj/vivado_prj/
+MathWorks/hdl_prj_ipcore/
+
+# Keep the generated VHDL under hdl_prj/hdlsrc, but drop the regenerable
+# code-generation report viewer and status files (report is ~5 MB of JS/CSS).
+MathWorks/hdl_prj/hdlsrc/**/_htmllib/
+MathWorks/hdl_prj/hdlsrc/**/html/
+MathWorks/hdl_prj/hdlsrc/**/hdlcodegenstatus.*
+MathWorks/hdl_prj/hdlsrc/**/*_report.html
+
+# ─────────────────────────────────────────────────────────────
+# OS / editor cruft
+# ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*~
