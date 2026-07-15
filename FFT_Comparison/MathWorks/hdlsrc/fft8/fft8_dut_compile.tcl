@@ -1,0 +1,16 @@
+exec xvhdl  fft8_dut_pkg.vhd
+exec xvhdl  SimpleDualPortRAM_generic.vhd
+exec xvhdl  SDFCommutator1.vhd
+exec xvhdl  RADIX22FFT_SDF1_1.vhd
+exec xvhdl  RADIX22FFT_CTRL1_1.vhd
+exec xvhdl  SDFCommutator2.vhd
+exec xvhdl  RADIX22FFT_SDF2_2.vhd
+exec xvhdl  RADIX22FFT_CTRL1_2.vhd
+exec xvhdl  TWDLROM_3_1.vhd
+exec xvhdl  Complex4Multiply.vhd
+exec xvhdl  SDFCommutator3.vhd
+exec xvhdl  RADIX22FFT_SDF1_3.vhd
+exec xvhdl  RADIX22FFT_CTRL1_1_block.vhd
+exec xvhdl  RADIX2FFT_bitNatural.vhd
+exec xvhdl  FFT.vhd
+exec xvhdl  fft8_dut.vhd

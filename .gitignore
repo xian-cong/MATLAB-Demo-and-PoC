@@ -23,6 +23,18 @@ hs_err_pid*.dmp
 webtalk*.jou
 webtalk*.log
 
+# xsim (Vivado simulator) output
+xsim.dir/
+*.wdb
+*.vcd
+xvhdl.pb
+xelab.pb
+xsim.pb
+
+# scratch Vivado build projects for the simplified LED design
+MathWorks/hdl_prj/build_v2/
+**/build_v*/
+
 # ─────────────────────────────────────────────────────────────
 # MATLAB / Simulink build output
 # ─────────────────────────────────────────────────────────────
@@ -39,12 +51,17 @@ codegen/
 MathWorks/hdl_prj/vivado_prj/
 MathWorks/hdl_prj_ipcore/
 
-# Keep the generated VHDL under hdl_prj/hdlsrc, but drop the regenerable
+# Keep the generated VHDL under hdlsrc, but drop the regenerable
 # code-generation report viewer and status files (report is ~5 MB of JS/CSS).
-MathWorks/hdl_prj/hdlsrc/**/_htmllib/
-MathWorks/hdl_prj/hdlsrc/**/html/
-MathWorks/hdl_prj/hdlsrc/**/hdlcodegenstatus.*
-MathWorks/hdl_prj/hdlsrc/**/*_report.html
+**/hdlsrc/**/_htmllib/
+**/hdlsrc/**/html/
+**/hdlsrc/**/hdlcodegenstatus.*
+**/hdlsrc/**/*_report.html
+
+# HDL Coder generated model + highlight scripts (regenerable)
+**/gm_*.slx
+**/highlightLUTPipeliningDiagnostic.m
+**/clearhighlighting.m
 
 # ─────────────────────────────────────────────────────────────
 # OS / editor cruft
@@ -52,3 +69,4 @@ MathWorks/hdl_prj/hdlsrc/**/*_report.html
 .DS_Store
 Thumbs.db
 *~
+flash_led_arty_guide_new.m
