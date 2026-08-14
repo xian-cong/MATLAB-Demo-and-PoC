@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="302097f7-a543-41fb-bc93-c5d51545e2f4">
+    <name>bis_lut</name>
+    <variables type="slsa.mm.param.graph.Variable" uuid="f5203fdc-3207-4f21-a693-9b7631cb7181">
+      <name>bp</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="d995bc03-37e0-49fc-bda5-10a271921718"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="64731435-faf3-46fa-b9ab-a4ef2d71ca03">
+      <name>tb</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="d995bc03-37e0-49fc-bda5-10a271921718"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="d995bc03-37e0-49fc-bda5-10a271921718">
+      <name>bis_lut</name>
+      <type>MODEL</type>
+      <variables type="slsa.mm.param.graph.Variable" uuid="f5203fdc-3207-4f21-a693-9b7631cb7181"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="64731435-faf3-46fa-b9ab-a4ef2d71ca03"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="832f0a67-1e53-4a03-bacc-446a8d1c099d"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>

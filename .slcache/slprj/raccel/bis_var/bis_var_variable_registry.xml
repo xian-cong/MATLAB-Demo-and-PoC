@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="88129639-f5f2-4cd6-bbfd-4bbdd3bc3373">
+    <name>bis_var</name>
+    <variables type="slsa.mm.param.graph.Variable" uuid="f1c1348b-dedd-4ef9-84a7-dbbe9f0fb9c0">
+      <name>VCTRL</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="69646fdb-43fa-44c1-be54-47502f63ce50"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="69646fdb-43fa-44c1-be54-47502f63ce50">
+      <name>bis_var</name>
+      <type>MODEL</type>
+      <variables type="slsa.mm.param.graph.Variable" uuid="f1c1348b-dedd-4ef9-84a7-dbbe9f0fb9c0"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="cc9ceed6-9500-4e0d-ac2c-4dad7354c186"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>

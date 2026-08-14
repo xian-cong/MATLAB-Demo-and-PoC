@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_graph/R2021b">
+  <slsa.mm.param.graph.VariableRegistry type="slsa.mm.param.graph.VariableRegistry" uuid="5180c9b5-d690-4c09-913f-1826a21bc3c6">
+    <name>vesselPowerCert</name>
+    <variables type="slsa.mm.param.graph.Variable" uuid="1f7a8c48-6cbc-4033-aceb-0804434a5ed1">
+      <name>VAR_ESS</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="09fa3f4f-f2a9-4015-8d13-0c4abb6ea758">
+      <name>dpBase_kW</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="a1123620-31d5-4a3a-b692-8524147588a1">
+      <name>designSpeed_kn</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="517d26f2-3eb7-48bd-9731-68a669ee9814">
+      <name>VAR_GEN</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="4d97de77-a7ba-4206-8d11-f380a8bdc846">
+      <name>capEnergy_kWh</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="b59e5c58-133a-448c-a291-6a12a7335765">
+      <name>VAR_PROP_ARCH</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="28f4744f-e114-4b23-8c8a-ec5189767c9c">
+      <name>VAR_SHORE</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="db9799fd-4f44-44d6-baba-9c46d2f68007">
+      <name>capPower_kW</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="ba2ccf18-8185-453d-b1b8-7b64fcbc2165">
+      <name>dpRippleAmp_kW</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="d936f27e-6c25-4937-8155-262065c2de4c">
+      <name>genUnitPower_kW</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="d9034f97-4647-46e0-b0ca-e6c48569b67c">
+      <name>dt_s</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="73ca24a4-0c36-46c9-9d1f-40ba036ab0ab">
+      <name>essEnergy_kWh</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="b8006b60-f6b0-4068-953d-2b162688410d">
+      <name>essEtaRT</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="36f575b1-6dbf-4dab-8d58-7751ce8abc43">
+      <name>essPower_kW</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="251076d4-1334-4182-8d90-e9e51a9d2317">
+      <name>essSocInit</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="0a41a4bb-a463-4d6a-8e85-f24a2866b791">
+      <name>etaDrive</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="6753f46a-39a2-4985-b6ca-81758f6c9cf5">
+      <name>etaGearbox</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="23dd8f30-90e9-40b0-8d19-286017fbf915">
+      <name>propPower_kW</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="6310088a-07f4-48f3-8ed4-fee84702c086">
+      <name>etaMotor</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="817f96cf-3443-4d62-8c05-74172291cd58">
+      <name>etaShaftMach</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="d8a45105-9793-4b11-ad4a-cb6287449596">
+      <name>genLoadMax</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="3c442403-4a84-484d-9c34-ae3db84c29e5">
+      <name>genSfocLoadOpt</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="107d9098-382e-4ba2-8da6-7818080018af">
+      <name>genSfocMin</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="06577f7b-7cd8-42fd-aea7-8dbb27932df9">
+      <name>hotelTab_kW</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="206ee957-bc3c-461e-9aa2-ef455e2e011c">
+      <name>meSfocLoadOpt</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="e027862b-fc84-4480-8337-992d5058dbb1">
+      <name>mePower_kW</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="3b01a3be-bc8f-4715-9d72-ac80846fd2ff">
+      <name>meSfocMin</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="83eca9ba-2b8e-4d83-8a54-8c7e58ce40ac">
+      <name>modeTab</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="da443ede-34da-4ff2-9ff6-0a801f6c201a">
+      <name>seaMargin</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="fd6aa080-b429-4e78-bd6b-110ad7ead270">
+      <name>seaTab</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="d5323847-f950-4f99-b87b-2972ed7f0be5">
+      <name>shorePower_kW</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="6ece29c4-09e8-4974-8dd0-062ce7984bd0">
+      <name>tBreak_s</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <variables type="slsa.mm.param.graph.Variable" uuid="c7cea9a8-2d5f-4528-be08-ea3bf44ccf9d">
+      <name>vTab_kn</name>
+      <workspace type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38"/>
+    </variables>
+    <workspaces type="slsa.mm.param.graph.Workspace" uuid="b1a328fa-c4cd-4a0e-b026-26de1b02af38">
+      <name>vesselPowerCert</name>
+      <type>MODEL</type>
+      <variables type="slsa.mm.param.graph.Variable" uuid="1f7a8c48-6cbc-4033-aceb-0804434a5ed1"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="09fa3f4f-f2a9-4015-8d13-0c4abb6ea758"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="a1123620-31d5-4a3a-b692-8524147588a1"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="517d26f2-3eb7-48bd-9731-68a669ee9814"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="4d97de77-a7ba-4206-8d11-f380a8bdc846"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="b59e5c58-133a-448c-a291-6a12a7335765"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="28f4744f-e114-4b23-8c8a-ec5189767c9c"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="db9799fd-4f44-44d6-baba-9c46d2f68007"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="ba2ccf18-8185-453d-b1b8-7b64fcbc2165"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="d936f27e-6c25-4937-8155-262065c2de4c"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="d9034f97-4647-46e0-b0ca-e6c48569b67c"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="73ca24a4-0c36-46c9-9d1f-40ba036ab0ab"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="b8006b60-f6b0-4068-953d-2b162688410d"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="36f575b1-6dbf-4dab-8d58-7751ce8abc43"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="251076d4-1334-4182-8d90-e9e51a9d2317"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="0a41a4bb-a463-4d6a-8e85-f24a2866b791"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="6753f46a-39a2-4985-b6ca-81758f6c9cf5"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="23dd8f30-90e9-40b0-8d19-286017fbf915"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="6310088a-07f4-48f3-8ed4-fee84702c086"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="817f96cf-3443-4d62-8c05-74172291cd58"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="d8a45105-9793-4b11-ad4a-cb6287449596"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="3c442403-4a84-484d-9c34-ae3db84c29e5"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="107d9098-382e-4ba2-8da6-7818080018af"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="06577f7b-7cd8-42fd-aea7-8dbb27932df9"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="206ee957-bc3c-461e-9aa2-ef455e2e011c"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="e027862b-fc84-4480-8337-992d5058dbb1"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="3b01a3be-bc8f-4715-9d72-ac80846fd2ff"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="83eca9ba-2b8e-4d83-8a54-8c7e58ce40ac"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="da443ede-34da-4ff2-9ff6-0a801f6c201a"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="fd6aa080-b429-4e78-bd6b-110ad7ead270"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="d5323847-f950-4f99-b87b-2972ed7f0be5"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="6ece29c4-09e8-4974-8dd0-062ce7984bd0"/>
+      <variables type="slsa.mm.param.graph.Variable" uuid="c7cea9a8-2d5f-4528-be08-ea3bf44ccf9d"/>
+    </workspaces>
+    <contextManager type="slsa.mm.param.graph.ContextManager" uuid="8f275670-8cf3-44b7-86a4-9fd7a7381a98"/>
+  </slsa.mm.param.graph.VariableRegistry>
+</MF0>

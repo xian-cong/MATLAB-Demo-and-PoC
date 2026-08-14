@@ -1,0 +1,20 @@
+=== 1. model builds from script ===
+   vesselPowerCert.slx built
+=== 2. default configuration passes ===
+   verdict: PASS  (8 rules)
+   8/8 PASS
+=== 3. a poor configuration fails, with reasons ===
+   verdict: FAIL
+   not passing: CAP-01, RED-01, RED-02, GEN-01, EMI-01, FUE-01, EMI-02
+=== 4. variant selection changes the answer ===
+   mechanical 19.23 t vs diesel-electric 20.75 t
+=== 5. report generates ===
+   7458 chars, print button: 1
+=== 6. app runs headlessly from the .mlapp ===
+   app verdict: PASS
+=== 7. .mlapp carries the class AND App Designer's code model ===
+   2 callbacks, 330 editable-section lines
+=== 8. deployable archive builds ===
+   C:\demo\webapp_server\dist\VesselCertApp.ctf  (0.61 MB)
+
+ALL CHECKS PASSED

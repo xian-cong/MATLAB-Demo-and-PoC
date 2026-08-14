@@ -1,0 +1,78 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<style>
+body{font-family:"Segoe UI",Arial,sans-serif;font-size:13px;color:#1a1a1a;margin:0;padding:18px 22px;background:#fff}
+h1{font-size:19px;margin:0 0 2px 0}
+h2{font-size:14px;margin:22px 0 8px 0;padding-bottom:4px;border-bottom:2px solid #d8dde3}
+.sub{color:#5a6672;font-size:12px;margin-bottom:14px}
+.verdict{display:inline-block;padding:9px 18px;border-radius:4px;font-size:16px;font-weight:600;letter-spacing:.4px;margin:6px 0 4px 0}
+.verdict.pass{background:#e4f4e6;color:#1a6b2a;border:1px solid #a8d9b2}
+.verdict.warn{background:#fdf3dc;color:#8a5d09;border:1px solid #ecd08a}
+.verdict.fail{background:#fbe4e4;color:#9c2020;border:1px solid #e7a9a9}
+table{border-collapse:collapse;width:100%;margin-bottom:6px}
+th,td{text-align:left;padding:6px 9px;border-bottom:1px solid #e6e9ec;vertical-align:top}
+th{background:#f5f7f9;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#5a6672}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.4px}
+.tag.PASS{background:#e4f4e6;color:#1a6b2a}
+.tag.WARN{background:#fdf3dc;color:#8a5d09}
+.tag.FAIL{background:#fbe4e4;color:#9c2020}
+.detail{color:#5a6672;font-size:11.5px;margin-top:3px}
+.grid{display:flex;flex-wrap:wrap;gap:10px}
+.kpi{flex:1 1 128px;border:1px solid #e2e6ea;border-radius:5px;padding:9px 11px;background:#fafbfc}
+.kpi .v{font-size:17px;font-weight:600}
+.kpi .l{font-size:10.5px;color:#5a6672;text-transform:uppercase;letter-spacing:.4px}
+.foot{margin-top:20px;color:#8a949d;font-size:10.5px;border-top:1px solid #e6e9ec;padding-top:8px}
+.toolbar{margin:0 0 12px 0}.toolbar button{font:inherit;padding:6px 14px;border:1px solid #c4ccd4;border-radius:4px;background:#f5f7f9;cursor:pointer}
+.toolbar button:hover{background:#e9edf1}
+@media print{.toolbar{display:none}body{padding:0}}
+</style></head><body>
+<div class="toolbar"><button onclick="window.print()">Print / save as PDF</button></div>
+<h1>Electrical Power System Verification Report</h1>
+<div class="sub">MV Demo Trader &nbsp;&middot;&nbsp; IMO 9999999 &nbsp;&middot;&nbsp; Offshore Support Vessel</div>
+<div class="verdict pass">PASS</div>
+<h2>Voyage summary</h2><div class="grid">
+<div class="kpi"><div class="v">19.01 t</div><div class="l">Fuel burned</div></div>
+<div class="kpi"><div class="v">61.0 t</div><div class="l">CO2 emitted</div></div>
+<div class="kpi"><div class="v">32.60</div><div class="l">Carbon intensity</div></div>
+<div class="kpi"><div class="v">220 nm</div><div class="l">Distance</div></div>
+<div class="kpi"><div class="v">32 h</div><div class="l">Voyage length</div></div>
+<div class="kpi"><div class="v">4413 kWh</div><div class="l">Shore energy</div></div>
+<div class="kpi"><div class="v">2234 kW</div><div class="l">Peak plant load</div></div>
+<div class="kpi"><div class="v">USD 14,830</div><div class="l">Fuel cost</div></div>
+</div>
+<h2>Verification criteria</h2>
+<table><tr><th style="width:62px">Rule</th><th>Criterion</th><th style="width:150px">Measured</th><th style="width:150px">Requirement</th><th style="width:62px">Result</th></tr>
+<tr><td>CAP-01</td><td>Installed generating capacity covers peak demand<div class="detail">Capacity margin 58.6%.</div></td><td class="num">2234 kW</td><td class="num">&lt;= 5400 kW installed</td><td><span class="tag PASS">PASS</span></td></tr>
+<tr><td>RED-01</td><td>N-1 redundancy: largest set can trip without shortfall<div class="detail">Worst-case loss of the largest running generator, at every point in the profile.</div></td><td class="num">0 kW shortfall</td><td class="num">0 kW shortfall</td><td><span class="tag PASS">PASS</span></td></tr>
+<tr><td>RED-02</td><td>Spinning reserve available to catch a load step<div class="detail">Generators alone provide 10.0%; the store adds up to 1500 kW of instantly available reserve.</div></td><td class="num">79.6%</td><td class="num">&gt;= 15%</td><td><span class="tag PASS">PASS</span></td></tr>
+<tr><td>GEN-01</td><td>Generator loading kept inside its permitted band<div class="detail">Mean loading 46%, peak 90%. Sustained low load causes fouling.</div></td><td class="num">0.0% of voyage</td><td class="num">&lt;= 5% outside 30-90%</td><td><span class="tag PASS">PASS</span></td></tr>
+<tr><td>ESS-01</td><td>Energy storage state of charge within limits<div class="detail">Throughput 2656 kWh over the voyage.</div></td><td class="num">22% - 65%</td><td class="num">20% - 90%</td><td><span class="tag PASS">PASS</span></td></tr>
+<tr><td>EMI-01</td><td>Zero emissions alongside (cold ironing)<div class="detail">Fuel burned onboard while in harbour mode.</div></td><td class="num">0.00 t fuel in port</td><td class="num">0.00 t</td><td><span class="tag PASS">PASS</span></td></tr>
+<tr><td>FUE-01</td><td>Voyage fuel within budget<div class="detail">Main engine 12.05 t, generators 6.96 t. Cost approx USD 14,830.</div></td><td class="num">19.01 t</td><td class="num">&lt;= 20.50 t</td><td><span class="tag PASS">PASS</span></td></tr>
+<tr><td>EMI-02</td><td>Carbon intensity within required band<div class="detail">Total 61.0 t CO2 over 220 nm. Indicative rating C.</div></td><td class="num">32.60 g/t-nm</td><td class="num">&lt;= 34.00 g/t-nm</td><td><span class="tag PASS">PASS</span></td></tr>
+</table>
+<h2>As-verified configuration</h2>
+<table><tr><th style="width:44%">Item</th><th>Selection / value</th></tr>
+<tr><td>Propulsion architecture</td><td>Hybrid PTI/PTO</td></tr>
+<tr><td>Energy storage</td><td>Li-ion battery</td></tr>
+<tr><td>Generator configuration</td><td>3 x sets of 1800 kW</td></tr>
+<tr><td>Shore connection</td><td>Cold ironing</td></tr>
+<tr><td>Displacement</td><td>8500 t</td></tr>
+<tr><td>Design speed</td><td>14.0 kn</td></tr>
+<tr><td>Propulsion power at design speed</td><td>4800 kW</td></tr>
+<tr><td>Hotel base load</td><td>550 kW</td></tr>
+<tr><td>Installed generating capacity</td><td>5400 kW</td></tr>
+<tr><td>Capacity remaining after N-1</td><td>3600 kW</td></tr>
+</table>
+<h2>Operating profile as simulated</h2>
+<table><tr><th>Leg</th><th>Mode</th><th class="num">Hours</th><th class="num">Speed (kn)</th><th class="num">Hotel factor</th><th class="num">Sea state</th></tr>
+<tr><td>1</td><td>Harbour</td><td class="num">4.0</td><td class="num">0.0</td><td class="num">1.00</td><td class="num">0</td></tr>
+<tr><td>2</td><td>Manoeuvring</td><td class="num">1.0</td><td class="num">6.0</td><td class="num">1.10</td><td class="num">1</td></tr>
+<tr><td>3</td><td>Transit</td><td class="num">8.0</td><td class="num">14.0</td><td class="num">1.00</td><td class="num">3</td></tr>
+<tr><td>4</td><td>DP / station-keeping</td><td class="num">6.0</td><td class="num">0.0</td><td class="num">1.60</td><td class="num">4</td></tr>
+<tr><td>5</td><td>Transit</td><td class="num">8.0</td><td class="num">12.0</td><td class="num">1.00</td><td class="num">3</td></tr>
+<tr><td>6</td><td>Manoeuvring</td><td class="num">1.0</td><td class="num">6.0</td><td class="num">1.10</td><td class="num">1</td></tr>
+<tr><td>7</td><td>Harbour</td><td class="num">4.0</td><td class="num">0.0</td><td class="num">1.00</td><td class="num">0</td></tr>
+</table>
+<div class="foot">Generated 2026-08-13 21:04 by the Vessel Power System Certification demo (Simulink model <code>vesselPowerCert</code>). Demonstration tool: the rule set is representative and is not a class society notation.</div>
+</body></html>

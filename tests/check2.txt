@@ -1,0 +1,30 @@
+
+================ DEFAULT (hybrid + Li-ion + cold ironing)
+VERDICT: PASS
+  CAP-01   PASS  Installed generating capacity covers peak demand 2234 kW              <= 5400 kW installed
+  RED-01   PASS  N-1 redundancy: largest set can trip without shortfall 0 kW shortfall       0 kW shortfall
+  RED-02   PASS  Spinning reserve available to catch a load step 79.6%                >= 15%
+  GEN-01   PASS  Generator loading kept inside its permitted band 0.0% of voyage       <= 5% outside 30-90%
+  ESS-01   PASS  Energy storage state of charge within limits   22% - 65%            20% - 90%
+  EMI-01   PASS  Zero emissions alongside (cold ironing)        0.00 t fuel in port  0.00 t
+  FUE-01   PASS  Voyage fuel within budget                      19.01 t              <= 20.50 t
+  EMI-02   PASS  Carbon intensity within required band          32.60 g/t-nm         <= 34.00 g/t-nm
+  fuel 19.01 t | CO2 61.0 t | 32.60 g/t-nm | peak 2234 kW / installed 5400 kW
+  reserve gen-only 0.100 -> with store 0.796 (credit 1500 kW) | outBand 0.000
+  SOC 0.22..0.65 | harbourFuel 0.0000 t
+
+================ POOR (diesel-electric, no storage, no shore)
+VERDICT: FAIL
+  CAP-01   FAIL  Installed generating capacity covers peak demand 6632 kW              <= 5400 kW installed
+  RED-01   FAIL  N-1 redundancy: largest set can trip without shortfall 3032 kW shortfall    0 kW shortfall
+  RED-02   FAIL  Spinning reserve available to catch a load step 0.0%                 >= 15%
+  GEN-01   FAIL  Generator loading kept inside its permitted band 25.0% of voyage      <= 5% outside 30-90%
+  ESS-01   PASS  Energy storage state of charge within limits   not fitted           n/a
+  EMI-01   FAIL  Zero emissions alongside (cold ironing)        4.12 t fuel in port  0.00 t
+  FUE-01   FAIL  Voyage fuel within budget                      21.73 t              <= 20.50 t
+  EMI-02   WARN  Carbon intensity within required band          37.25 g/t-nm         <= 34.00 g/t-nm
+  fuel 21.73 t | CO2 69.7 t | 37.25 g/t-nm | peak 6632 kW / installed 5400 kW
+  reserve gen-only 0.000 -> with store 0.000 (credit 0 kW) | outBand 0.250
+  SOC NaN..NaN | harbourFuel 4.1227 t
+
+DONE

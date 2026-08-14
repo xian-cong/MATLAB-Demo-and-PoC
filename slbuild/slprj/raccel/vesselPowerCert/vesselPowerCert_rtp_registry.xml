@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_rtp/R2023a">
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="4e76a0d7-ce15-4212-930a-ed1f3714bd9f">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="d96777d7-2ee2-4bf8-aa22-f5c092de3b6f"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="3c94cea4-7314-481e-8e18-c42aca359ca3"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="7e37fc8e-79ed-475b-8c13-e2ce6d84e976">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="24eff4f4-f124-4de4-b543-8ec18a695515"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="39f395fe-952a-4dcf-bf04-12970c3eb6da"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.ModelMetadata type="slsa.mm.param.rtp.ModelMetadata" uuid="3e48814e-2434-4e4a-92bb-c4c99e79b83b">
+    <modelName>vesselPowerCert</modelName>
+  </slsa.mm.param.rtp.ModelMetadata>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="d96777d7-2ee2-4bf8-aa22-f5c092de3b6f">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>VAR_ESS</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="4e76a0d7-ce15-4212-930a-ed1f3714bd9f"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="d90f445c-e5b8-4d39-93e1-bca01f17c550">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="b05171d4-4c94-494b-80dd-8c40a9843105"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="9f55f310-c2a0-4ec3-b743-228f85410d2c"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="3c94cea4-7314-481e-8e18-c42aca359ca3">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="4e76a0d7-ce15-4212-930a-ed1f3714bd9f"/>
+    <valueIndices>0</valueIndices>
+    <valueIndices>0</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="3c3cb0e3-243a-43c7-b560-12974eaf6557">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>etaShaftMach</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="03270993-afea-440d-9687-71607d4ce55a"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="b7bbfacd-b297-4ad2-b7dd-9865150479cb">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="6440e170-ee9d-477b-99e0-e36f62a78ee8"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="41c2a82a-456c-4d60-8166-6ff41ad68ff8"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="778d78ee-e539-45e3-ac3a-ebb854c9a1c2">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>VAR_SHORE</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="37a6d2d6-589a-483b-89b5-41cb5b97a049"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="37a6d2d6-589a-483b-89b5-41cb5b97a049">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="778d78ee-e539-45e3-ac3a-ebb854c9a1c2"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="63e14383-8578-45c0-9a5a-78db94bda51c"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="f7f839c2-c182-416e-9abf-586464055fa5">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="72b7679d-72ba-4026-a5f4-c1910fab92e7"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="62c811c9-a138-45ff-90da-8d50ca9f21be"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="e2fc3a7d-16ff-47ae-95ce-bdb651d5bfc9">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="64a44875-3a45-4448-b572-e876b077a592"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="cff0b7d1-42a5-44b6-bc96-8ffec35d284e"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="62c811c9-a138-45ff-90da-8d50ca9f21be">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="f7f839c2-c182-416e-9abf-586464055fa5"/>
+    <valueIndices>1</valueIndices>
+    <valueIndices>1</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="72b7679d-72ba-4026-a5f4-c1910fab92e7">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>VAR_GEN</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="f7f839c2-c182-416e-9abf-586464055fa5"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="03270993-afea-440d-9687-71607d4ce55a">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="3c3cb0e3-243a-43c7-b560-12974eaf6557"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e6e7a7bc-a0f8-478d-891b-cd1a7395a190"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="83de1ed3-5125-40f0-b2d0-6fdefb7969e6">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="2613cf0a-0936-495d-977d-9fc4936db6fc"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="ac165c76-2208-4509-8ed9-455226cc81eb"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="83901af2-9a10-4481-8816-f358e5c50177">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="789ec580-3eda-4cbd-8a63-db6d254e759a"/>
+    <valueIndices>13</valueIndices>
+    <valueIndices>13</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="2613cf0a-0936-495d-977d-9fc4936db6fc">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>VAR_PROP_ARCH</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="83de1ed3-5125-40f0-b2d0-6fdefb7969e6"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="2621b860-a9c9-410a-a1f6-0a809c336fbb">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="c953b245-d2dc-49ce-83b1-3a8e95a6f522"/>
+    <valueIndices>19</valueIndices>
+    <valueIndices>19</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e6e7a7bc-a0f8-478d-891b-cd1a7395a190">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="03270993-afea-440d-9687-71607d4ce55a"/>
+    <valueIndices>17</valueIndices>
+    <valueIndices>17</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="ac165c76-2208-4509-8ed9-455226cc81eb">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="83de1ed3-5125-40f0-b2d0-6fdefb7969e6"/>
+    <valueIndices>2</valueIndices>
+    <valueIndices>2</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e393e8e2-90b5-4943-b29c-d2d06c6835d8">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="4256c753-5460-4ca3-98ee-35234f46471e"/>
+    <valueIndices>12</valueIndices>
+    <valueIndices>12</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="63e14383-8578-45c0-9a5a-78db94bda51c">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="37a6d2d6-589a-483b-89b5-41cb5b97a049"/>
+    <valueIndices>3</valueIndices>
+    <valueIndices>3</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="2da74f16-ee7d-4f89-8253-a538c73483fb">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="1816cd5a-e623-43a4-b018-cc31e218e540"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="9502eb48-3673-4883-aee0-413faee5c942"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="1816cd5a-e623-43a4-b018-cc31e218e540">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>capEnergy_kWh</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="2da74f16-ee7d-4f89-8253-a538c73483fb"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="9502eb48-3673-4883-aee0-413faee5c942">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="2da74f16-ee7d-4f89-8253-a538c73483fb"/>
+    <valueIndices>4</valueIndices>
+    <valueIndices>4</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="4092d0aa-2e66-41e0-9306-1e588dca849b">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>seaMargin</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="450d34b8-3362-438d-91ef-50aa8f66a2be"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="40fa011f-e1ec-42d4-b218-2017d53e2022">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="c1015375-5684-4914-b3cb-28ef97161432"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="8fb44fa9-d478-4ab1-be6c-287a4faa1632"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="41c2a82a-456c-4d60-8166-6ff41ad68ff8">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="b7bbfacd-b297-4ad2-b7dd-9865150479cb"/>
+    <valueIndices>6</valueIndices>
+    <valueIndices>6</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="c1015375-5684-4914-b3cb-28ef97161432">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>capPower_kW</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="40fa011f-e1ec-42d4-b218-2017d53e2022"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="cff0b7d1-42a5-44b6-bc96-8ffec35d284e">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="e2fc3a7d-16ff-47ae-95ce-bdb651d5bfc9"/>
+    <valueIndices>8</valueIndices>
+    <valueIndices>8</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="8fb44fa9-d478-4ab1-be6c-287a4faa1632">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="40fa011f-e1ec-42d4-b218-2017d53e2022"/>
+    <valueIndices>5</valueIndices>
+    <valueIndices>5</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="24eff4f4-f124-4de4-b543-8ec18a695515">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>dt_s</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="7e37fc8e-79ed-475b-8c13-e2ce6d84e976"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="6440e170-ee9d-477b-99e0-e36f62a78ee8">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>designSpeed_kn</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="b7bbfacd-b297-4ad2-b7dd-9865150479cb"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="64a44875-3a45-4448-b572-e876b077a592">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>dpRippleAmp_kW</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="e2fc3a7d-16ff-47ae-95ce-bdb651d5bfc9"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="4c08c1da-bd68-4262-a9e6-b16e965c21a2">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="79121908-f558-4112-bfc1-a8f2284f8de1"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="d3ce9895-9836-43d2-b35a-c8971ecb42e8"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="79121908-f558-4112-bfc1-a8f2284f8de1">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>dpBase_kW</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="4c08c1da-bd68-4262-a9e6-b16e965c21a2"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="79f8df30-93c2-4f60-b5d9-bcfa9765c92a">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="7893eb3d-1b4b-40d6-857a-8afe30476ff3"/>
+    <valueIndices>10</valueIndices>
+    <valueIndices>10</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="39f395fe-952a-4dcf-bf04-12970c3eb6da">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="7e37fc8e-79ed-475b-8c13-e2ce6d84e976"/>
+    <valueIndices>9</valueIndices>
+    <valueIndices>9</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="53e5b17c-2c66-4a64-8228-8312bc007415">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="f302625c-de40-41c1-97ca-ce462fe38e82"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="c99e3bae-9587-49eb-8540-d7f209a76f5b"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="d3ce9895-9836-43d2-b35a-c8971ecb42e8">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="4c08c1da-bd68-4262-a9e6-b16e965c21a2"/>
+    <valueIndices>7</valueIndices>
+    <valueIndices>7</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="b8308eac-26fc-49ca-8c71-40d4bd5a31c6">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="5c3ada6a-dcb7-4382-893a-7afea42dcb9b"/>
+    <valueIndices>20</valueIndices>
+    <valueIndices>20</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="789ec580-3eda-4cbd-8a63-db6d254e759a">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="9de42a47-a7c4-4e97-9dc1-93626b6012aa"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="83901af2-9a10-4481-8816-f358e5c50177"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="38cb470a-90c2-4852-832d-cb5f3c690135">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>essEtaRT</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="1bf6aed1-ab0b-4b73-b0e2-0707c5ab85cd"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="7893eb3d-1b4b-40d6-857a-8afe30476ff3">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="1ba0bb2c-c456-4480-83bd-9062d49d6211"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="79f8df30-93c2-4f60-b5d9-bcfa9765c92a"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="1ba0bb2c-c456-4480-83bd-9062d49d6211">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>essEnergy_kWh</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="7893eb3d-1b4b-40d6-857a-8afe30476ff3"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="1bf6aed1-ab0b-4b73-b0e2-0707c5ab85cd">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="38cb470a-90c2-4852-832d-cb5f3c690135"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="b08863b2-5cf0-4d29-aad3-3b96bcbc5b44"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="b05171d4-4c94-494b-80dd-8c40a9843105">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>etaGearbox</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="d90f445c-e5b8-4d39-93e1-bca01f17c550"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="b08863b2-5cf0-4d29-aad3-3b96bcbc5b44">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="1bf6aed1-ab0b-4b73-b0e2-0707c5ab85cd"/>
+    <valueIndices>11</valueIndices>
+    <valueIndices>11</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="4256c753-5460-4ca3-98ee-35234f46471e">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="c63def5e-2cdb-4d85-b47c-23c2c53bd568"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e393e8e2-90b5-4943-b29c-d2d06c6835d8"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="c63def5e-2cdb-4d85-b47c-23c2c53bd568">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>essPower_kW</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="4256c753-5460-4ca3-98ee-35234f46471e"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="9de42a47-a7c4-4e97-9dc1-93626b6012aa">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>essSocInit</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="789ec580-3eda-4cbd-8a63-db6d254e759a"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="f302625c-de40-41c1-97ca-ce462fe38e82">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>etaDrive</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="53e5b17c-2c66-4a64-8228-8312bc007415"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="c93301db-225e-469c-8a92-d7803e1f8d8e">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="44401cbb-262f-4504-9b43-79f9f90dda50"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="56080e17-334e-4689-b463-1c70c0797cfd"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="c953b245-d2dc-49ce-83b1-3a8e95a6f522">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="ae52cb28-71e9-4e94-bd88-9e932e6896d3"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="2621b860-a9c9-410a-a1f6-0a809c336fbb"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="c99e3bae-9587-49eb-8540-d7f209a76f5b">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="53e5b17c-2c66-4a64-8228-8312bc007415"/>
+    <valueIndices>14</valueIndices>
+    <valueIndices>14</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="9f55f310-c2a0-4ec3-b743-228f85410d2c">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="d90f445c-e5b8-4d39-93e1-bca01f17c550"/>
+    <valueIndices>15</valueIndices>
+    <valueIndices>15</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="c82d7b8a-8869-4809-910d-f920954ffa1b">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="48714ad8-f7c4-4a8b-b441-8a5f65481adf"/>
+    <valueIndices>16</valueIndices>
+    <valueIndices>16</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="48714ad8-f7c4-4a8b-b441-8a5f65481adf">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="9c6392b2-8427-45ea-acb6-190dd76b4444"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="c82d7b8a-8869-4809-910d-f920954ffa1b"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="5c3ada6a-dcb7-4382-893a-7afea42dcb9b">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="f123bc1b-cef2-4705-be43-90dbb18ed414"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="b8308eac-26fc-49ca-8c71-40d4bd5a31c6"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="5c9d8557-0318-4f92-9e2c-dd45ca77db19">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="bb10be0a-5b6a-47b2-9c34-9a1bbc405544"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="206820a3-25d6-452a-96b5-ea8484bc8949"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="9c6392b2-8427-45ea-acb6-190dd76b4444">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>etaMotor</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="48714ad8-f7c4-4a8b-b441-8a5f65481adf"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="bb10be0a-5b6a-47b2-9c34-9a1bbc405544">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>genLoadMax</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="5c9d8557-0318-4f92-9e2c-dd45ca77db19"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="204eea69-e562-4fad-b184-bb641f7de98a">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="17ad013b-a151-4d81-9ef3-f90dea31d7b6"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="a7227563-bcf4-4623-88a6-edb2cf5d2661"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="206820a3-25d6-452a-96b5-ea8484bc8949">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="5c9d8557-0318-4f92-9e2c-dd45ca77db19"/>
+    <valueIndices>18</valueIndices>
+    <valueIndices>18</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="ae52cb28-71e9-4e94-bd88-9e932e6896d3">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>genSfocLoadOpt</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="c953b245-d2dc-49ce-83b1-3a8e95a6f522"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="f123bc1b-cef2-4705-be43-90dbb18ed414">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>genSfocMin</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="5c3ada6a-dcb7-4382-893a-7afea42dcb9b"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="0a67bc8e-fe03-4839-a8a7-69c5c45b56a5">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="834bf6f9-dd62-4c5b-bac9-62261158fcbf"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="6e4c4715-0ddf-4017-9a35-a45ebf0d5c65"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="834bf6f9-dd62-4c5b-bac9-62261158fcbf">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>genUnitPower_kW</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="0a67bc8e-fe03-4839-a8a7-69c5c45b56a5"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="6e4c4715-0ddf-4017-9a35-a45ebf0d5c65">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="0a67bc8e-fe03-4839-a8a7-69c5c45b56a5"/>
+    <valueIndices>21</valueIndices>
+    <valueIndices>21</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="08997e9d-746f-4614-8269-c17e221dc9a6">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="3f97ca83-72ad-4c39-b8ac-6d1d081bfdbd"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="47ba92d6-a29e-485e-b800-6e715d297f51"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="3f97ca83-72ad-4c39-b8ac-6d1d081bfdbd">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>hotelTab_kW</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="08997e9d-746f-4614-8269-c17e221dc9a6"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="47ba92d6-a29e-485e-b800-6e715d297f51">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="08997e9d-746f-4614-8269-c17e221dc9a6"/>
+    <valueIndices>22</valueIndices>
+    <valueIndices>28</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="49e430eb-b73b-4eea-bcac-e2abcf2a5ed6">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="fcb96c10-50a8-4e57-88a4-0e725fdee44e"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="5bf9e7f2-38c8-43fd-8778-9c43095860e5"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="49a41073-af83-4868-977c-cbded505fec2">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="be597f81-cc20-4204-bd79-ce486515456e"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="2cb2da4d-2b6e-4431-8dc8-b019183954d0"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="be597f81-cc20-4204-bd79-ce486515456e">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>mePower_kW</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="49a41073-af83-4868-977c-cbded505fec2"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="2cb2da4d-2b6e-4431-8dc8-b019183954d0">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="49a41073-af83-4868-977c-cbded505fec2"/>
+    <valueIndices>29</valueIndices>
+    <valueIndices>29</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="74cda9e2-0a09-4b68-9c41-cb7c8f9c15f9">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="deda6341-0f2a-4815-bc47-3c7637cd3dd2"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="6a3dce0a-1015-45dc-8210-10c781a12024"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="deda6341-0f2a-4815-bc47-3c7637cd3dd2">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>meSfocLoadOpt</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="74cda9e2-0a09-4b68-9c41-cb7c8f9c15f9"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="6a3dce0a-1015-45dc-8210-10c781a12024">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="74cda9e2-0a09-4b68-9c41-cb7c8f9c15f9"/>
+    <valueIndices>30</valueIndices>
+    <valueIndices>30</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="17ad013b-a151-4d81-9ef3-f90dea31d7b6">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>meSfocMin</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="204eea69-e562-4fad-b184-bb641f7de98a"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="a7227563-bcf4-4623-88a6-edb2cf5d2661">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="204eea69-e562-4fad-b184-bb641f7de98a"/>
+    <valueIndices>31</valueIndices>
+    <valueIndices>31</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="ceb0b9ab-b99b-415e-ad86-7d6d197bec11">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="6ddc843d-5737-4ea1-8ad9-abd79661fd97"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="c3568f50-679c-4cc2-b951-040d264743c7"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="6ddc843d-5737-4ea1-8ad9-abd79661fd97">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>modeTab</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="ceb0b9ab-b99b-415e-ad86-7d6d197bec11"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="c3568f50-679c-4cc2-b951-040d264743c7">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="ceb0b9ab-b99b-415e-ad86-7d6d197bec11"/>
+    <valueIndices>32</valueIndices>
+    <valueIndices>38</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="9695f467-8fb2-475a-a7bc-dd45b348c362">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="a97e3288-b186-43df-8f9e-424766830da8"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="2122ea62-ad0c-4fb9-89e6-4ebb8446dedf"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="a97e3288-b186-43df-8f9e-424766830da8">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>propPower_kW</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="9695f467-8fb2-475a-a7bc-dd45b348c362"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="2122ea62-ad0c-4fb9-89e6-4ebb8446dedf">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="9695f467-8fb2-475a-a7bc-dd45b348c362"/>
+    <valueIndices>39</valueIndices>
+    <valueIndices>39</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="45b90e91-5fe8-4165-b58f-cd693515697d">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>shorePower_kW</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="92e91b77-ff14-400c-80d0-1bf31d60a611"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="450d34b8-3362-438d-91ef-50aa8f66a2be">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="4092d0aa-2e66-41e0-9306-1e588dca849b"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="a6485837-ac41-42f4-a554-894187b205aa"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="a6485837-ac41-42f4-a554-894187b205aa">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="450d34b8-3362-438d-91ef-50aa8f66a2be"/>
+    <valueIndices>40</valueIndices>
+    <valueIndices>40</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="44401cbb-262f-4504-9b43-79f9f90dda50">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>seaTab</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="c93301db-225e-469c-8a92-d7803e1f8d8e"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="56080e17-334e-4689-b463-1c70c0797cfd">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="c93301db-225e-469c-8a92-d7803e1f8d8e"/>
+    <valueIndices>41</valueIndices>
+    <valueIndices>47</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="92e91b77-ff14-400c-80d0-1bf31d60a611">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="45b90e91-5fe8-4165-b58f-cd693515697d"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="d2fc2cbc-f746-4938-8c2a-6e148cdb0304"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="d2fc2cbc-f746-4938-8c2a-6e148cdb0304">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="92e91b77-ff14-400c-80d0-1bf31d60a611"/>
+    <valueIndices>48</valueIndices>
+    <valueIndices>48</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="fcb96c10-50a8-4e57-88a4-0e725fdee44e">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>tBreak_s</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="49e430eb-b73b-4eea-bcac-e2abcf2a5ed6"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="5bf9e7f2-38c8-43fd-8778-9c43095860e5">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="49e430eb-b73b-4eea-bcac-e2abcf2a5ed6"/>
+    <valueIndices>49</valueIndices>
+    <valueIndices>55</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="86280f1c-0c9a-4930-ae43-d1c6851ccac4">
+    <id type="slsa.mm.param.rtp.VariableId" uuid="9f3a5e7f-2110-40e5-8d94-2af6581517cb"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="c1e0154f-e27e-4781-9383-f474e56fda2a"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.VariableId type="slsa.mm.param.rtp.VariableId" uuid="9f3a5e7f-2110-40e5-8d94-2af6581517cb">
+    <workspaceName>vesselPowerCert</workspaceName>
+    <name>vTab_kn</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="86280f1c-0c9a-4930-ae43-d1c6851ccac4"/>
+  </slsa.mm.param.rtp.VariableId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="c1e0154f-e27e-4781-9383-f474e56fda2a">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="86280f1c-0c9a-4930-ae43-d1c6851ccac4"/>
+    <valueIndices>56</valueIndices>
+    <valueIndices>62</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+</MF0>
