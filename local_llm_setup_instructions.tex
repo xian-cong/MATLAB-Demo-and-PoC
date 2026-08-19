@@ -1,0 +1,634 @@
+% ============================================================
+%  TechSource - Local LLM + MATLAB Agentic Toolkit Setup Guide
+%  LM Studio (Bionic) + MATLAB MCP Server
+%  + MATLAB Agentic Toolkit + Simulink Agentic Toolkit
+% ============================================================
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[top=0.7in, bottom=0.9in, left=0.85in, right=0.85in, footskip=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{helvet}
+\usepackage{microtype}
+\usepackage[nobottomtitles*]{titlesec}
+\usepackage{titling}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{tcolorbox}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{amssymb}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{TSorange}{RGB}{230, 126, 14}
+\definecolor{TSgray}{RGB}{100, 100, 100}
+\definecolor{TSdark}{RGB}{30, 30, 30}
+\definecolor{TSlightgray}{RGB}{245, 245, 245}
+\definecolor{TSblue}{RGB}{30, 90, 160}
+\definecolor{TSboxbg}{RGB}{255, 248, 235}
+\definecolor{TScodebg}{RGB}{243, 245, 248}
+\definecolor{TSframe}{RGB}{185, 185, 185}
+
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = TSorange,
+  urlcolor   = TSblue,
+  citecolor  = TSgray,
+  pdftitle   = {Local LLM + MATLAB Agentic Toolkit Setup},
+  pdfauthor  = {TechSource},
+}
+
+\titleformat{\section}
+  {\color{TSorange}\large\bfseries\sffamily}
+  {Step \thesection.}{0.6em}{}
+  [{\color{TSorange}\titlerule[0.8pt]}]
+
+\titleformat{\subsection}
+  {\color{TSgray}\normalsize\bfseries\sffamily}
+  {\thesubsection}{0.6em}{}
+
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\titlespacing{\subsection}{0pt}{7pt}{3pt}
+
+% Never leave a step heading stranded at the foot of a page
+\renewcommand{\bottomtitlespace}{0.10\textheight}
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{46pt}
+\fancyhead[L]{\includegraphics[height=0.42in]{techsource_logo.png}}
+\fancyhead[R]{\includegraphics[height=0.42in]{mw-reseller-badge-rgb-def.png}}
+\fancyfoot[C]{\color{TSgray}\scriptsize\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}}
+
+\captionsetup{
+  font={small,color=TSgray},
+  labelfont={bf,color=TSorange},
+  format=plain,
+  justification=centering,
+  skip=4pt,
+}
+
+\tcbuselibrary{skins, breakable}
+
+\newtcolorbox{notebox}{
+  colback=TSboxbg, colframe=TSorange,
+  fonttitle=\bfseries\sffamily\small,
+  title={$\bigstar$\; Note},
+  left=6pt, right=6pt, top=4pt, bottom=4pt, breakable,
+  fontupper=\raggedright,
+}
+
+\newtcolorbox{stepbox}[1]{
+  colback=TSlightgray, colframe=TSgray,
+  fonttitle=\bfseries\sffamily\small\color{TSorange},
+  title={#1},
+  left=6pt, right=6pt, top=4pt, bottom=4pt, breakable, arc=3pt,
+  fontupper=\raggedright,
+}
+
+% Command / path box -- for anything the reader must type or paste
+\newtcolorbox{codebox}{
+  colback=TScodebg, colframe=TSframe,
+  boxrule=0.5pt, arc=2pt,
+  left=6pt, right=6pt, top=5pt, bottom=5pt, breakable,
+  fontupper=\ttfamily\small\raggedright,
+}
+
+% ------------------------------------------------------------
+%  Uniform screenshot command
+%  Usage: \screenshot[label]{filename}{Caption}
+%
+%  Every screenshot is centred inside a frame of EXACTLY the same
+%  width and height, so all figures line up down the page no matter
+%  what the source image resolution is. To resize every screenshot
+%  in the document, edit \shotwidth below -- nothing else.
+%
+%  HOW TO INSERT A SCREENSHOT:
+%    1. Save your PNG/JPG in the same folder as this .tex file
+%    2. Add a \screenshot{file.png}{Caption} line where you want it
+%    3. Recompile twice: pdflatex local_llm_setup_instructions.tex
+% ------------------------------------------------------------
+\newlength{\shotwidth}
+\newlength{\shotheight}
+\setlength{\shotwidth}{0.73\textwidth}
+\setlength{\shotheight}{0.538\shotwidth}
+
+% Slightly tighter, more flexible spacing around the framed figures so a
+% step and its two screenshots stay together on one page.
+\setlength{\intextsep}{10pt plus 3pt minus 3pt}
+
+\newcommand{\screenshot}[3][]{%
+  \begin{figure}[H]
+    \centering
+    {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.6pt}%
+     \fcolorbox{TSframe}{white}{%
+       \begin{minipage}[c][\shotheight][c]{\shotwidth}%
+         \setlength{\parskip}{0pt}%
+         \centering
+         \includegraphics[width=\shotwidth, height=\shotheight, keepaspectratio]{#2}%
+       \end{minipage}}}%
+    \ifx&#3&\else\caption{#3}\fi
+    \ifx&#1&\else\label{#1}\fi
+  \end{figure}%
+}
+
+\setlist[enumerate,1]{label=\textbf{\arabic*.}, leftmargin=*, itemsep=4pt, topsep=4pt}
+\setlist[itemize,1]{leftmargin=*, itemsep=3pt, topsep=3pt, label=\textcolor{TSorange}{\textbullet}}
+
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+
+\newcommand{\tick}{\textcolor{TSorange}{$\square$}}
+\newcommand{\arrow}{\,$\rightarrow$\,}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% -- Compact Title Banner -------------------------------------
+\begin{center}
+  \color{TSorange}\rule{\textwidth}{2pt}\\[5pt]
+  {\fontsize{18}{22}\selectfont\bfseries\color{TSdark}
+    Local LLM + MATLAB Agentic Toolkit Setup Guide}\\[4pt]
+  {\small\color{TSgray}
+    LM Studio \textendash{} MATLAB MCP Server \textendash{} MATLAB \& Simulink Agentic Toolkits}\\[2pt]
+  {\small\color{TSgray}
+    Platform: Windows \quad\textbar\quad MATLAB R2026a
+    \quad\textbar\quad \textbf{Runs Fully Offline}
+    \quad\textbar\quad Revised 19 August 2026}\\[5pt]
+  \color{TSorange}\rule{\textwidth}{2pt}
+\end{center}
+
+\vspace{6pt}
+
+% ============================================================
+\section*{Overview}
+% ============================================================
+
+This guide sets up a \textbf{fully local AI assistant for MATLAB and Simulink}. The language model
+runs on your own machine, so your code and models never leave your computer.
+
+\begin{notebox}
+  \textbf{Once the setup is done, the whole thing runs offline.} The model, the MCP server, the
+  tools and the skills all live on your own disk --- nothing is sent to a cloud service, and no
+  internet connection is needed to use it. You only need to be online for the \textbf{downloads}
+  in Steps 1, 3, 4, 5 and 10.
+\end{notebox}
+
+Four pieces work together:
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+\textbf{Component} & \textbf{What it does} \\
+\midrule
+LM Studio (Bionic)          & Runs the language model locally and hosts the chat / agent interface. \\
+MATLAB MCP Server           & Lets the agent drive MATLAB, starting it if it is not already open. \\
+MATLAB Agentic Toolkit      & Adds MATLAB tools and skills the agent can use. \\
+Simulink Agentic Toolkit    & Adds Simulink, Stateflow and System Composer tools and skills. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{notebox}
+  Set aside about \textbf{1--2 hours}, most of which is downloading. You will need roughly
+  \textbf{15 GB of free disk space} for LM Studio, one model, and the toolkits.
+\end{notebox}
+
+\textbf{What you will need:}
+\begin{itemize}
+  \item A \textbf{Windows} PC where you are allowed to install software
+  \item \textbf{MATLAB R2026a} installed locally, plus \textbf{Simulink} for the Simulink toolkit
+  \item A stable internet connection --- for the setup downloads only
+  \item A GPU with 8 GB or more of VRAM is recommended, but not required
+\end{itemize}
+
+\begin{notebox}
+  Please complete this setup \textbf{at least one day before} the workshop. If you get stuck,
+  contact \texttt{matlabday\_support@techsource-asia.com} with a screenshot of the step that
+  failed.
+\end{notebox}
+
+\newpage
+
+% ============================================================
+\section{Install LM Studio}
+% ============================================================
+
+\begin{enumerate}
+  \item Go to \url{https://lmstudio.ai/download} and click
+        \textbf{Download LM Studio Bionic}. The installer is about 600 MB.
+
+  \screenshot[fig:lms-download]{lm_studio_installation.png}{Downloading the LM Studio Bionic installer}
+
+  \item Run the downloaded \texttt{Bionic-\textit{version}-x64.exe} and accept the default options.
+
+  \screenshot[fig:lms-install]{lm_studio.png}{The LM Studio (Bionic) installer running}
+\end{enumerate}
+
+\begin{notebox}
+  \textbf{Note down the installation path} shown by the installer. Separately, LM Studio keeps
+  your per-user data --- models, skills and settings --- in a hidden folder in your user profile:
+  \begin{codebox}
+  \path{C:\Users\<YourUserName>\.lmstudio}
+  \end{codebox}
+  You will need that second path in \textbf{Step 9}.
+\end{notebox}
+
+% ============================================================
+\section{Open the LM Studio Settings}
+% ============================================================
+
+\begin{enumerate}
+  \item Launch LM Studio. On a fresh install you land on the \textbf{Create your first project}
+        screen. Click the \textbf{sidebar toggle} in the top-left corner.
+
+  \screenshot[fig:lms-sidebar]{lm_studio_1.png}{Click the sidebar toggle at the top-left}
+
+  \item Click \textbf{Settings} at the bottom of the sidebar.
+
+  \screenshot[fig:lms-settings]{2.png}{Settings sits at the bottom of the expanded sidebar}
+\end{enumerate}
+
+% ============================================================
+\section{Choose and Download a Model}
+% ============================================================
+
+\begin{enumerate}
+  \item In the Settings sidebar, under \textbf{Local Models}, click \textbf{Explore}.
+  \item Pick a model from the staff picks, or search Hugging Face. This guide uses
+        \textbf{Gemma 4 12B QAT} (7.15 GB), which fits comfortably on most workshop machines.
+  \item Click \textbf{Download} and let it finish before continuing.
+
+  \screenshot[fig:lms-model]{3.png}{Selecting Gemma 4 12B QAT in Explore and starting the download}
+\end{enumerate}
+
+\begin{notebox}
+  Check the \textbf{Capabilities} row in the model details before downloading. The model
+  \textbf{must list \texttt{Tools}} --- without it the model cannot call the MATLAB MCP tools and
+  nothing later in this guide will work. \texttt{Vision} and \texttt{Reasoning} are useful extras.
+\end{notebox}
+
+% ============================================================
+\section{Download the Agentic Toolkit Installer}
+% ============================================================
+
+\begin{enumerate}
+  \item Go to the Simulink Agentic Toolkit repository:\\
+        \url{https://github.com/matlab/simulink-agentic-toolkit}
+  \item In the right-hand column under \textbf{Releases}, click the release marked
+        \textbf{Latest}.
+
+  \screenshot[fig:gh-release]{5.png}{Open the latest release from the repository page}
+
+  \item Scroll down to \textbf{Assets} and download \texttt{agenticToolkitInstaller.mltbx}.
+
+  \screenshot[fig:gh-asset]{6.png}{Download agenticToolkitInstaller.mltbx from the release assets}
+\end{enumerate}
+
+\begin{notebox}
+  \texttt{agenticToolkitInstaller.mltbx} is the \textbf{only} file you need. It is a small
+  installer, about 76 KB, that fetches the MCP server and both toolkits for you. Do \textbf{not}
+  download \texttt{simulink-agentic-toolkit.mltbx} separately.
+\end{notebox}
+
+% ============================================================
+\section{Install the Toolkits in MATLAB}
+% ============================================================
+
+\begin{enumerate}
+  \item Open MATLAB and set the \textbf{Current Folder} to the folder you downloaded the
+        installer into, for example \texttt{Downloads}.
+  \item In the \textbf{Command Window}, run the following, substituting your own path:
+
+  \begin{codebox}
+  \path{matlab.internal.open.openmltbx("C:\Users\TSA\Downloads\agenticToolkitInstaller.mltbx")}
+  \end{codebox}
+
+  \screenshot[fig:ml-openmltbx]{7.png}{Running openmltbx on the downloaded .mltbx file}
+
+  \item When \textbf{Installation Complete} appears, click \textbf{Close}.
+
+  \screenshot[fig:ml-installed]{8.png}{The installer confirms the toolbox is installed}
+
+  \item Now run the setup function:
+
+  \begin{codebox}
+  setupAgenticToolkit("install", DisableTelemetry=true)
+  \end{codebox}
+
+  \item At \textbf{Enter selection}, type \texttt{3} for \textbf{Both} and press Enter. Review the
+        plan, then type \texttt{y} at \textbf{Proceed? [Y/n]} and press Enter.
+
+  \screenshot[fig:ml-setup]{9.png}{Select option 3 (Both), then confirm with y}
+
+  \item The setup downloads and installs the MCP server and both toolkits. When it asks
+        \textbf{``Would you like to configure your coding agent now?''}, type \texttt{n}
+        and press Enter.
+
+  \screenshot[fig:ml-agent-n]{10.png}{Answer n --- LM Studio is registered by hand in Step 7}
+\end{enumerate}
+
+\begin{notebox}
+  Answer \texttt{n} because the automatic configuration only covers Claude Code, Codex, GitHub
+  Copilot, Amp and Gemini CLI. LM Studio is registered manually in \textbf{Step 7}.
+\end{notebox}
+
+% ============================================================
+\section{Copy the MATLAB MCP Server Path}
+% ============================================================
+
+\begin{enumerate}
+  \item In the setup output, find the line beginning
+        \textbf{``MCP server binary installed to:''} and select and copy the full path.
+
+  \screenshot[fig:ml-mcp-path]{11.png}{Copy the MCP server binary path from the install log}
+\end{enumerate}
+
+On a default installation the path looks like this:
+
+\begin{codebox}
+\path{C:\Users\TSA\.matlab\agentic-toolkits\bin\matlab-mcp-server.exe}
+\end{codebox}
+
+\begin{notebox}
+  Leave the MATLAB Command Window open and do not clear it. You will come back for a second
+  path in the middle of the next step.
+\end{notebox}
+
+% ============================================================
+\section{Register the MCP Server in LM Studio}
+% ============================================================
+
+\begin{enumerate}
+  \item In LM Studio, go to \textbf{Settings}\arrow\textbf{Connected Apps}. At the bottom, under
+        \textbf{Manual MCP server setup}, click \textbf{+ Add custom MCP}.
+
+  \screenshot[fig:lms-connected]{4.png}{Add custom MCP under Manual MCP server setup}
+
+  \item Fill in the form:
+  \begin{itemize}
+    \item \textbf{Name}: \texttt{MATLAB MCP Core Server}
+    \item \textbf{Connection}: \texttt{On this computer}
+    \item \textbf{Command}: paste the MCP server path you copied in Step 6
+  \end{itemize}
+
+  \item Switch back to MATLAB and copy the \textbf{Simulink Agentic Toolkit} path from the line
+        \textbf{``Simulink Agentic Toolkit installed to:''}.
+
+  \screenshot[fig:ml-slk-path]{12.png}{Copy the Simulink Agentic Toolkit installation path}
+
+  \item Back in LM Studio, turn on \textbf{Show advanced options}. Under \textbf{Arguments},
+        add one argument built from the path you just copied:
+
+  \begin{codebox}
+  \path{--extension-file=C:\Users\TSA\.matlab\agentic-toolkits\simulink\tools\tools.json}
+  \end{codebox}
+
+  \begin{sloppypar}
+  Replace \path{C:\Users\TSA\.matlab\agentic-toolkits\simulink} with your own Simulink Agentic
+  Toolkit path, and keep the trailing \path{\tools\tools.json} exactly as shown.
+  \end{sloppypar}
+
+  \screenshot[fig:lms-mcp-args]{13.png}{The Command field and the extension-file argument}
+
+  \item Scroll to the bottom of the form and click \textbf{Add MCP}.
+
+  \screenshot[fig:lms-add-mcp]{14.png}{Click Add MCP to save the server}
+
+  \item Back on the \textbf{Connected Apps} page, confirm the server reports
+        \textbf{Connected \textbullet{} 13 tools ready}.
+
+  \screenshot[fig:lms-connected-ok]{15.png}{The MATLAB MCP Core Server connected with 13 tools}
+\end{enumerate}
+
+\begin{notebox}
+  If you do not see \textbf{13 tools ready}, check these in order:
+  \begin{itemize}
+    \item Toggle the server \textbf{off and on again} --- LM Studio only launches the server when
+          it is enabled.
+    \item The \textbf{Command} path points at \texttt{matlab-mcp-server.exe} and that file exists.
+    \item The \texttt{--extension-file} argument ends in \path{\tools\tools.json}
+          and that file exists. Without this argument you will see fewer tools, because the
+          Simulink tools are never loaded.
+  \end{itemize}
+\end{notebox}
+
+% ============================================================
+\section{Increase the Context Length}
+% ============================================================
+
+\begin{enumerate}
+  \item In Settings, under \textbf{Local Models}, click \textbf{Local Model Defaults}.
+  \item Set \textbf{Minimum AutoFit context length} to \texttt{325000}.
+
+  \screenshot[fig:lms-context]{16.png}{Raise Minimum AutoFit context length to 325000}
+\end{enumerate}
+
+\begin{notebox}
+  The toolkit tool definitions and skills are large. With too little context the agent silently
+  truncates them and tool calls start to fail. If a model then \textbf{refuses to load}, your
+  machine cannot provide that much context --- lower this value or choose a smaller model.
+\end{notebox}
+
+% ============================================================
+\section{Open the LM Studio Skills Folder}
+% ============================================================
+
+\begin{enumerate}
+  \item Open File Explorer, paste the following into the address bar, and press Enter:
+
+  \begin{codebox}
+  \path{%USERPROFILE%\.lmstudio\skills}
+  \end{codebox}
+
+  \screenshot[fig:skills-folder]{17.png}{The hidden .lmstudio skills folder, empty on a fresh install}
+
+  \item Leave this window open --- you will paste into it in the next step.
+\end{enumerate}
+
+\begin{notebox}
+  \texttt{.lmstudio} is hidden, so you will not find it by browsing. Paste the path above, or turn
+  on \textbf{View}\arrow\textbf{Show}\arrow\textbf{Hidden items}. If the \texttt{skills} folder
+  does not exist yet, create it.
+\end{notebox}
+
+% ============================================================
+\section{Install the MATLAB and Simulink Skills}
+% ============================================================
+
+\begin{enumerate}
+  \item Open both toolkit repositories in your browser:
+  \begin{itemize}
+    \item \url{https://github.com/matlab/matlab-agentic-toolkit/}
+    \item \url{https://github.com/matlab/simulink-agentic-toolkit/}
+  \end{itemize}
+
+  \item On each repository, click the green \textbf{Code} button and choose
+        \textbf{Download ZIP}.
+
+  \screenshot[fig:gh-zip]{18.png}{Code, then Download ZIP, on each repository}
+
+  \item Extract both ZIP files. Open
+        \path{matlab-agentic-toolkit-main\skills-catalog}, select
+        \textbf{all of the folders}, and copy them.
+
+  \screenshot[fig:matlab-skills]{19.png}{The MATLAB skills catalog --- copy all folders}
+
+  \item Paste them into the \path{.lmstudio\skills} folder from Step 9.
+
+  \item Repeat for the Simulink toolkit: open
+        \path{simulink-agentic-toolkit-main\skills-catalog}, copy all of the
+        folders, and paste them into the same \texttt{skills} folder.
+
+  \screenshot[fig:simulink-skills]{20.png}{The Simulink skills catalog --- copy all folders}
+\end{enumerate}
+
+\begin{notebox}
+  Copy the \textbf{contents} of \texttt{skills-catalog}, not the \texttt{skills-catalog} folder
+  itself. Each skill category must sit directly inside
+  \path{.lmstudio\skills}. You can skip \texttt{README.md}.
+\end{notebox}
+
+% ============================================================
+\section{Verify the Skills Are Loaded}
+% ============================================================
+
+\begin{enumerate}
+  \item In LM Studio, go to \textbf{Settings}\arrow\textbf{Skills}.
+  \item Confirm the \textbf{Bionic Skills} list is populated, with entries such as
+        \texttt{building-simulink-models}, \texttt{checking-model-compliance} and
+        \texttt{authoring-simulink-inputs}.
+
+  \screenshot[fig:lms-skills]{21.png}{The Bionic Skills list after copying both catalogs}
+\end{enumerate}
+
+\begin{notebox}
+  If the list is empty, restart LM Studio. If it is still empty, check the folder layout --- each
+  skill folder must contain a \texttt{SKILL.md} file.
+\end{notebox}
+
+% ============================================================
+\section{Run Your First Prompt}
+% ============================================================
+
+Your setup is complete. You do not need to start MATLAB yourself --- on the first tool call the
+MCP server launches MATLAB for you. If MATLAB is already open, the agent attaches to that session
+instead.
+
+\begin{enumerate}
+  \item Click \textbf{Back to app} to leave Settings, then click \textbf{New Project}. Give the
+        project a name, leave \textbf{Allow coding} switched on, pick a folder for the
+        \textbf{Local workspace}, and click \textbf{Create}.
+
+  \screenshot[fig:first-project]{22.png}{Creating a project with Allow coding switched on}
+
+  \item In the prompt box, click the model selector and choose the model you downloaded in
+        Step 3.
+
+  \screenshot[fig:first-model]{23.png}{Choosing the model in the prompt box}
+
+  \item Send this prompt:
+
+  \begin{codebox}
+  What version of MATLAB is running? List the installed toolboxes.
+  \end{codebox}
+
+  \item Watch the session. The agent shows each tool as it runs --- the first is
+        \textbf{Called MATLAB MCP Core Server}, and MATLAB starts up alongside it.
+
+  \screenshot[fig:first-prompt]{24.png}{The first tool call, with MATLAB launching automatically}
+
+  \item Wait for the answer. It should report \textbf{your} MATLAB release and \textbf{your}
+        toolbox list. Expand \textbf{Called 1 tool} and \textbf{Reasoned} to see which tool the
+        model picked --- here it chose \texttt{detect\_matlab\_toolboxes}.
+
+  \screenshot[fig:first-result]{25.png}{The reply: release and toolbox list read live from MATLAB}
+\end{enumerate}
+
+\begin{notebox}
+  The \textbf{first} prompt is slow, because MATLAB has to start before the tool can return.
+  Later prompts in the same session reuse the running MATLAB and respond much faster.
+\end{notebox}
+
+\begin{notebox}
+  \textbf{Everything you just ran was offline.} To prove it, disconnect from the network and send
+  the prompt again --- the model, the MCP server, the tools and the skills are all on your
+  machine. The one exception is MATLAB's own licence check, if yours is a network licence.
+\end{notebox}
+
+% ------------------------------------------------------------
+%  Add further exercise prompts below, following the same
+%  pattern. Every screenshot is framed at the same width as the
+%  ones earlier in the guide automatically -- there is nothing
+%  else to adjust.
+%
+%  \screenshot[fig:prompt-slk]{25.png}{The agent building a Simulink model}
+% ------------------------------------------------------------
+
+\newpage
+
+% ============================================================
+%  Closing reference page -- checklist and troubleshooting are
+%  kept together on their own page so it can be printed alone.
+% ============================================================
+\section*{Setup Checklist}
+% ============================================================
+
+Run through this list before the workshop:
+
+\begin{itemize}[label={\tick}]
+  \item LM Studio is installed and opens without errors
+  \item A model with the \texttt{Tools} capability has finished downloading
+  \item MATLAB R2026a is installed locally, with Simulink
+  \item \texttt{setupAgenticToolkit} completed and reported \textbf{Artifacts installed}
+  \item \textbf{Connected Apps} shows \textbf{Connected \textbullet{} 13 tools ready}
+  \item \textbf{Minimum AutoFit context length} is set to \texttt{325000}
+  \item \textbf{Settings}\arrow\textbf{Skills} lists the MATLAB and Simulink skills
+  \item The first prompt returned \textbf{your} MATLAB release and toolbox list
+\end{itemize}
+
+% ============================================================
+\section*{Troubleshooting}
+% ============================================================
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.54\textwidth}@{}}
+\toprule
+\textbf{Symptom} & \textbf{Most likely cause} \\
+\midrule
+MCP server will not connect
+  & The \textbf{Command} path is wrong, or \texttt{matlab-mcp-server.exe} is missing. \\
+Connected, but fewer than 13 tools
+  & The \texttt{--extension-file} argument is missing, or points at a \texttt{tools.json} that does not exist. \\
+Model fails to load
+  & Not enough RAM or VRAM for a 325{,}000-token context. Lower the value, or use a smaller model. \\
+Answer arrives with no \textbf{Called} row
+  & The model is answering from general knowledge, not from MATLAB. Check that it has the
+    \texttt{Tools} capability, and that Step 7 reads 13 tools ready. \\
+Skills list is empty
+  & The skills were copied one level too deep, or LM Studio needs a restart. \\
+\texttt{Unrecognized function or variable}
+  & \texttt{setupAgenticToolkit} only exists after the \texttt{.mltbx} is installed --- redo Step 5. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vfill
+\begin{center}
+  {\color{TSgray}\scriptsize\textit{\copyright{} \the\year{} TechSource. All rights reserved.}}
+\end{center}
+
+\end{document}
