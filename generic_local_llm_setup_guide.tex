@@ -1,0 +1,393 @@
+% ============================================================
+%  TechSource - MATLAB MCP Server Setup Guide
+%  Combined: TOML-config bridges [Method A] + JSON-config / any
+%  other bridge [Method B] -- no specific tool is named
+% ============================================================
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[top=0.7in, bottom=1.0in, left=0.85in, right=0.85in, footskip=0.35in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{helvet}
+\usepackage{microtype}
+\usepackage[nobottomtitles*]{titlesec}
+\usepackage{titling}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{tcolorbox}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{fancyvrb}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{TSorange}{RGB}{230, 126, 14}
+\definecolor{TSgray}{RGB}{100, 100, 100}
+\definecolor{TSmaroon}{RGB}{128, 0, 32}
+\definecolor{TSdark}{RGB}{30, 30, 30}
+\definecolor{TSlightgray}{RGB}{245, 245, 245}
+\definecolor{TSblue}{RGB}{30, 90, 160}
+\definecolor{TSboxbg}{RGB}{255, 248, 235}
+\definecolor{TScodebg}{RGB}{243, 245, 248}
+\definecolor{TSframe}{RGB}{185, 185, 185}
+
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = TSorange,
+  urlcolor   = TSblue,
+  citecolor  = TSgray,
+  pdftitle   = {MATLAB MCP Server Setup},
+  pdfauthor  = {TechSource},
+}
+
+\titleformat{\section}
+  {\color{TSorange}\large\bfseries\sffamily}
+  {Step \thesection.}{0.6em}{}
+  [{\color{TSorange}\titlerule[0.8pt]}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\sffamily}
+  {}{0em}{}
+
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\titlespacing{\subsection}{0pt}{9pt}{4pt}
+
+\renewcommand{\bottomtitlespace}{0.10\textheight}
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{46pt}
+\fancyhead[L]{\includegraphics[height=0.42in]{techsource_logo.png}}
+\fancyhead[R]{\includegraphics[height=0.42in]{mw-reseller-badge-rgb-def.png}}
+\fancyfoot[C]{\color{TSgray}\small Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}}
+
+\captionsetup{
+  font={small,color=TSgray},
+  labelfont={bf,color=TSorange},
+  format=plain,
+  justification=centering,
+  skip=4pt,
+}
+
+\tcbuselibrary{skins, breakable}
+
+\newtcolorbox{notebox}{
+  colback=TSboxbg, colframe=TSorange,
+  fonttitle=\bfseries\sffamily\small,
+  title={$\bigstar$\; Note},
+  left=6pt, right=6pt, top=4pt, bottom=4pt, breakable,
+  fontupper=\raggedright,
+}
+
+\newtcolorbox{assumptionbox}[1]{
+  colback=TSboxbg, colframe=TSorange,
+  fonttitle=\bfseries\sffamily\small,
+  title={#1},
+  left=6pt, right=6pt, top=4pt, bottom=4pt, breakable,
+  fontupper=\raggedright,
+}
+
+\newtcolorbox{codebox}{
+  colback=TScodebg, colframe=TSframe,
+  boxrule=0.5pt, arc=2pt,
+  left=6pt, right=6pt, top=5pt, bottom=5pt, breakable,
+  fontupper=\ttfamily\small\raggedright,
+}
+
+\newtcolorbox{codeblock}{
+  colback=TScodebg, colframe=TSframe,
+  boxrule=0.5pt, arc=2pt,
+  left=6pt, right=6pt, top=5pt, bottom=5pt, breakable,
+}
+% Same styling as codeblock, but never splits across a page --- used where the
+% whole block needs to stay together (e.g. a script the reader will copy in one go).
+\newtcolorbox{codeblocknobreak}{
+  colback=TScodebg, colframe=TSframe,
+  boxrule=0.5pt, arc=2pt,
+  left=6pt, right=6pt, top=5pt, bottom=5pt,
+}
+\fvset{fontsize=\footnotesize, xleftmargin=0pt, formatcom=\color{TSdark}}
+
+% Method A / Method B labelled dividers -- visually distinct so each step's
+% two methods are easy to tell apart at a glance. Neither name names a
+% specific product -- the split is by config file shape only.
+\newcommand{\methodA}{\subsection*{\color{TSblue}$\blacktriangleright$~Method A --- If the Bridge Uses a TOML Config File}}
+\newcommand{\methodB}{\subsection*{\color{TSmaroon}$\blacktriangleright$~Method B --- If It Uses JSON, or Anything Else}}
+
+\setlist[enumerate,1]{label=\textbf{\arabic*.}, leftmargin=*, itemsep=4pt, topsep=4pt}
+\setlist[itemize,1]{leftmargin=*, itemsep=3pt, topsep=3pt, label=\textcolor{TSorange}{\textbullet}}
+
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+
+\newcommand{\tick}{\textcolor{TSorange}{$\square$}}
+\newcommand{\arrow}{\,$\rightarrow$\,}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+\begin{center}
+  \color{TSorange}\rule{\textwidth}{2pt}\\[5pt]
+  {\fontsize{18}{22}\selectfont\bfseries\color{TSdark}
+    MATLAB MCP Server Setup Guide}\\[4pt]
+  {\small\color{TSgray}
+    For Bridges Using a TOML or JSON Configuration File}\\[2pt]
+  {\small\color{TSgray}
+    Revised 19 August 2026}\\[5pt]
+  \color{TSorange}\rule{\textwidth}{2pt}
+\end{center}
+
+\vspace{6pt}
+
+% ============================================================
+\section*{Overview}
+% ============================================================
+
+This guide does not assume which local model bridge is installed on the target machine, and does
+not name any specific product. Instead it splits by the \textbf{shape of that bridge's own
+configuration file}, since that alone is usually enough to tell which method applies:
+
+\begin{itemize}
+  \item {\color{TSblue}\textbf{Method A}} --- for bridges that store configuration as
+        \textbf{TOML} (recognizable by a \path{config.toml}-style file with section headers
+        written like \path{[[mcp_servers]]}).
+  \item {\color{TSmaroon}\textbf{Method B}} --- for bridges that store configuration as
+        \textbf{JSON} (recognizable by curly braces and a key such as \path{"mcpServers": \{...\}}),
+        or for any bridge whose format is unknown.
+\end{itemize}
+
+Open whatever configuration file the bridge already has to see which shape it is, then follow the
+matching method within each step below. \textbf{Try Method A first if unsure; if the config file
+does not look like TOML, skip straight to Method B.}
+
+\begin{notebox}
+  Steps that do not depend on the bridge's configuration format (downloading the files, raising
+  the context limit) are given only once, since the two methods would be identical anyway.
+\end{notebox}
+
+\textbf{What you will need:}
+\begin{itemize}
+  \item A Windows PC
+  \item A stable internet connection, for the downloads in Step 1 only
+  \item Enough free disk space for the MCP server binary and the skill catalogs (well under 1 GB)
+\end{itemize}
+
+\textbf{Two assumptions this guide relies on:}
+
+\begin{assumptionbox}{Assumption 1 --- A Bridge Already Exists}
+  The target machine already has a working local model connector bridge connecting a local LLM
+  to MCP servers. Tool-calling infrastructure is a given --- there is no need to test whether the
+  model itself has file or tool access before registering anything.
+\end{assumptionbox}
+
+\begin{assumptionbox}{Assumption 2 --- Context Window Is Not a Hard Constraint}
+  The context limit of the local model can be increased as needed, so the full MATLAB/Simulink
+  tool set and skill content can be loaded in full, without pruning or selective loading.
+\end{assumptionbox}
+
+
+% ============================================================
+\section{Download Everything Into One Folder}
+% ============================================================
+
+This step is identical either way --- it does not depend on the bridge's configuration format.
+Everything is downloaded by hand from the browser and extracted into one working folder. By the
+end of this step, that folder looks like this:
+
+\begin{codeblock}
+\begin{Verbatim}
+C:\mcp-deploy\matlab\
+  matlab-mcp-server\          <- MCP server binary            (Step 2 below)
+  matlab-agentic-toolkit\     <- skills catalog + templates    (Step 3 below)
+  simulink-agentic-toolkit\   <- Simulink tools/skills, optional (Step 4 below)
+\end{Verbatim}
+\end{codeblock}
+
+\begin{enumerate}
+  \item Create the working folder: \path{C:\mcp-deploy\matlab}.
+
+  \item Inside it, create a subfolder named \path{matlab-mcp-server}. Open\\
+        \url{https://github.com/matlab/matlab-mcp-server/releases} in a browser, open the
+        \textbf{latest} release, download the \texttt{.exe} listed there for your platform, and
+        save it into that subfolder.
+
+  \item Go back to \path{C:\mcp-deploy\matlab}, then:
+  \begin{enumerate}[label=(\alph*)]
+    \item Open \url{https://github.com/matlab/matlab-agentic-toolkit}.
+    \item Click the green \textbf{Code} button, then choose \textbf{Download ZIP}.
+    \item Right-click the downloaded ZIP and choose \textbf{Extract All}.
+    \item Click \textbf{Browse}, set the destination to \path{C:\mcp-deploy\matlab} itself ---
+          do not accept whatever folder is pre-filled --- then click \textbf{Extract}.
+    \item \textbf{Rename} the extracted \path{matlab-agentic-toolkit-main} folder to
+          \path{matlab-agentic-toolkit}.
+  \end{enumerate}
+
+  \item Only if Simulink tools/skills are also needed, still inside \path{C:\mcp-deploy\matlab}:
+  \begin{enumerate}[label=(\alph*)]
+    \item Open \url{https://github.com/matlab/simulink-agentic-toolkit}.
+    \item Click \textbf{Code} \textrightarrow{} \textbf{Download ZIP}.
+    \item Extract it the same way, setting the destination to \path{C:\mcp-deploy\matlab} itself.
+    \item \textbf{Rename} the extracted \path{simulink-agentic-toolkit-main} folder to
+          \path{simulink-agentic-toolkit}.
+  \end{enumerate}
+\end{enumerate}
+
+% ============================================================
+\section{Raise the Context Limit (Optional)}
+% ============================================================
+
+Also identical either way --- there is no one universal setting name, so the same general
+guidance applies regardless of configuration format. Do this if the bridge and model in use
+allow it; skip it otherwise and come back to it later if tool calls start failing.
+
+\begin{enumerate}
+  \item If a context-length or token-limit setting is exposed for whatever is actually running
+        the model underneath the bridge, raise it comfortably above what a full tool set plus
+        skill text is expected to need.
+\end{enumerate}
+
+\begin{notebox}
+  A too-small context limit here will \textbf{silently truncate} tool definitions and skill
+  content instead of erroring cleanly --- err generous if adjustable, or shrink the tool/skill
+  selection if not.
+\end{notebox}
+
+
+% ============================================================
+\section{Register the MCP Server}
+% ============================================================
+
+\methodA
+
+\begin{enumerate}
+  \item Open the bridge's TOML config file --- commonly \path{config.toml} in a hidden
+        dot-folder in your home directory.
+
+  \item Add this block:
+
+  \begin{codeblock}
+  \begin{Verbatim}
+[[mcp_servers]]
+name = "matlab-mcp"
+transport = "stdio"
+command = "C:/mcp-deploy/matlab/matlab-mcp-server/matlab-mcp-server-windows-x64.exe"
+args = ["--extension-file=C:/mcp-deploy/matlab/simulink-agentic-toolkit/tools/tools.json"]
+  \end{Verbatim}
+  \end{codeblock}
+\end{enumerate}
+
+\methodB
+
+\begin{enumerate}
+  \item Locate the bridge's config file that lists MCP servers --- commonly JSON, with an
+        \path{mcpServers} object.
+
+  \item Back up the file.
+
+  \item Add this entry, or copy a starting template from
+        \path{matlab-agentic-toolkit/templates/}:
+
+  \begin{codeblock}
+  \begin{Verbatim}
+{
+  "mcpServers": {
+    "matlab-mcp": {
+      "command":
+        "C:\\mcp-deploy\\matlab\\matlab-mcp-server\\matlab-mcp-server-windows-x64.exe",
+      "args": [
+        "--extension-file=C:\\mcp-deploy\\matlab\\simulink-agentic-toolkit\\tools\\tools.json"
+      ]
+    }
+  }
+}
+  \end{Verbatim}
+  \end{codeblock}
+\end{enumerate}
+
+
+% ============================================================
+\section{Place the Skills}
+% ============================================================
+
+\methodA
+
+\begin{enumerate}
+  \item Find the bridge's skills folder --- check its documentation for the exact location, or
+        look for a folder named \path{.agents/skills/} (project-local) or
+        \path{~/.agents/skills/} (user-global) in your home directory. Depending on the bridge,
+        this folder may not exist yet --- create it if it doesn't.
+
+  \item \textbf{Set \texttt{\$dst} below to that skills folder}, then run this in PowerShell ---
+        \path{skills-catalog} nests each skill inside a category folder, so this finds every
+        \path{SKILL.md} wherever it sits and copies just that skill's folder straight into
+        \texttt{\$dst}, for both toolkits in one pass:
+
+  \begin{codeblocknobreak}
+  \begin{Verbatim}
+$dst = "<bridge's skills folder>"
+$srcs = "C:\mcp-deploy\matlab\matlab-agentic-toolkit\skills-catalog",
+        "C:\mcp-deploy\matlab\simulink-agentic-toolkit\skills-catalog"
+foreach ($src in $srcs) {
+  if (Test-Path $src) {
+    Get-ChildItem $src -Directory -Recurse | Where-Object {
+      Test-Path (Join-Path $_.FullName "SKILL.md")
+    } | ForEach-Object {
+      Copy-Item $_.FullName -Destination (Join-Path $dst $_.Name) -Recurse -Force
+    }
+  }
+}
+  \end{Verbatim}
+  \end{codeblocknobreak}
+
+        The second toolkit path is simply skipped if it was not downloaded.
+
+  \item If the bridge's config file has an \path{enabled_skills} list, add the copied skill
+        names to it, then reload or restart.
+\end{enumerate}
+
+\methodB
+
+\begin{itemize}
+  \item \textbf{If it expects skills at a fixed path:} set \texttt{\$dst} to that path and run
+        the same PowerShell command shown above under Method A --- it copies every skill folder
+        from both toolkits in one pass and simply skips whichever toolkit was not downloaded.
+\end{itemize}
+
+
+% ============================================================
+\section{Restart and Verify}
+% ============================================================
+
+\begin{enumerate}
+  \item Restart or reload the bridge, whichever it supports, so the configuration change takes
+        effect.
+  \item Confirm the MATLAB server appears in the bridge's tool list, with its full tool set, not
+        a truncated one.
+  \item Ask your agent:
+\end{enumerate}
+
+\begin{codeblock}
+\begin{Verbatim}
+What version of MATLAB is running? List the installed toolboxes.
+\end{Verbatim}
+\end{codeblock}
+
+
+\vfill
+\begin{center}
+  {\color{TSgray}\scriptsize\textit{\copyright{} \the\year{} TechSource. All rights reserved.}}
+\end{center}
+
+\end{document}
