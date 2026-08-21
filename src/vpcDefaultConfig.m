@@ -81,7 +81,7 @@ cfg.fuel.price_USDpt  = 780;
 
 % ------------------------------------------------- acceptance criteria -----
 % These thresholds are calibrated against the achievable range of this vessel and
-% profile (see build/vpcSweep.m), so that a well-chosen configuration passes and a
+% profile (see tests/vpcSweep.m), so that a well-chosen configuration passes and a
 % poor one fails on a specific, explainable rule rather than on everything at once.
 cfg.limits.genLoadMin      = 0.30;  % sustained low load is not permitted
 cfg.limits.genLoadMax      = 0.90;

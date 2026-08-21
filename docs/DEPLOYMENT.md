@@ -1,8 +1,7 @@
 # Deploying a Variant-Subsystem Simulink model to MATLAB Web App Server
 
-This is the direct answer to the customer's question, with the reasoning that was
-verified on this machine (MATLAB R2026a Update 4, Windows 11) rather than inferred
-from documentation.
+Every finding below was verified on MATLAB R2026a Update 4 on Windows 11, by building
+and running the artifacts described — not inferred from documentation.
 
 ## Short answer
 
@@ -188,7 +187,7 @@ this demo the operating profile is driven by 1-D lookup tables whose breakpoint
 vectors are 7 long, so the app validates that the profile still has exactly 7 legs
 and explains why if it does not. Users edit leg *values*, not the leg *count*.
 
-This is the main design constraint to communicate to the customer: enumerate the
+This is the main design constraint for any app of this kind: enumerate the
 configuration space in advance. Continuous parameters are free; structure is not.
 
 ### 6. A C compiler is needed — on the build machine
@@ -246,17 +245,18 @@ report that is hidden by `@media print`. No server-side file handling at all.
 
 ### 10. Your `startup.m` gets bundled
 
-The build warns that your MATLAB `startup.m` is included in deployed applications.
-On this machine it belongs to the MathWorks Agentic Toolkit and modifies the path,
-which is forbidden under MATLAB Compiler, so the probe executable printed:
+The build warns that your MATLAB `startup.m` is included in deployed applications. If
+it modifies the MATLAB path — which is forbidden under MATLAB Compiler — the deployed
+app prints a warning on every launch. On the build machine used here, `startup.m`
+belongs to the MathWorks Agentic Toolkit and does exactly that:
 
 ```
 Warning: Agentic toolkit initialization failed: Modifying the MATLAB path is not
 supported by MATLAB Compiler.
 ```
 
-Harmless here, but worth wrapping the body of your `startup.m` in `if ~isdeployed`
-before shipping anything to a customer.
+Harmless, but wrap the body of `startup.m` in `if ~isdeployed` to keep it out of
+shipped applications.
 
 ## Building the archive
 

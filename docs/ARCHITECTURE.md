@@ -89,6 +89,11 @@ the Nyquist limit of that step so the fluctuation is resolved rather than aliase
 worth noting, because the obvious choice of realistic thruster periods (tens of
 seconds) would have aliased into nonsense at this step size.
 
+The step is written into the model as a **literal number**, not as the name of a
+workspace variable. A solver setting that names a variable works in desktop MATLAB and
+makes every deployed simulation fail; `vpcCheckModelDeployable` asserts this against the
+saved file on every build. See `DEPLOYMENT.md` section 0b.
+
 ## Extending it
 
 **A new choice for an existing component.** Add a code block and a name to the

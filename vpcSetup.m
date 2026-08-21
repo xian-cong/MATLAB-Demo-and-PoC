@@ -13,9 +13,10 @@ root = fileparts(mfilename('fullpath'));
 % src  = runtime code, packaged into the .ctf
 % tools = model-authoring code, desktop only (uses add_block, sfroot, new_system
 %         and friends, none of which exist in the MATLAB Runtime)
-% app/ holds VesselCertApp.m - the real, runnable class. There is deliberately no
-% .mlapp on the path: one is generated into build/mlapp/ only when packaging, so
-% that App Designer can never overwrite the app you actually run.
+% app/ holds VesselCertApp.mlapp - the app itself. Its generator source lives in
+% app/source/ and is deliberately NOT added, so that exactly one VesselCertApp is
+% ever resolvable (MATLAB cannot have VesselCertApp.m and VesselCertApp.mlapp both
+% on the path). Regenerate the .mlapp from that source with vpcBuildApp.
 addpath(fullfile(root,'src'));
 addpath(fullfile(root,'tools'));
 addpath(fullfile(root,'app'));
