@@ -14,7 +14,8 @@ Built and verified on MATLAB **R2026a** Update 4.
 
 ### The app in a browser, served by Web App Server
 
-![The app running on MATLAB Web App Server](docs/img/webapp-running.png)
+<img width="1665" height="897" alt="image" src="https://github.com/user-attachments/assets/8f1393b5-bd00-4523-91d5-66d184258340" />
+
 
 The surveyor selects the fitted variant of each component on the left and reads the
 scored criteria on the right. This run is **diesel-electric + supercapacitor + 2
@@ -26,7 +27,7 @@ out as warnings rather than failures, and cold ironing still passes.
 
 ### The Variant Subsystems in Simulink
 
-![The GenSets Variant Subsystem and its three choices](docs/img/variant-subsystem.png)
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/df6052ca-9a8a-4483-8a4d-5088fe38d623" />
 
 `GenSets` holds three choices — `TwoUnits`, `ThreeUnits`, `FourUnits`. The app selects
 one per run by writing a plain number into the model workspace. All choices are compiled
@@ -35,7 +36,7 @@ deployment.
 
 ### The app in App Designer
 
-![The .mlapp open in App Designer Design View](docs/img/appdesigner-design-view.png)
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/b390003d-78b8-4fad-9a0a-feed9900b97e" />
 
 The `.mlapp` opens, edits and saves in App Designer's Design View without losing its
 code.
